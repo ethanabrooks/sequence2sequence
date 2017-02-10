@@ -27,6 +27,7 @@ import tensorflow as tf
 # import tensorflow.models.rnn.seq2seq as seq2seq
 # import tensorflow.nn.seq2seq as seq2seq
 import data_utils
+from em_cell import NTMCell
 
 
 class Seq2SeqModel(object):
@@ -44,20 +45,21 @@ class Seq2SeqModel(object):
     http://arxiv.org/abs/1412.2007
   """
 
-    def __init__(self,
-                 source_vocab_size,
-                 target_vocab_size,
-                 buckets,
-                 size,
-                 num_layers,
-                 max_gradient_norm,
-                 batch_size,
-                 learning_rate,
-                 learning_rate_decay_factor,
-                 use_lstm=False,
-                 num_samples=512,
-                 forward_only=False,
-                 dtype=tf.float32):
+    def __init__(
+            self,
+            source_vocab_size,
+            target_vocab_size,
+            buckets,
+            size,
+            num_layers,
+            max_gradient_norm,
+            batch_size,
+            learning_rate,
+            learning_rate_decay_factor,
+            num_samples=512,
+            forward_only=False,
+            dtype=tf.float32
+    ):
         """Create the model.
 
     Args:
@@ -76,7 +78,6 @@ class Seq2SeqModel(object):
         changed after initialization if this is convenient, e.g., for decoding.
       learning_rate: learning rate to start with.
       learning_rate_decay_factor: decay learning rate by this much when needed.
-      use_lstm: if true, we use LSTM cells instead of GRU cells.
       num_samples: number of samples for sampled softmax.
       forward_only: if set, we do not construct the backward pass in the model.
       dtype: the data type to use to store internal variables.
@@ -102,7 +103,6 @@ class Seq2SeqModel(object):
             output_projection = (w, b)
 
             def sampled_loss(logit, target):
-
                 # We need to compute the sampled_softmax_loss using 32bit floats to
                 # avoid numerical instabilities.
                 local_w_t = tf.cast(w_t, tf.float32, name='local_w_t')
@@ -124,13 +124,14 @@ class Seq2SeqModel(object):
 
         # Create the internal multi-layer cell for our RNN.
         def single_cell():
-            # return tf.contrib.rnn.GRUCell(size)
-            return tf.nn.rnn_cell.GRUCell(size)
+            # return tf.nn.rnn_cell.GRUCell(size)
+            # return tf.nn.rnn_cell.LSTMCell(size)
+            return NTMCell(size)
 
-        if use_lstm:
-            def single_cell():
-                # return tf.contrib.rnn.BasicLSTMCell(size)
-                return tf.nn.rnn_cell.BasicRNNCell(size)
+        # if use_lstm:
+        #     def single_cell():
+        #         # return tf.contrib.rnn.BasicLSTMCell(size)
+        #         return tf.nn.rnn_cell.BasicRNNCell(size)
 
         cell = single_cell()
         if num_layers > 1:
@@ -149,7 +150,8 @@ class Seq2SeqModel(object):
                 embedding_size=size,
                 output_projection=output_projection,
                 feed_previous=do_decode,
-                dtype=dtype)
+                dtype=dtype,
+            )
 
         # Feeds for inputs.
         self.encoder_inputs = []

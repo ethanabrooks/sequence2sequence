@@ -1,42 +1,9 @@
-# Copyright 2015 The TensorFlow Authors. All Rights Reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# ==============================================================================
-
 """Module for constructing RNN Cells.
 
-## Base interface for all RNN Cells
-
 @@RNNCell
-
-## RNN Cells for use with TensorFlow's core RNN methods
-
-@@BasicRNNCell
 @@NTMCell
-@@GRUCell
-@@LSTMCell
+@@NTMStateTuple
 
-## Classes storing split `RNNCell` state
-
-@@LSTMStateTuple
-
-## RNN Cell wrappers (RNNCells that wrap other RNNCells)
-
-@@MultiRNNCell
-@@DropoutWrapper
-@@EmbeddingWrapper
-@@InputProjectionWrapper
-@@OutputProjectionWrapper
 """
 from __future__ import absolute_import
 from __future__ import division
@@ -45,47 +12,30 @@ from __future__ import print_function
 import collections
 import math
 
-from tensorflow.python.framework import ops
-from tensorflow.python.framework import tensor_shape
-from tensorflow.python.ops import array_ops
-from tensorflow.python.ops import clip_ops
-from tensorflow.python.ops import embedding_ops
-from tensorflow.python.ops import init_ops
-from tensorflow.python.ops import math_ops
-from tensorflow.python.ops import nn_ops
-from tensorflow.python.ops import variable_scope as vs
-
-from tensorflow.python.ops.math_ops import sigmoid
-from tensorflow.python.ops.math_ops import tanh
+import tensorflow as tf
 from tensorflow.python.ops.rnn_cell import RNNCell
 
-from tensorflow.python.platform import tf_logging as logging
-from tensorflow.python.util import nest
+
+def cosine_distance(memory, keys):
+    """
+    :param memory: [batch_size, memory_dim, n_memory_slots]
+    :param keys:   [batch_size, memory_dim]
+    :return:       [batch_size, n_memory_slots]
+    """
+    broadcast_keys = tf.expand_dims(keys, dim=2)
+
+    def norm(x):
+        return tf.sqrt(tf.reduce_sum(tf.square(x), reduction_indices=1, keep_dims=True))
+
+    norms = map(norm, [memory, broadcast_keys])  # [batch_size, n_memory_slots]
+    dot_product = tf.squeeze(tf.batch_matmul(broadcast_keys,
+                                             memory,
+                                             adj_x=True))  # [batch_size, n_memory_slots]
+    norms_product = tf.squeeze(tf.nn.softplus(tf.mul(*norms)))
+    return dot_product / norms_product
 
 
-def _state_size_with_prefix(state_size, prefix=None):
-    """Helper function that enables int or TensorShape shape specification.
-
-  This function takes a size specification, which can be an integer or a
-  TensorShape, and converts it into a list of integers. One may specify any
-  additional dimensions that precede the final state size specification.
-
-  Args:
-    state_size: TensorShape or int that specifies the size of a tensor.
-    prefix: optional additional list of dimensions to prepend.
-
-  Returns:
-    result_state_size: list of dimensions the resulting tensor size.
-  """
-    result_state_size = tensor_shape.as_shape(state_size).as_list()
-    if prefix is not None:
-        if not isinstance(prefix, list):
-            raise TypeError("prefix of _state_size_with_prefix should be a list.")
-        result_state_size = prefix + result_state_size
-    return result_state_size
-
-
-_NTMStateTuple = collections.namedtuple("LSTMStateTuple", ("M", "h"))
+_NTMStateTuple = collections.namedtuple("LSTMStateTuple", ("M", "h", "w"))
 
 
 class NTMStateTuple(_NTMStateTuple):
@@ -97,10 +47,10 @@ class NTMStateTuple(_NTMStateTuple):
 
     @property
     def dtype(self):
-        (M, h) = self
-        if not M.dtype == h.dtype:
-            raise TypeError("Inconsistent internal state: %s vs %s" %
-                            (str(M.dtype), str(h.dtype)))
+        (M, h, w) = self
+        if not M.dtype == h.dtype == w.dtype:
+            raise TypeError("Inconsistent internal state: {} vs {} vs {}"
+                            .format(M.dtype, h.dtype, w.dtype))
         return M.dtype
 
 
@@ -118,7 +68,11 @@ class NTMCell(RNNCell):
   For advanced models, please use the full LSTMCell that follows.
   """
 
-    def __init__(self, num_units, forget_bias=1.0, input_size=None, activation=tanh):
+    def __init__(self,
+                 num_units,
+                 forget_bias=1.0,
+                 activation=tf.tanh,
+                 size_memory=8):
         """Initialize the basic LSTM cell.
 
     Args:
@@ -127,35 +81,118 @@ class NTMCell(RNNCell):
       input_size: Deprecated and unused.
       activation: Activation function of the inner states.
     """
-        if input_size is not None:
-            logging.warn("%s: The input_size parameter is deprecated.", self)
-        self._num_units = num_units
+        self._dim = num_units
         self._forget_bias = forget_bias
         self._activation = activation
+        self._size_memory = size_memory
 
     @property
     def state_size(self):
-        return NTMStateTuple(self._num_units, self._num_units)
+        return NTMStateTuple(self._dim * self._size_memory,
+                             self._dim,
+                             self._size_memory)
 
     @property
     def output_size(self):
-        return self._num_units
+        return self._dim
 
     def __call__(self, inputs, state, scope=None):
-        """Long short-term memory cell (LSTM)."""
-        with vs.variable_scope(scope or type(self).__name__):  # "BasicLSTMCell"
+        with tf.variable_scope(scope or type(self).__name__):  # "NTMCell"
             # Parameters of gates are concatenated into one multiply for efficiency.
-            M, h = state
-            concat = _linear([inputs, h], 4 * self._num_units, True)
+            dtype = state.dtype
 
-            # i = input_gate, j = new_input, f = forget_gate, o = output_gate
-            i, j, f, o = array_ops.split(1, 4, concat)
+            M, h, w = state
 
-            new_c = (M * sigmoid(f + self._forget_bias) + sigmoid(i) *
-                     self._activation(j))
-            new_h = self._activation(new_c) * sigmoid(o)
+            M = tf.reshape(M, (-1, self._size_memory, self._dim))
 
-            new_state = NTMStateTuple(new_c, new_h)
+            c = tf.squeeze(
+                tf.batch_matmul(tf.expand_dims(w, axis=1), M)
+            )
+            concat = tf.concat(1, [inputs, c])
+
+            input_dims = {
+                inputs: inputs.get_shape()[1],
+                M: self._dim,
+                w: self._size_memory,
+                c: self._dim,
+                h: self._dim
+            }
+
+            output_dims = {
+                # weight_interpolation
+                'g': input_dims[M],
+
+                # memory_key
+                'k': input_dims[M],
+
+                # read_sharpness
+                'b': 1,
+
+                # erase_vector
+                'e': self._size_memory,
+
+                # new memory vector
+                'v': self._size_memory,
+            }
+
+            total_variable_dim = sum(output_dims.values())
+
+            weight_dims = [
+                (input_dims[inputs] + input_dims[c], input_dims[h]),
+                (input_dims[h], total_variable_dim),
+            ]
+
+            weights = []
+            biases = []
+            for i, (in_size, out_size) in enumerate(weight_dims):
+                weights.append(
+                    tf.get_variable("weight" + str(i), [in_size, out_size], dtype)
+                )
+                biases.append(
+                    tf.get_variable("bias" + str(i), [out_size], dtype)
+                )
+
+            new_h = tf.sigmoid(tf.matmul(concat, weights[0]) + biases[0])
+
+            concat = tf.matmul(new_h, weights[1]) + biases[1]
+
+            g, k, b, e, v = tf.split_v(concat,
+                                       output_dims.values(),
+                                       split_dim=1)
+
+            # w
+            g = tf.sigmoid(g)
+            v = tf.tanh(v)
+            b = tf.nn.softplus(b)
+            w_hat = tf.nn.softmax(b * cosine_distance(M, k))  # TODO: fix this!
+            # new_w = (1 - g) * w + g * w_hat
+            # print(w)
+            # w = tf.squeeze(w, 2)
+
+            e.set_shape(w.get_shape())
+            f = w * e  # TODO: new_w here
+
+            # u = broadcast(w, 1, 1)
+            # [batch_size, 1, n_memory_slots]
+
+            # v = broadcast(v, 2, 1)
+            # [batch_size, memory_dim, 1]
+
+            v.set_shape([None, self._size_memory])
+            print(v)
+            print(w)
+            new_content = tf.batch_matmul(w * f, v, adj_y=True)
+            new_content.set_shape(w.get_shape())
+            new_M = M * tf.expand_dims(1 - f, axis=2) + tf.expand_dims(new_content, axis=2)
+
+            # new_M = (M * tf.sigmoid(g + self._forget_bias))
+            # new_h = tf.sigmoid(tf.matmul(x, ))
+            # new_h = self._activation(new_M) * tf.sigmoid(e)
+            # TODO: These are the wrong variables!
+
+            new_M = tf.reshape(new_M, [-1, self._size_memory * self._dim])
+            new_w = tf.reshape(w, [-1, self._size_memory]) # TODO: new_w
+            new_state = NTMStateTuple(new_M, new_h, new_w)
             return new_h, new_state
 
 
@@ -166,14 +203,14 @@ def _get_concat_variable(name, shape, dtype, num_shards):
         return sharded_variable[0]
 
     concat_name = name + "/concat"
-    concat_full_name = vs.get_variable_scope().name + "/" + concat_name + ":0"
-    for value in ops.get_collection(ops.GraphKeys.CONCATENATED_VARIABLES):
+    concat_full_name = tf.get_variable_scope().name + "/" + concat_name + ":0"
+    for value in tf.get_collection(tf.GraphKeys.CONCATENATED_VARIABLES):
         if value.name == concat_full_name:
             return value
 
-    concat_variable = array_ops.concat(0, sharded_variable, name=concat_name)
-    ops.add_to_collection(ops.GraphKeys.CONCATENATED_VARIABLES,
-                          concat_variable)
+    concat_variable = tf.concat(0, sharded_variable, name=concat_name)
+    tf.add_to_collection(tf.GraphKeys.CONCATENATED_VARIABLES,
+                         concat_variable)
     return concat_variable
 
 
@@ -190,7 +227,7 @@ def _get_sharded_variable(name, shape, dtype, num_shards):
         current_size = unit_shard_size
         if i < remaining_rows:
             current_size += 1
-        shards.append(vs.get_variable(name + "_%d" % i, [current_size] + shape[1:],
+        shards.append(tf.get_variable(name + "_%d" % i, [current_size] + shape[1:],
                                       dtype=dtype))
     return shards
 
@@ -212,9 +249,9 @@ def _linear(args, output_size, bias, bias_start=0.0, scope=None):
   Raises:
     ValueError: if some of the arguments has unspecified or wrong shape.
   """
-    if args is None or (nest.is_sequence(args) and not args):
+    if args is None or (tf.nest.is_sequence(args) and not args):
         raise ValueError("`args` must be specified")
-    if not nest.is_sequence(args):
+    if not tf.nest.is_sequence(args):
         args = [args]
 
     # Calculate the total size of arguments on dimension 1.
@@ -231,18 +268,18 @@ def _linear(args, output_size, bias, bias_start=0.0, scope=None):
     dtype = [a.dtype for a in args][0]
 
     # Now the computation.
-    with vs.variable_scope(scope or "Linear"):
-        matrix = vs.get_variable(
+    with tf.variable_scope(scope or "Linear"):
+        matrix = tf.get_variable(
             "Matrix", [total_arg_size, output_size], dtype=dtype)
         if len(args) == 1:
-            res = math_ops.matmul(args[0], matrix)
+            res = tf.matmul(args[0], matrix)
         else:
-            res = math_ops.matmul(array_ops.concat(1, args), matrix)
+            res = tf.matmul(tf.concat(1, args), matrix)
         if not bias:
             return res
-        bias_term = vs.get_variable(
+        bias_term = tf.get_variable(
             "Bias", [output_size],
             dtype=dtype,
-            initializer=init_ops.constant_initializer(
+            initializer=tf.constant_initializer(
                 bias_start, dtype=dtype))
     return res + bias_term

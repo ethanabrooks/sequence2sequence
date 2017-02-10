@@ -127,7 +127,6 @@ class NTMCell(RNNCell):
         """
         M, h, w = state
 
-        '''
         M = tf.reshape(M, (-1, self.memory_dim, self.n_memory_slots))
         # [batch_size, memory_dim, n_memory_slots]
 
@@ -163,13 +162,11 @@ class NTMCell(RNNCell):
         # [batch_size, memory_dim]
 
         # MODEL INPUT AND OUTPUT
-        '''
 
         # eqn 10
         y = tf.nn.softmax(tf.matmul(h, self.W) + self.b)
         # [batch_size, nclasses]
 
-        '''
         # EXTERNAL MEMORY UPDATE
         # eqn 17
         e = tf.nn.sigmoid(tf.matmul(h, self.We) + self.be)
@@ -208,7 +205,6 @@ class NTMCell(RNNCell):
         # eqn 14
         w = (1 - g) * w + g * w_hat
         # [batch_size, n_memory_slots]
-        '''
 
         return y, NTMStateTuple(M, h, w)
 

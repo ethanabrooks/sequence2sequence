@@ -15,26 +15,6 @@ import math
 import tensorflow as tf
 from tensorflow.python.ops.rnn_cell import RNNCell
 
-
-def cosine_distance(memory, keys):
-    """
-    :param memory: [batch_size, memory_dim, n_memory_slots]
-    :param keys:   [batch_size, memory_dim]
-    :return:       [batch_size, n_memory_slots]
-    """
-    broadcast_keys = tf.expand_dims(keys, dim=2)
-
-    def norm(x):
-        return tf.sqrt(tf.reduce_sum(tf.square(x), reduction_indices=1, keep_dims=True))
-
-    norms = map(norm, [memory, broadcast_keys])  # [batch_size, n_memory_slots]
-    dot_product = tf.squeeze(tf.batch_matmul(broadcast_keys,
-                                             memory,
-                                             adj_x=True))  # [batch_size, n_memory_slots]
-    norms_product = tf.squeeze(tf.nn.softplus(tf.mul(*norms)))
-    return dot_product / norms_product
-
-
 _NTMStateTuple = collections.namedtuple("LSTMStateTuple", ("M", "h", "w"))
 
 
@@ -99,16 +79,15 @@ class NTMCell(RNNCell):
     def __call__(self, inputs, state, scope=None):
         with tf.variable_scope(scope or type(self).__name__):  # "NTMCell"
             # Parameters of gates are concatenated into one multiply for efficiency.
-            dtype = state.dtype
-
             M, h, w = state
-
-            M = tf.reshape(M, (-1, self._size_memory, self._dim))
+            M = tf.reshape(M, (-1, self._dim, self._size_memory))  # ?, dim, size_mem
 
             c = tf.squeeze(
-                tf.batch_matmul(tf.expand_dims(w, axis=1), M)
-            )
-            concat = tf.concat(1, [inputs, c])
+                tf.batch_matmul(M, tf.expand_dims(w, axis=2)),
+                axis=2
+            )  # ?, dim
+
+            concat = tf.concat(1, [inputs, c])  # ?, dim + dim
 
             input_dims = {
                 inputs: inputs.get_shape()[1],
@@ -138,6 +117,7 @@ class NTMCell(RNNCell):
             total_variable_dim = sum(output_dims.values())
 
             weight_dims = [
+                # (in_size, out_size)
                 (input_dims[inputs] + input_dims[c], input_dims[h]),
                 (input_dims[h], total_variable_dim),
             ]
@@ -145,6 +125,7 @@ class NTMCell(RNNCell):
             weights = []
             biases = []
             for i, (in_size, out_size) in enumerate(weight_dims):
+                dtype = state.dtype
                 weights.append(
                     tf.get_variable("weight" + str(i), [in_size, out_size], dtype)
                 )
@@ -153,47 +134,38 @@ class NTMCell(RNNCell):
                 )
 
             new_h = tf.sigmoid(tf.matmul(concat, weights[0]) + biases[0])
-
             concat = tf.matmul(new_h, weights[1]) + biases[1]
 
-            g, k, b, e, v = tf.split_v(concat,
-                                       output_dims.values(),
-                                       split_dim=1)
+            g, k, b, e, v = tf.split_v(concat, output_dims.values(), split_dim=1)
+
+            # cosine distances
+            k = tf.expand_dims(
+                tf.nn.l2_normalize(k, dim=1), axis=2
+            )  # ?, dim, 1
+
+            M_hat = tf.nn.l2_normalize(M, dim=1)  # ?, dim, size_mem
+
+            cosine_distance = tf.squeeze(
+                tf.batch_matmul(k, M_hat, adj_x=True), axis=1
+            )  # ?, 8
 
             # w
-            g = tf.sigmoid(g)
-            v = tf.tanh(v)
-            b = tf.nn.softplus(b)
-            w_hat = tf.nn.softmax(b * cosine_distance(M, k))  # TODO: fix this!
-            # new_w = (1 - g) * w + g * w_hat
-            # print(w)
-            # w = tf.squeeze(w, 2)
+            g = tf.sigmoid(g)  # ?, 1
+            v = tf.tanh(v)  # ?, dim
+            b = tf.nn.softplus(b)  # ?, 1
+            w_hat = tf.nn.softmax(b * cosine_distance)  # ?, size_mem
+            new_w = (1 - g) * w + g * w_hat  # ?, size_mem
 
-            e.set_shape(w.get_shape())
-            f = w * e  # TODO: new_w here
-
-            # u = broadcast(w, 1, 1)
-            # [batch_size, 1, n_memory_slots]
-
-            # v = broadcast(v, 2, 1)
-            # [batch_size, memory_dim, 1]
-
-            v.set_shape([None, self._size_memory])
-            print(v)
-            print(w)
-            new_content = tf.batch_matmul(w * f, v, adj_y=True)
-            new_content.set_shape(w.get_shape())
-            new_M = M * tf.expand_dims(1 - f, axis=2) + tf.expand_dims(new_content, axis=2)
-
-            # new_M = (M * tf.sigmoid(g + self._forget_bias))
-            # new_h = tf.sigmoid(tf.matmul(x, ))
-            # new_h = self._activation(new_M) * tf.sigmoid(e)
-            # TODO: These are the wrong variables!
-
+            # M
+            f = tf.expand_dims(new_w * e, axis=1)  # ?, 1, size_mem
+            v.set_shape(h.get_shape())  # ?, dim
+            v = tf.expand_dims(v, axis=2)  # ?, dim, 1
+            new_content = tf.batch_matmul(v, f)  # ?, dim, size_mem
+            new_M = M * (1 - f) + new_content  # ?, dim, size_mem
             new_M = tf.reshape(new_M, [-1, self._size_memory * self._dim])
-            new_w = tf.reshape(w, [-1, self._size_memory]) # TODO: new_w
-            new_state = NTMStateTuple(new_M, new_h, new_w)
-            return new_h, new_state
+            new_w = tf.reshape(new_w, [-1, self._size_memory])  # TODO: new_w
+
+            return new_h, NTMStateTuple(new_M, new_h, new_w)
 
 
 def _get_concat_variable(name, shape, dtype, num_shards):

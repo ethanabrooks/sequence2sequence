@@ -20,11 +20,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="scratch_1.py" pinned="false" current-in-tab="true">
-            <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py">
+          <file leaf-file-name="rnn_cell.py" pinned="false" current-in-tab="true">
+            <entry file="file://$USER_HOME$/env/lib/python2.7/site-packages/tensorflow/python/ops/rnn_cell.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+                <state relative-caret-position="330">
+                  <caret line="45" column="10" lean-forward="false" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
                   <folding />
                 </state>
               </provider>
@@ -34,13 +34,13 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="em_cell.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/em_cell.py">
+          <file leaf-file-name="translate.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/translate.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="195" column="32" lean-forward="true" selection-start-line="195" selection-start-column="32" selection-end-line="195" selection-end-column="32" />
+                <state relative-caret-position="330">
+                  <caret line="163" column="0" lean-forward="true" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
                   <folding>
-                    <element signature="e#80#118#0" expanded="true" />
+                    <element signature="e#1288#1326#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -432,11 +432,16 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/em_cell.py</url>
-          <line>89</line>
+          <line>69</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/em_cell.py</url>
+          <line>162</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1531,146 +1536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/env/lib/python2.7/site-packages/tensorflow/python/ops/rnn_cell.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="247" column="10" lean-forward="false" selection-start-line="247" selection-start-column="10" selection-end-line="247" selection-end-column="10" />
-          <folding>
-            <marker date="1486527760000" expanded="true" signature="0:688" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="690:1110" ph="&quot;&quot;&quot;Module for constructing RNN Cells....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="1111:1868" ph="import ..." />
-            <marker date="1486527760000" expanded="true" signature="1924:2735" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="1927:2452" ph="&quot;&quot;&quot;Helper function that enables int or TensorShape shape specification....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="2543:2708" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="2760:6684" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="2763:4034" ph="&quot;&quot;&quot;Abstract object representing an RNN cell....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="4084:4886" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="4089:4837" ph="&quot;&quot;&quot;Run this RNN cell on inputs, starting from the given state....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="4923:5126" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="4928:5077" ph="&quot;&quot;&quot;size(s) of state(s) used by this cell....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="5164:5286" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="5330:6684" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="5335:5891" ph="&quot;&quot;&quot;Return zero-filled state tensor(s)....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="5961:6435" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="6031:6199" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="6445:6666" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="6715:7433" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="6816:6985" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="7022:7049" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="7087:7114" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="7164:7433" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="7459:8611" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="7599:7768" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="7805:7832" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="7870:7897" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="7947:8611" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="8061:8587" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="8113:8387" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="8430:8549" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="8725:9134" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="8728:8901" ph="&quot;&quot;&quot;Tuple used by LSTM Cells for `state_size`, `zero_state`, and output state....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="8950:9134" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="8999:9115" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="9166:11771" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="9169:9617" ph="&quot;&quot;&quot;Basic LSTM recurrent network cell....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="9738:10669" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="9743:10249" ph="&quot;&quot;&quot;Initialize the basic LSTM cell....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="10276:10422" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="10296:10415" ph="&quot;...&quot;" />
-            <marker date="1486527760000" expanded="true" signature="10706:10829" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="10867:10894" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="10944:11771" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="11048:11771" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="11831:12478" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="12215:12273" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="12539:13130" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="12629:12737" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="12900:13114" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="13157:20606" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="13160:13839" ph="&quot;&quot;&quot;Long short-term memory unit (LSTM) recurrent network cell....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="14144:16689" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="14149:15662" ph="&quot;&quot;&quot;Initialize the parameters for an LSTM cell....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="15689:15835" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="15709:15828" ph="&quot;...&quot;" />
-            <marker date="1486527760000" expanded="true" signature="16358:16521" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="16531:16689" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="16726:16754" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="16792:16821" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="16871:20606" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="16876:17851" ph="&quot;&quot;&quot;Run one step of LSTM....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="17999:18144" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="18452:20468" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="19071:19365" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="19396:19538" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="19550:19652" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="19691:19869" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="20055:20468" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="20284:20468" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="20648:22093" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="20651:20974" ph="&quot;&quot;&quot;Operator adding an output projection to the given cell....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="21016:21583" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="21021:21324" ph="&quot;&quot;&quot;Create a cell with output projection....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="21620:21653" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="21691:21720" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="21770:22093" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="22134:23459" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="22137:22414" ph="&quot;&quot;&quot;Operator adding an input projection to the given cell....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="22470:23013" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="22475:22760" ph="&quot;&quot;&quot;Create a cell with input projection....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="23050:23083" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="23121:23155" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="23205:23459" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="23492:25693" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="23663:25021" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="23668:24314" ph="&quot;&quot;&quot;Create a cell with added input and/or output dropout....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="24527:24648" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="24764:24887" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="25058:25091" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="25129:25163" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="25213:25693" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="25728:28313" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="25731:26028" ph="&quot;&quot;&quot;Operator adding input embedding to the given cell....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="26110:27103" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="26115:26650" ph="&quot;&quot;&quot;Create a cell with an added input embedding....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="26802:26955" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="26826:26916" ph="&quot;...&quot;" />
-            <marker date="1486527760000" expanded="true" signature="27140:27173" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="27211:27245" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="27295:28313" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="27396:28274" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="27451:28274" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="27647:27870" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="28344:30804" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="28460:29492" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="28465:29018" ph="&quot;&quot;&quot;Create a RNN cell composed sequentially of a number of RNNCells....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="29204:29492" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="29271:29492" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="29297:29423" ph="&quot;...&quot;" />
-            <marker date="1486527760000" expanded="true" signature="29529:29688" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="29726:29765" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="29815:30804" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="29941:30657" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="30073:30657" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="30119:30657" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="30154:30394" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="30198:30361" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="30410:30562" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="30835:32389" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="30912:32083" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="30917:31328" ph="&quot;&quot;&quot;Create a SlimRNNCell from a cell_fn....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="31786:31919" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="31952:32083" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="32120:32148" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="32186:32215" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="32265:32389" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="32457:34197" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="32460:33062" ph="&quot;&quot;&quot;Linear map: sum_i(args[i] * W[i]), where W[i] is a variable....&quot;&quot;&quot;" />
-            <marker date="1486527760000" expanded="true" signature="33376:33622" ph="..." />
-            <marker date="1486527760000" expanded="true" signature="33731:34172" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/env/lib/python2.7/site-packages/tensorflow/python/ops/gen_array_ops.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -2089,8 +1954,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/seq2seq_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="197" column="0" lean-forward="false" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
+        <state relative-caret-position="-1215">
+          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
           <folding>
             <marker date="1486739513000" expanded="true" signature="0:688" ph="..." />
             <marker date="1486739513000" expanded="true" signature="753:1124" ph="import ..." />
@@ -2149,59 +2014,54 @@
     <entry file="file://$PROJECT_DIR$/translate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="303" column="9" lean-forward="false" selection-start-line="303" selection-start-column="9" selection-end-line="303" selection-end-column="9" />
+          <caret line="163" column="0" lean-forward="true" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
           <folding>
-            <marker date="1486613289000" expanded="true" signature="0:688" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="690:1287" ph="&quot;&quot;&quot;Binary for training translation models and decoding from them....&quot;&quot;&quot;" />
-            <marker date="1486613289000" expanded="false" signature="1288:1621" ph="import ..." />
-            <marker date="1486613289000" expanded="true" signature="3399:3533" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="3642:5530" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="3647:4458" ph="&quot;&quot;&quot;Read data from source and target files and put into buckets....&quot;&quot;&quot;" />
-            <marker date="1486613289000" expanded="true" signature="4559:5510" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="4626:5510" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="4804:5510" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="4875:4976" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="5235:5430" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="5323:5430" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="5573:6460" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="6180:6324" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="6334:6443" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="6475:11445" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="6668:7266" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="6890:6982" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="7276:7519" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="7551:11445" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="8141:8357" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="8389:8511" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="8659:11445" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="8672:8828" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="8915:9032" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="9703:11445" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="9868:9959" ph="&quot;...&quot;" />
-            <marker date="1486613289000" expanded="true" signature="9963:10070" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="10747:11410" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="10800:10904" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="11461:13756" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="11492:13756" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="12234:13756" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="12521:12629" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="12569:12629" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="13775:14699" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="13844:14699" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="14230:14354" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="14383:14699" ph="..." />
-            <marker date="1486613289000" expanded="true" signature="14714:14824" ph="..." />
+            <element signature="e#1288#1326#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/em_cell.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="195" column="32" lean-forward="true" selection-start-line="195" selection-start-column="32" selection-end-line="195" selection-end-column="32" />
+        <state relative-caret-position="225">
+          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
           <folding>
-            <element signature="e#80#118#0" expanded="true" />
+            <marker date="1486772815000" expanded="true" signature="0:79" ph="&quot;&quot;&quot;Module for constructing RNN Cells....&quot;&quot;&quot;" />
+            <marker date="1486772815000" expanded="true" signature="80:296" ph="import ..." />
+            <marker date="1486772815000" expanded="true" signature="411:835" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="416:548" ph="&quot;&quot;&quot;Tuple used by LSTM Cells for `state_size`, `zero_state`, and output state....&quot;&quot;&quot;" />
+            <marker date="1486772815000" expanded="true" signature="603:835" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="674:812" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="861:5333" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="866:1314" ph="&quot;&quot;&quot;Basic LSTM recurrent network cell....&quot;&quot;&quot;" />
+            <marker date="1486772815000" expanded="true" signature="1470:1910" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="1479:1762" ph="&quot;&quot;&quot;Initialize the basic LSTM cell....&quot;&quot;&quot;" />
+            <marker date="1486772815000" expanded="true" signature="1951:2099" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="2141:2166" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="2218:5333" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="2280:5333" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="2723:2910" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="2940:3301" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="3391:3564" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="3681:3971" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="5393:6062" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="5791:5859" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="6123:6758" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="6217:6333" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="6504:6740" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="6826:8665" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="6831:7433" ph="&quot;&quot;&quot;Linear map: sum_i(args[i] * W[i]), where W[i] is a variable....&quot;&quot;&quot;" />
+            <marker date="1486772815000" expanded="true" signature="7773:8049" ph="..." />
+            <marker date="1486772815000" expanded="true" signature="8164:8638" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/env/lib/python2.7/site-packages/tensorflow/python/ops/rnn_cell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="45" column="10" lean-forward="false" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>

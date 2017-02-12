@@ -125,36 +125,45 @@ class NTMCell(RNNCell):
                 )
 
             new_h = tf.sigmoid(tf.matmul(concat, weights[0]) + biases[0])
-            concat = tf.matmul(new_h, weights[1]) + biases[1]
+            new_h = tf.verify_tensor_all_finite(new_h, 'new_h')
 
-            variables = tf.split_v(concat, output_dims, split_dim=1)
-            # for var, dim in zip(variables, output_dims):
-            #     var.set_shape([None, dim])
-            g, k, b, e, v = variables
+            concat = tf.matmul(new_h, weights[1]) + biases[1]
+            concat = tf.verify_tensor_all_finite(concat, 'concat')
+
+            g, k, b, e, v = tf.split_v(concat, output_dims, split_dim=1)
 
             # cosine distances
             k = tf.expand_dims(
                 tf.nn.l2_normalize(k, dim=1), axis=2
             )  # ?, dim, 1
+            k = tf.verify_tensor_all_finite(k, 'k')
 
             M_hat = tf.nn.l2_normalize(M, dim=1)  # ?, dim, size_mem
+            M_hat = tf.verify_tensor_all_finite(M_hat, 'M_hat')
 
             cosine_distance = tf.squeeze(
                 tf.batch_matmul(k, M_hat, adj_x=True), axis=1
             )  # ?, size_mem
+            cosine_distance = tf.verify_tensor_all_finite(cosine_distance, 'cosine_distance')
 
             # w
             g = tf.sigmoid(g)  # ?, 1
             v = tf.tanh(v)  # ?, dim
             b = tf.nn.softplus(b)  # ?, 1
+            b = tf.verify_tensor_all_finite(b, 'b')
             w_hat = tf.nn.softmax(b * cosine_distance)  # ?, size_mem
+            w_hat = tf.verify_tensor_all_finite(w_hat, 'w_hat')
             new_w = (1 - g) * w + g * w_hat  # ?, size_mem
+            new_w = tf.verify_tensor_all_finite(new_w, 'new_w')
 
             # M
             f = tf.expand_dims(new_w * e, axis=1)  # ?, 1, size_mem
+            f = tf.verify_tensor_all_finite(f, 'f')
             v = tf.expand_dims(v, axis=2)  # ?, dim, 1
             new_content = tf.batch_matmul(v, f)  # ?, dim, size_mem
+            new_content = tf.verify_tensor_all_finite(new_content, 'new_content')
             new_M = M * (1 - f) + new_content * f  # ?, dim, size_mem
+            new_M = tf.verify_tensor_all_finite(new_M, 'new_M')
             new_M = tf.reshape(new_M, [-1, self._size_memory * self._dim])
 
             return new_h, NTMStateTuple(new_M, new_h, new_w)

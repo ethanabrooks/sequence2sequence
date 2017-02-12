@@ -98,20 +98,11 @@ class NTMCell(RNNCell):
             }
 
             output_dims = [
-                # g weight_interpolation
-                1,
-
-                # k = memory_key
-                input_dims[M],
-
-                # b = read_sharpness
-                1,
-
-                # e = erase_vector
-                self._size_memory,
-
-                # v = new memory vector
-                input_dims[M],
+                1,  # g weight_interpolation
+                input_dims[M],  # k = memory_key
+                1,  # b = read_sharpness
+                self._size_memory,  # e = erase_vector
+                input_dims[M],  # v = new memory vector
             ]
 
             total_variable_dim = sum(output_dims)
@@ -165,7 +156,6 @@ class NTMCell(RNNCell):
             new_content = tf.batch_matmul(v, f)  # ?, dim, size_mem
             new_M = M * (1 - f) + new_content * f  # ?, dim, size_mem
             new_M = tf.reshape(new_M, [-1, self._size_memory * self._dim])
-            # new_w = tf.reshape(new_w, [-1, self._size_memory]
 
             return new_h, NTMStateTuple(new_M, new_h, new_w)
 

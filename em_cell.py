@@ -97,24 +97,15 @@ class NTMCell(RNNCell):
                 h: self._dim
             }
 
-            output_dims = {
-                # weight_interpolation
-                'g': input_dims[M],
+            output_dims = [
+                1,  # g weight_interpolation
+                input_dims[M],  # k = memory_key
+                1,  # b = read_sharpness
+                self._size_memory,  # e = erase_vector
+                input_dims[M],  # v = new memory vector
+            ]
 
-                # memory_key
-                'k': input_dims[M],
-
-                # read_sharpness
-                'b': 1,
-
-                # erase_vector
-                'e': self._size_memory,
-
-                # new memory vector
-                'v': self._size_memory,
-            }
-
-            total_variable_dim = sum(output_dims.values())
+            total_variable_dim = sum(output_dims)
 
             weight_dims = [
                 # (in_size, out_size)
@@ -136,7 +127,10 @@ class NTMCell(RNNCell):
             new_h = tf.sigmoid(tf.matmul(concat, weights[0]) + biases[0])
             concat = tf.matmul(new_h, weights[1]) + biases[1]
 
-            g, k, b, e, v = tf.split_v(concat, output_dims.values(), split_dim=1)
+            variables = tf.split_v(concat, output_dims, split_dim=1)
+            # for var, dim in zip(variables, output_dims):
+            #     var.set_shape([None, dim])
+            g, k, b, e, v = variables
 
             # cosine distances
             k = tf.expand_dims(
@@ -147,7 +141,7 @@ class NTMCell(RNNCell):
 
             cosine_distance = tf.squeeze(
                 tf.batch_matmul(k, M_hat, adj_x=True), axis=1
-            )  # ?, 8
+            )  # ?, size_mem
 
             # w
             g = tf.sigmoid(g)  # ?, 1
@@ -158,12 +152,10 @@ class NTMCell(RNNCell):
 
             # M
             f = tf.expand_dims(new_w * e, axis=1)  # ?, 1, size_mem
-            v.set_shape(h.get_shape())  # ?, dim
             v = tf.expand_dims(v, axis=2)  # ?, dim, 1
             new_content = tf.batch_matmul(v, f)  # ?, dim, size_mem
-            new_M = M * (1 - f) + new_content  # ?, dim, size_mem
+            new_M = M * (1 - f) + new_content * f  # ?, dim, size_mem
             new_M = tf.reshape(new_M, [-1, self._size_memory * self._dim])
-            new_w = tf.reshape(new_w, [-1, self._size_memory])  # TODO: new_w
 
             return new_h, NTMStateTuple(new_M, new_h, new_w)
 

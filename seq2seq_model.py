@@ -186,11 +186,6 @@ class Seq2SeqModel(object):
                         for output in self.outputs[b]
                         ]
         else:
-            # print('model_with_buckets:')
-            # print('encoder_inputs: ', end='')
-            # print(self.encoder_inputs)
-            # print('decoder_inputs: ', end='')
-            # print(self.decoder_inputs)
             self.outputs, self.losses = tf.nn.seq2seq.model_with_buckets(
                 self.encoder_inputs, self.decoder_inputs,
                 targets, self.target_weights,

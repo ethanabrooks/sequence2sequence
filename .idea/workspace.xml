@@ -23,13 +23,13 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="em_cell.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/em_cell.py">
+          <file leaf-file-name="seq2seq_model.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/seq2seq_model.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="630">
-                  <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+                <state relative-caret-position="360">
+                  <caret line="131" column="31" lean-forward="false" selection-start-line="131" selection-start-column="31" selection-end-line="131" selection-end-column="31" />
                   <folding>
-                    <element signature="e#80#118#0" expanded="true" />
+                    <element signature="e#753#791#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -39,12 +39,14 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/test.py">
+          <file leaf-file-name="em_cell.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/em_cell.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-                  <folding />
+                <state relative-caret-position="510">
+                  <caret line="159" column="28" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
+                  <folding>
+                    <element signature="e#80#118#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -81,9 +83,9 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py" />
         <option value="$PROJECT_DIR$/translate.py" />
-        <option value="$PROJECT_DIR$/seq2seq_model.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/em_cell.py" />
+        <option value="$PROJECT_DIR$/seq2seq_model.py" />
       </list>
     </option>
   </component>
@@ -153,7 +155,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.translate">
     <configuration default="false" name="em_cell" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -205,24 +207,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="translate" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="HOME" value="/Users/ethan" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="s2s" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/translate.py" />
-      <option name="PARAMETERS" value="--data_dir ~/data --max_train_data_size 10" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -237,6 +221,24 @@
       <module name="s2s" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="translate" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="HOME" value="/Users/ethan" />
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="s2s" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/translate.py" />
+      <option name="PARAMETERS" value="--data_dir ~/data --max_train_data_size 100" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
@@ -378,13 +380,13 @@
       <item index="0" class="java.lang.String" itemvalue="Python.em_cell" />
       <item index="1" class="java.lang.String" itemvalue="Python.scratch" />
       <item index="2" class="java.lang.String" itemvalue="Python.scratch_1" />
-      <item index="3" class="java.lang.String" itemvalue="Python.translate" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.test" />
+      <item index="4" class="java.lang.String" itemvalue="Python.translate" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.translate" />
+        <item index="0" class="java.lang.String" itemvalue="Python.translate" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test" />
         <item index="2" class="java.lang.String" itemvalue="Python.scratch_1" />
         <item index="3" class="java.lang.String" itemvalue="Python.scratch" />
         <item index="4" class="java.lang.String" itemvalue="Python.em_cell" />
@@ -425,18 +427,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34624413" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50628364" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39788732" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34624413" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39788732" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -471,7 +473,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/em_cell.py</url>
-          <line>155</line>
+          <line>163</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
@@ -527,6 +529,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="174" column="16" lean-forward="false" selection-start-line="174" selection-start-column="16" selection-end-line="174" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -577,6 +580,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="202" column="35" lean-forward="false" selection-start-line="202" selection-start-column="35" selection-end-line="202" selection-end-column="35" />
+          <folding>
+            <element signature="e#753#791#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -584,6 +590,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="193" column="4" lean-forward="false" selection-start-line="193" selection-start-column="4" selection-end-line="193" selection-end-column="4" />
+          <folding>
+            <marker date="1486862000000" expanded="true" signature="0:688" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="690:1287" ph="&quot;&quot;&quot;Binary for training translation models and decoding from them....&quot;&quot;&quot;" />
+            <marker date="1486862000000" expanded="false" signature="1288:1621" ph="import ..." />
+            <marker date="1486862000000" expanded="true" signature="3399:3533" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="3642:5530" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="3647:4458" ph="&quot;&quot;&quot;Read data from source and target files and put into buckets....&quot;&quot;&quot;" />
+            <marker date="1486862000000" expanded="true" signature="4559:5510" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="4626:5510" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="4804:5510" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="4875:4976" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="5235:5430" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="5323:5430" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="5573:6460" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="6180:6324" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="6334:6443" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="6475:11445" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="6668:7266" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="6890:6982" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="7276:7519" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="7551:11445" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="8141:8357" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="8389:8511" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="8659:11445" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="8672:8828" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="8915:9032" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="9703:11445" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="9868:9959" ph="&quot;...&quot;" />
+            <marker date="1486862000000" expanded="true" signature="9963:10070" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="10747:11410" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="10800:10904" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="11461:13756" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="11492:13756" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="12234:13756" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="12521:12629" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="12569:12629" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="13775:14699" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="13844:14699" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="14230:14354" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="14383:14699" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="14714:14824" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -706,6 +754,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
           <caret line="1142" column="22" lean-forward="true" selection-start-line="1142" selection-start-column="22" selection-end-line="1142" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -766,13 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/em_cell_old.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="174" column="16" lean-forward="false" selection-start-line="174" selection-start-column="16" selection-end-line="174" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/Carbon/Scrap.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -802,24 +844,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/translate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="70" column="30" lean-forward="true" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/env/lib/python2.7/site-packages/tensorflow/python/ops/gradients_impl.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="499" column="0" lean-forward="false" selection-start-line="499" selection-start-column="0" selection-end-line="499" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/seq2seq_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="154" column="0" lean-forward="true" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -830,18 +858,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/em_cell_old.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="174" column="16" lean-forward="false" selection-start-line="174" selection-start-column="16" selection-end-line="174" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="195">
+          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding>
+            <marker date="1486847852000" expanded="true" signature="87:201" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seq2seq_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="131" column="31" lean-forward="false" selection-start-line="131" selection-start-column="31" selection-end-line="131" selection-end-column="31" />
+          <folding>
+            <element signature="e#753#791#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="52" column="16" lean-forward="false" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+          <folding>
+            <marker date="1486862000000" expanded="true" signature="0:688" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="690:1287" ph="&quot;&quot;&quot;Binary for training translation models and decoding from them....&quot;&quot;&quot;" />
+            <marker date="1486862000000" expanded="false" signature="1288:1621" ph="import ..." />
+            <marker date="1486862000000" expanded="true" signature="3399:3533" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="3642:5530" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="3647:4458" ph="&quot;&quot;&quot;Read data from source and target files and put into buckets....&quot;&quot;&quot;" />
+            <marker date="1486862000000" expanded="true" signature="4559:5510" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="4626:5510" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="4804:5510" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="4875:4976" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="5235:5430" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="5323:5430" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="5573:6460" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="6180:6324" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="6334:6443" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="6475:11445" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="6668:7266" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="6890:6982" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="7276:7519" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="7551:11445" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="8141:8357" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="8389:8511" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="8659:11445" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="8672:8828" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="8915:9032" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="9703:11445" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="9868:9959" ph="&quot;...&quot;" />
+            <marker date="1486862000000" expanded="true" signature="9963:10070" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="10747:11410" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="10800:10904" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="11461:13756" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="11492:13756" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="12234:13756" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="12521:12629" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="12569:12629" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="13775:14699" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="13844:14699" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="14230:14354" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="14383:14699" ph="..." />
+            <marker date="1486862000000" expanded="true" signature="14714:14824" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/em_cell.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="159" column="28" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="28" />
           <folding>
             <element signature="e#80#118#0" expanded="true" />
           </folding>

@@ -1,0 +1,474 @@
+Preparing WMT data in data
+Creating 3 layers of 1024 units.
+Created model with fresh parameters.
+Reading development and training data (limit: 0).
+  reading data line 100000
+  reading data line 200000
+  reading data line 300000
+  reading data line 400000
+  reading data line 500000
+  reading data line 600000
+  reading data line 700000
+  reading data line 800000
+  reading data line 900000
+  reading data line 1000000
+  reading data line 1100000
+  reading data line 1200000
+  reading data line 1300000
+  reading data line 1400000
+  reading data line 1500000
+  reading data line 1600000
+  reading data line 1700000
+  reading data line 1800000
+  reading data line 1900000
+  reading data line 2000000
+  reading data line 2100000
+  reading data line 2200000
+  reading data line 2300000
+  reading data line 2400000
+  reading data line 2500000
+  reading data line 2600000
+  reading data line 2700000
+  reading data line 2800000
+  reading data line 2900000
+  reading data line 3000000
+  reading data line 3100000
+  reading data line 3200000
+  reading data line 3300000
+  reading data line 3400000
+  reading data line 3500000
+  reading data line 3600000
+  reading data line 3700000
+  reading data line 3800000
+  reading data line 3900000
+  reading data line 4000000
+  reading data line 4100000
+  reading data line 4200000
+  reading data line 4300000
+  reading data line 4400000
+  reading data line 4500000
+  reading data line 4600000
+  reading data line 4700000
+  reading data line 4800000
+  reading data line 4900000
+  reading data line 5000000
+  reading data line 5100000
+  reading data line 5200000
+  reading data line 5300000
+  reading data line 5400000
+  reading data line 5500000
+  reading data line 5600000
+  reading data line 5700000
+  reading data line 5800000
+  reading data line 5900000
+  reading data line 6000000
+  reading data line 6100000
+  reading data line 6200000
+  reading data line 6300000
+  reading data line 6400000
+  reading data line 6500000
+  reading data line 6600000
+  reading data line 6700000
+  reading data line 6800000
+  reading data line 6900000
+  reading data line 7000000
+  reading data line 7100000
+  reading data line 7200000
+  reading data line 7300000
+  reading data line 7400000
+  reading data line 7500000
+  reading data line 7600000
+  reading data line 7700000
+  reading data line 7800000
+  reading data line 7900000
+  reading data line 8000000
+  reading data line 8100000
+  reading data line 8200000
+  reading data line 8300000
+  reading data line 8400000
+  reading data line 8500000
+  reading data line 8600000
+  reading data line 8700000
+  reading data line 8800000
+  reading data line 8900000
+  reading data line 9000000
+  reading data line 9100000
+  reading data line 9200000
+  reading data line 9300000
+  reading data line 9400000
+  reading data line 9500000
+  reading data line 9600000
+  reading data line 9700000
+  reading data line 9800000
+  reading data line 9900000
+  reading data line 10000000
+  reading data line 10100000
+  reading data line 10200000
+  reading data line 10300000
+  reading data line 10400000
+  reading data line 10500000
+  reading data line 10600000
+  reading data line 10700000
+  reading data line 10800000
+  reading data line 10900000
+  reading data line 11000000
+  reading data line 11100000
+  reading data line 11200000
+  reading data line 11300000
+  reading data line 11400000
+  reading data line 11500000
+  reading data line 11600000
+  reading data line 11700000
+  reading data line 11800000
+  reading data line 11900000
+  reading data line 12000000
+  reading data line 12100000
+  reading data line 12200000
+  reading data line 12300000
+  reading data line 12400000
+  reading data line 12500000
+  reading data line 12600000
+  reading data line 12700000
+  reading data line 12800000
+  reading data line 12900000
+  reading data line 13000000
+  reading data line 13100000
+  reading data line 13200000
+  reading data line 13300000
+  reading data line 13400000
+  reading data line 13500000
+  reading data line 13600000
+  reading data line 13700000
+  reading data line 13800000
+  reading data line 13900000
+  reading data line 14000000
+  reading data line 14100000
+  reading data line 14200000
+  reading data line 14300000
+  reading data line 14400000
+  reading data line 14500000
+  reading data line 14600000
+  reading data line 14700000
+  reading data line 14800000
+  reading data line 14900000
+  reading data line 15000000
+  reading data line 15100000
+  reading data line 15200000
+  reading data line 15300000
+  reading data line 15400000
+  reading data line 15500000
+  reading data line 15600000
+  reading data line 15700000
+  reading data line 15800000
+  reading data line 15900000
+  reading data line 16000000
+  reading data line 16100000
+  reading data line 16200000
+  reading data line 16300000
+  reading data line 16400000
+  reading data line 16500000
+  reading data line 16600000
+  reading data line 16700000
+  reading data line 16800000
+  reading data line 16900000
+  reading data line 17000000
+  reading data line 17100000
+  reading data line 17200000
+  reading data line 17300000
+  reading data line 17400000
+  reading data line 17500000
+  reading data line 17600000
+  reading data line 17700000
+  reading data line 17800000
+  reading data line 17900000
+  reading data line 18000000
+  reading data line 18100000
+  reading data line 18200000
+  reading data line 18300000
+  reading data line 18400000
+  reading data line 18500000
+  reading data line 18600000
+  reading data line 18700000
+  reading data line 18800000
+  reading data line 18900000
+  reading data line 19000000
+  reading data line 19100000
+  reading data line 19200000
+  reading data line 19300000
+  reading data line 19400000
+  reading data line 19500000
+  reading data line 19600000
+  reading data line 19700000
+  reading data line 19800000
+  reading data line 19900000
+  reading data line 20000000
+  reading data line 20100000
+  reading data line 20200000
+  reading data line 20300000
+  reading data line 20400000
+  reading data line 20500000
+  reading data line 20600000
+  reading data line 20700000
+  reading data line 20800000
+  reading data line 20900000
+  reading data line 21000000
+  reading data line 21100000
+  reading data line 21200000
+  reading data line 21300000
+  reading data line 21400000
+  reading data line 21500000
+  reading data line 21600000
+  reading data line 21700000
+  reading data line 21800000
+  reading data line 21900000
+  reading data line 22000000
+  reading data line 22100000
+  reading data line 22200000
+  reading data line 22300000
+  reading data line 22400000
+  reading data line 22500000
+global step 200 learning rate 0.5000 step-time 26.73 perplexity 19337.77
+  eval: bucket 0 perplexity 164.97
+  eval: bucket 1 perplexity 243.49
+  eval: bucket 2 perplexity 311.02
+  eval: bucket 3 perplexity 356.17
+global step 400 learning rate 0.5000 step-time 20.70 perplexity 469.85
+  eval: bucket 0 perplexity 118.79
+  eval: bucket 1 perplexity 192.85
+  eval: bucket 2 perplexity 220.04
+  eval: bucket 3 perplexity 255.34
+global step 600 learning rate 0.5000 step-time 17.58 perplexity 394.64
+  eval: bucket 0 perplexity 287.73
+  eval: bucket 1 perplexity 305.49
+  eval: bucket 2 perplexity 260.64
+  eval: bucket 3 perplexity 237.40
+global step 800 learning rate 0.5000 step-time 17.76 perplexity 284.66
+  eval: bucket 0 perplexity 197.79
+  eval: bucket 1 perplexity 194.52
+  eval: bucket 2 perplexity 215.89
+  eval: bucket 3 perplexity 213.97
+global step 1000 learning rate 0.5000 step-time 18.27 perplexity 210.19
+  eval: bucket 0 perplexity 184.85
+  eval: bucket 1 perplexity 186.20
+  eval: bucket 2 perplexity 183.54
+  eval: bucket 3 perplexity 196.06
+global step 1200 learning rate 0.5000 step-time 16.46 perplexity 276.62
+  eval: bucket 0 perplexity 135.27
+  eval: bucket 1 perplexity 186.28
+  eval: bucket 2 perplexity 188.18
+  eval: bucket 3 perplexity 199.12
+global step 1400 learning rate 0.5000 step-time 21.12 perplexity 204.55
+  eval: bucket 0 perplexity 171.75
+  eval: bucket 1 perplexity 252.72
+  eval: bucket 2 perplexity 231.17
+  eval: bucket 3 perplexity 237.01
+global step 1600 learning rate 0.5000 step-time 17.94 perplexity 202.99
+  eval: bucket 0 perplexity 62.52
+  eval: bucket 1 perplexity 96.87
+  eval: bucket 2 perplexity 143.36
+  eval: bucket 3 perplexity 173.83
+global step 1800 learning rate 0.5000 step-time 21.52 perplexity 162.13
+  eval: bucket 0 perplexity 66.12
+  eval: bucket 1 perplexity 90.27
+  eval: bucket 2 perplexity 130.07
+  eval: bucket 3 perplexity 162.27
+global step 2000 learning rate 0.5000 step-time 23.29 perplexity 168.32
+  eval: bucket 0 perplexity 67.63
+  eval: bucket 1 perplexity 91.19
+  eval: bucket 2 perplexity 122.98
+  eval: bucket 3 perplexity 155.47
+global step 2200 learning rate 0.5000 step-time 22.77 perplexity 163.09
+  eval: bucket 0 perplexity 1158.50
+  eval: bucket 1 perplexity 266.58
+  eval: bucket 2 perplexity 294.44
+  eval: bucket 3 perplexity 310.65
+global step 2400 learning rate 0.5000 step-time 23.97 perplexity 190.42
+  eval: bucket 0 perplexity 189.17
+  eval: bucket 1 perplexity 140.96
+  eval: bucket 2 perplexity 178.47
+  eval: bucket 3 perplexity 213.05
+global step 2600 learning rate 0.4950 step-time 20.88 perplexity 153.99
+  eval: bucket 0 perplexity 573.22
+  eval: bucket 1 perplexity 287.01
+  eval: bucket 2 perplexity 253.08
+  eval: bucket 3 perplexity 223.56
+global step 2800 learning rate 0.4950 step-time 17.71 perplexity 162.43
+  eval: bucket 0 perplexity 143.37
+  eval: bucket 1 perplexity 103.85
+  eval: bucket 2 perplexity 126.72
+  eval: bucket 3 perplexity 155.11
+global step 3000 learning rate 0.4950 step-time 18.86 perplexity 165.54
+  eval: bucket 0 perplexity 50.95
+  eval: bucket 1 perplexity 74.64
+  eval: bucket 2 perplexity 91.81
+  eval: bucket 3 perplexity 132.97
+global step 3200 learning rate 0.4950 step-time 19.74 perplexity 131.12
+  eval: bucket 0 perplexity 52.08
+  eval: bucket 1 perplexity 63.61
+  eval: bucket 2 perplexity 103.54
+  eval: bucket 3 perplexity 130.30
+global step 3400 learning rate 0.4950 step-time 22.94 perplexity 148.82
+  eval: bucket 0 perplexity 44.83
+  eval: bucket 1 perplexity 64.48
+  eval: bucket 2 perplexity 96.82
+  eval: bucket 3 perplexity 116.19
+global step 3600 learning rate 0.4950 step-time 24.66 perplexity 106.34
+  eval: bucket 0 perplexity 41.07
+  eval: bucket 1 perplexity 53.86
+  eval: bucket 2 perplexity 72.11
+  eval: bucket 3 perplexity 85.98
+global step 3800 learning rate 0.4950 step-time 26.07 perplexity 88.95
+  eval: bucket 0 perplexity 48.83
+  eval: bucket 1 perplexity 43.65
+  eval: bucket 2 perplexity 67.59
+  eval: bucket 3 perplexity 81.58
+global step 4000 learning rate 0.4950 step-time 24.87 perplexity 78.26
+  eval: bucket 0 perplexity 37.97
+  eval: bucket 1 perplexity 35.16
+  eval: bucket 2 perplexity 55.94
+  eval: bucket 3 perplexity 74.68
+global step 4200 learning rate 0.4950 step-time 24.55 perplexity 72.46
+  eval: bucket 0 perplexity 67.06
+  eval: bucket 1 perplexity 36.61
+  eval: bucket 2 perplexity 48.97
+  eval: bucket 3 perplexity 67.73
+global step 4400 learning rate 0.4950 step-time 23.63 perplexity 66.70
+  eval: bucket 0 perplexity 39.46
+  eval: bucket 1 perplexity 33.26
+  eval: bucket 2 perplexity 49.88
+  eval: bucket 3 perplexity 73.69
+global step 4600 learning rate 0.4950 step-time 23.07 perplexity 67.55
+  eval: bucket 0 perplexity 128.40
+  eval: bucket 1 perplexity 150.65
+  eval: bucket 2 perplexity 180.13
+  eval: bucket 3 perplexity 176.61
+global step 4800 learning rate 0.4950 step-time 22.65 perplexity 72.82
+  eval: bucket 0 perplexity 33.95
+  eval: bucket 1 perplexity 34.30
+  eval: bucket 2 perplexity 43.46
+  eval: bucket 3 perplexity 57.58
+global step 5000 learning rate 0.4901 step-time 23.52 perplexity 59.92
+  eval: bucket 0 perplexity 31.72
+  eval: bucket 1 perplexity 36.57
+  eval: bucket 2 perplexity 49.10
+  eval: bucket 3 perplexity 60.71
+global step 5200 learning rate 0.4901 step-time 20.98 perplexity 56.05
+  eval: bucket 0 perplexity 29.51
+  eval: bucket 1 perplexity 27.26
+  eval: bucket 2 perplexity 45.52
+  eval: bucket 3 perplexity 59.96
+global step 5400 learning rate 0.4901 step-time 18.63 perplexity 68.11
+  eval: bucket 0 perplexity 25.35
+  eval: bucket 1 perplexity 29.35
+  eval: bucket 2 perplexity 47.33
+  eval: bucket 3 perplexity 60.58
+global step 5600 learning rate 0.4901 step-time 14.62 perplexity 53.96
+  eval: bucket 0 perplexity 39.09
+  eval: bucket 1 perplexity 28.15
+  eval: bucket 2 perplexity 45.70
+  eval: bucket 3 perplexity 60.16
+global step 5800 learning rate 0.4901 step-time 14.23 perplexity 50.95
+  eval: bucket 0 perplexity 37.85
+  eval: bucket 1 perplexity 33.99
+  eval: bucket 2 perplexity 46.10
+  eval: bucket 3 perplexity 66.84
+global step 6000 learning rate 0.4901 step-time 18.83 perplexity 49.57
+  eval: bucket 0 perplexity 27.43
+  eval: bucket 1 perplexity 22.71
+  eval: bucket 2 perplexity 41.20
+  eval: bucket 3 perplexity 53.39
+global step 6200 learning rate 0.4901 step-time 20.45 perplexity 47.65
+  eval: bucket 0 perplexity 26.60
+  eval: bucket 1 perplexity 27.12
+  eval: bucket 2 perplexity 39.68
+  eval: bucket 3 perplexity 49.22
+global step 6400 learning rate 0.4901 step-time 19.32 perplexity 46.04
+  eval: bucket 0 perplexity 24.37
+  eval: bucket 1 perplexity 26.39
+  eval: bucket 2 perplexity 37.15
+  eval: bucket 3 perplexity 43.24
+global step 6600 learning rate 0.4901 step-time 18.35 perplexity 43.97
+  eval: bucket 0 perplexity 32.38
+  eval: bucket 1 perplexity 26.55
+  eval: bucket 2 perplexity 36.58
+  eval: bucket 3 perplexity 49.49
+global step 6800 learning rate 0.4901 step-time 18.92 perplexity 58.51
+  eval: bucket 0 perplexity 24.39
+  eval: bucket 1 perplexity 26.71
+  eval: bucket 2 perplexity 37.69
+  eval: bucket 3 perplexity 43.96
+global step 7000 learning rate 0.4851 step-time 19.47 perplexity 43.58
+  eval: bucket 0 perplexity 22.65
+  eval: bucket 1 perplexity 22.45
+  eval: bucket 2 perplexity 31.38
+  eval: bucket 3 perplexity 42.47
+global step 7200 learning rate 0.4851 step-time 20.13 perplexity 42.63
+  eval: bucket 0 perplexity 22.31
+  eval: bucket 1 perplexity 24.47
+  eval: bucket 2 perplexity 31.67
+  eval: bucket 3 perplexity 43.45
+global step 7400 learning rate 0.4851 step-time 19.22 perplexity 39.35
+  eval: bucket 0 perplexity 20.63
+  eval: bucket 1 perplexity 24.53
+  eval: bucket 2 perplexity 30.52
+  eval: bucket 3 perplexity 42.41
+global step 7600 learning rate 0.4851 step-time 19.27 perplexity 38.74
+  eval: bucket 0 perplexity 20.91
+  eval: bucket 1 perplexity 23.41
+  eval: bucket 2 perplexity 39.30
+  eval: bucket 3 perplexity 42.99
+global step 7800 learning rate 0.4851 step-time 19.70 perplexity 37.52
+  eval: bucket 0 perplexity 20.61
+  eval: bucket 1 perplexity 19.21
+  eval: bucket 2 perplexity 32.69
+  eval: bucket 3 perplexity 39.20
+global step 8000 learning rate 0.4851 step-time 19.72 perplexity 36.78
+  eval: bucket 0 perplexity 22.47
+  eval: bucket 1 perplexity 23.84
+  eval: bucket 2 perplexity 33.40
+  eval: bucket 3 perplexity 39.75
+global step 8200 learning rate 0.4851 step-time 19.41 perplexity 35.43
+  eval: bucket 0 perplexity 23.31
+  eval: bucket 1 perplexity 20.29
+  eval: bucket 2 perplexity 30.95
+  eval: bucket 3 perplexity 40.74
+global step 8400 learning rate 0.4851 step-time 18.86 perplexity 34.51
+  eval: bucket 0 perplexity 18.79
+  eval: bucket 1 perplexity 21.85
+  eval: bucket 2 perplexity 30.74
+  eval: bucket 3 perplexity 35.06
+global step 8600 learning rate 0.4851 step-time 19.87 perplexity 33.92
+  eval: bucket 0 perplexity 13.98
+  eval: bucket 1 perplexity 19.25
+  eval: bucket 2 perplexity 27.34
+  eval: bucket 3 perplexity 34.15
+global step 8800 learning rate 0.4851 step-time 18.93 perplexity 32.91
+  eval: bucket 0 perplexity 15.87
+  eval: bucket 1 perplexity 18.55
+  eval: bucket 2 perplexity 25.13
+  eval: bucket 3 perplexity 38.92
+global step 9000 learning rate 0.4851 step-time 19.71 perplexity 32.43
+  eval: bucket 0 perplexity 19.97
+  eval: bucket 1 perplexity 21.35
+  eval: bucket 2 perplexity 29.36
+  eval: bucket 3 perplexity 34.38
+global step 9200 learning rate 0.4851 step-time 20.24 perplexity 32.28
+  eval: bucket 0 perplexity 12.81
+  eval: bucket 1 perplexity 17.90
+  eval: bucket 2 perplexity 26.16
+  eval: bucket 3 perplexity 33.12
+global step 9400 learning rate 0.4851 step-time 19.99 perplexity 30.89
+  eval: bucket 0 perplexity 17.34
+  eval: bucket 1 perplexity 18.62
+  eval: bucket 2 perplexity 25.49
+  eval: bucket 3 perplexity 30.74
+global step 9600 learning rate 0.4851 step-time 20.11 perplexity 29.92
+  eval: bucket 0 perplexity 17.39
+  eval: bucket 1 perplexity 16.45
+  eval: bucket 2 perplexity 27.36
+  eval: bucket 3 perplexity 36.05
+global step 9800 learning rate 0.4851 step-time 19.00 perplexity 29.25
+  eval: bucket 0 perplexity 15.47
+  eval: bucket 1 perplexity 19.22
+  eval: bucket 2 perplexity 25.11
+  eval: bucket 3 perplexity 31.59

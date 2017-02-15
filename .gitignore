@@ -1,3 +1,6 @@
 env
 data_utils.pyc em_cell.pyc seq2seq_model.pyc
 .idea
+data
+train
+.git

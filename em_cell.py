@@ -13,7 +13,8 @@ import collections
 import math
 
 import tensorflow as tf
-from tensorflow.python.ops.rnn_cell import RNNCell
+# from tensorflow.python.ops.rnn_cell import RNNCell
+from tensorflow.python.ops.rnn_cell_impl import _RNNCell as RNNCell
 
 _NTMStateTuple = collections.namedtuple("LSTMStateTuple", ("M", "h", "w"))
 
@@ -137,10 +138,8 @@ class NTMCell(RNNCell):
                 tf.nn.l2_normalize(k, dim=1), axis=2
             )  # ?, dim, 1
             k = tf.verify_tensor_all_finite(k, 'k')
-
             M_hat = tf.nn.l2_normalize(M, dim=1)  # ?, dim, size_mem
             M_hat = tf.verify_tensor_all_finite(M_hat, 'M_hat')
-
             cosine_distance = tf.squeeze(
                 tf.batch_matmul(k, M_hat, adj_x=True), axis=1
             )  # ?, size_mem
@@ -157,16 +156,19 @@ class NTMCell(RNNCell):
             new_w = tf.verify_tensor_all_finite(new_w, 'new_w')
 
             # M
+            e = tf.sigmoid(e)
             f = tf.expand_dims(new_w * e, axis=1)  # ?, 1, size_mem
             f = tf.verify_tensor_all_finite(f, 'f')
             v = tf.expand_dims(v, axis=2)  # ?, dim, 1
             new_content = tf.batch_matmul(v, f)  # ?, dim, size_mem
             new_content = tf.verify_tensor_all_finite(new_content, 'new_content')
-            new_M = M * (1 - f) + new_content * f  # ?, dim, size_mem
+            new_M = M * (1 - f) + new_content  # ?, dim, size_mem
             new_M = tf.verify_tensor_all_finite(new_M, 'new_M')
             new_M = tf.reshape(new_M, [-1, self._size_memory * self._dim])
+            # M = tf.reshape(M, [-1, self._size_memory * self._dim])
 
             return new_h, NTMStateTuple(new_M, new_h, new_w)
+            # return h, NTMStateTuple(M, h, w)
 
 
 def _get_concat_variable(name, shape, dtype, num_shards):

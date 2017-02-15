@@ -162,7 +162,9 @@ def train():
         from_train, to_train, from_dev, to_dev, _, _ = data_utils.prepare_wmt_data(
             FLAGS.data_dir, FLAGS.from_vocab_size, FLAGS.to_vocab_size)
 
-    with tf.Session() as sess:
+    config = tf.ConfigProto(intra_op_parallelism_threads=8, inter_op_parallelism_threads=8)
+    config.gpu_options.allow_growth = True
+    with tf.Session(config=config) as sess:
         # Create model.
         print("Creating %d layers of %d units." % (FLAGS.num_layers, FLAGS.size))
         model = create_model(sess, False)
@@ -215,6 +217,7 @@ def train():
                 previous_losses.append(loss)
                 # Save checkpoint and zero timer and loss.
                 checkpoint_path = os.path.join(FLAGS.train_dir, "translate.ckpt")
+                print("????????????????????????????SAVING????????????????????????????????????????????")
                 model.saver.save(sess, checkpoint_path, global_step=model.global_step)
                 step_time, loss = 0.0, 0.0
                 # Run evals on development set and print their perplexity.

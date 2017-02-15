@@ -27,7 +27,9 @@ import tensorflow as tf
 # import tensorflow.models.rnn.seq2seq as seq2seq
 # import tensorflow.nn.seq2seq as seq2seq
 import data_utils
-from em_cell import NTMCell
+# from em_cell import NTMCell
+from tensorflow.contrib.legacy_seq2seq.python.ops.seq2seq import \
+    model_with_buckets, embedding_attention_seq2seq
 
 
 class Seq2SeqModel(object):
@@ -95,9 +97,12 @@ class Seq2SeqModel(object):
         # If we use sampled softmax, we need an output projection.
         output_projection = None
         softmax_loss_function = None
-        # Sampled softmax only makes sense if we sample less than vocabulary size.
+        # Sampled softmax only makes sense
+        # if we sample less than vocabulary size.
         if 0 < num_samples < self.target_vocab_size:
-            w_t = tf.get_variable("proj_w", [self.target_vocab_size, size], dtype=dtype)
+            w_t = tf.get_variable("proj_w", 
+                                  [self.target_vocab_size, size], 
+                                  dtype=dtype)
             w = tf.transpose(w_t)
             b = tf.get_variable("proj_b", [self.target_vocab_size], dtype=dtype)
             output_projection = (w, b)
@@ -124,9 +129,12 @@ class Seq2SeqModel(object):
 
         # Create the internal multi-layer cell for our RNN.
         def single_cell():
+
+
+            return tf.contrib.rnn.GRUCell(size)
             # return tf.nn.rnn_cell.GRUCell(size)
             # return tf.nn.rnn_cell.LSTMCell(size)
-            return NTMCell(size)
+            # return NTMCell(size)
 
         # if use_lstm:
         #     def single_cell():
@@ -135,13 +143,13 @@ class Seq2SeqModel(object):
 
         cell = single_cell()
         if num_layers > 1:
-            # cell = tf.contrib.rnn.MultiRNNCell([single_cell() for _ in range(num_layers)])
-            cell = tf.nn.rnn_cell.MultiRNNCell([single_cell() for _ in range(num_layers)])
+            cell = tf.contrib.rnn.MultiRNNCell([single_cell() for _ in range(num_layers)])
+            # cell = tf.nn.rnn_cell.MultiRNNCell([single_cell() for _ in range(num_layers)])
 
         # The seq2seq function: we use embedding for the input and attention.
         def seq2seq_f(encoder_inputs, decoder_inputs, do_decode):
-            # return tf.contrib.legacy_seq2seq.embedding_attention_seq2seq(
-            return tf.nn.seq2seq.embedding_attention_seq2seq(
+            # return tf.nn.seq2seq.embedding_attention_seq2seq(
+            return embedding_attention_seq2seq(
                 encoder_inputs,
                 decoder_inputs,
                 cell,
@@ -172,8 +180,8 @@ class Seq2SeqModel(object):
 
         # Training outputs and losses.
         if forward_only:
-            # self.outputs, self.losses = tf.contrib.legacy_seq2seq.model_with_buckets(
-            self.outputs, self.losses = tf.nn.seq2seq.model_with_buckets(
+            # self.outputs, self.losses = tf.nn.seq2seq.model_with_buckets(
+            self.outputs, self.losses = model_with_buckets(
                 self.encoder_inputs, self.decoder_inputs, targets,
                 self.target_weights, buckets, lambda x, y: seq2seq_f(x, y, True),
                 softmax_loss_function=softmax_loss_function
@@ -186,7 +194,9 @@ class Seq2SeqModel(object):
                         for output in self.outputs[b]
                         ]
         else:
-            self.outputs, self.losses = tf.nn.seq2seq.model_with_buckets(
+            # self.outputs, self.losses = tf.nn.seq2seq.model_with_buckets(
+            # self.outputs, self.losses = tf.nn.seq2seq.model_with_buckets(
+            self.outputs, self.losses = model_with_buckets(
                 self.encoder_inputs, self.decoder_inputs,
                 targets, self.target_weights,
                 buckets, seq2seq=lambda x, y: seq2seq_f(x, y, False),

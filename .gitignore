@@ -5,3 +5,4 @@ seq2seq_model.pyc
 env
 em_cell.pyc
 nohup.out
+train

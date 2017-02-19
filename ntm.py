@@ -14,7 +14,6 @@ import math
 
 import tensorflow as tf
 # from tensorflow.python.ops.rnn_cell import RNNCell
-from tensorflow.python.ops.rnn_cell_impl import _RNNCell as RNNCell
 
 _NTMStateTuple = collections.namedtuple("LSTMStateTuple", ("M", "h", "w"))
 
@@ -36,7 +35,7 @@ class NTMStateTuple(_NTMStateTuple):
         return M.dtype
 
 
-class Cell(RNNCell):
+class Cell(tf.contrib.rnn.RNNCell):
     """Basic LSTM recurrent network cell.
 
   The implementation is based on: http://arxiv.org/abs/1409.2329.
@@ -63,6 +62,8 @@ class Cell(RNNCell):
       input_size: Deprecated and unused.
       activation: Activation function of the inner states.
     """
+        assert isinstance(num_units, (float, int)), \
+            '`num_units` ({}) must be a float or an int'.format(num_units)
         self._dim = num_units
         self._forget_bias = forget_bias
         self._activation = activation
@@ -80,16 +81,18 @@ class Cell(RNNCell):
 
     def __call__(self, inputs, state, scope=None):
         with tf.variable_scope(scope or type(self).__name__):  # "NTMCell"
-            # Parameters of gates are concatenated into one multiply for efficiency.
+            if len(inputs.get_shape()) == 1:
+                inputs = tf.expand_dims(inputs, axis=0)
+
             M, h, w = state
             M = tf.reshape(M, (-1, self._dim, self._size_memory))  # ?, dim, size_mem
 
             c = tf.squeeze(
-                tf.batch_matmul(M, tf.expand_dims(w, axis=2)),
+                tf.matmul(M, tf.expand_dims(w, axis=2)),
                 axis=2
             )  # ?, dim
 
-            concat = tf.concat(1, [inputs, c])  # ?, dim + dim
+            concat = tf.concat([inputs, c], 1)  # ?, dim + dim
 
             dims = {
                 inputs: inputs.get_shape()[1],
@@ -140,10 +143,10 @@ class Cell(RNNCell):
             new_h = tf.sigmoid(tf.matmul(concat, weights[0]) + biases[0])
             new_h = tf.verify_tensor_all_finite(new_h, 'new_h')
 
+            # Parameters of gates are concatenated into one multiply for efficiency.
             concat = tf.matmul(new_h, weights[1]) + biases[1]
             concat = tf.verify_tensor_all_finite(concat, 'concat')
-
-            g, k, b, e, v = tf.split_v(concat, var_dims, split_dim=1)
+            g, k, b, e, v = tf.split(concat, var_dims, axis=1)
 
             # cosine distances
             k = tf.expand_dims(
@@ -153,7 +156,7 @@ class Cell(RNNCell):
             M_hat = tf.nn.l2_normalize(M, dim=1)  # ?, dim, size_mem
             M_hat = tf.verify_tensor_all_finite(M_hat, 'M_hat')
             cosine_distance = tf.squeeze(
-                tf.batch_matmul(k, M_hat, adj_x=True), axis=1
+                tf.matmul(k, M_hat, transpose_a=True), axis=1
             )  # ?, size_mem
             cosine_distance = tf.verify_tensor_all_finite(cosine_distance, 'cosine_distance')
 
@@ -172,7 +175,7 @@ class Cell(RNNCell):
             f = tf.expand_dims(new_w * e, axis=1)  # ?, 1, size_mem
             f = tf.verify_tensor_all_finite(f, 'f')
             v = tf.expand_dims(v, axis=2)  # ?, dim, 1
-            new_content = tf.batch_matmul(v, f)  # ?, dim, size_mem
+            new_content = tf.matmul(v, f)  # ?, dim, size_mem
             new_content = tf.verify_tensor_all_finite(new_content, 'new_content')
             new_M = M * (1 - f) + new_content  # ?, dim, size_mem
             new_M = tf.verify_tensor_all_finite(new_M, 'new_M')

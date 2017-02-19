@@ -19,6 +19,7 @@ from tensorflow.python.ops.rnn_cell_impl import _RNNCell as RNNCell
 _NTMStateTuple = collections.namedtuple("LSTMStateTuple", ("M", "h", "w"))
 
 
+# noinspection PyClassHasNoInit
 class NTMStateTuple(_NTMStateTuple):
     """Tuple used by LSTM Cells for `state_size`, `zero_state`, and output state.
 
@@ -35,7 +36,7 @@ class NTMStateTuple(_NTMStateTuple):
         return M.dtype
 
 
-class NTMCell(RNNCell):
+class Cell(RNNCell):
     """Basic LSTM recurrent network cell.
 
   The implementation is based on: http://arxiv.org/abs/1409.2329.
@@ -90,7 +91,7 @@ class NTMCell(RNNCell):
 
             concat = tf.concat(1, [inputs, c])  # ?, dim + dim
 
-            input_dims = {
+            dims = {
                 inputs: inputs.get_shape()[1],
                 M: self._dim,
                 w: self._size_memory,
@@ -98,32 +99,43 @@ class NTMCell(RNNCell):
                 h: self._dim
             }
 
-            output_dims = [
+            var_dims = [
                 1,  # g weight_interpolation
-                input_dims[M],  # k = memory_key
+                dims[M],  # k = memory_key
                 1,  # b = read_sharpness
                 self._size_memory,  # e = erase_vector
-                input_dims[M],  # v = new memory vector
+                dims[M],  # v = new memory vector
             ]
 
-            total_variable_dim = sum(output_dims)
+            total_variable_dim = sum(var_dims)
 
-            weight_dims = [
-                # (in_size, out_size)
-                (input_dims[inputs] + input_dims[c], input_dims[h]),
-                (input_dims[h], total_variable_dim),
-            ]
+            # weight_dims = [
+            #     # (in_size, out_size)
+            #     (dims[inputs] + dims[c], dims[h]),
+            #     (dims[h], total_variable_dim),
+            # ]
 
-            weights = []
-            biases = []
-            for i, (in_size, out_size) in enumerate(weight_dims):
-                dtype = state.dtype
-                weights.append(
-                    tf.get_variable("weight" + str(i), [in_size, out_size], dtype)
-                )
-                biases.append(
-                    tf.get_variable("bias" + str(i), [out_size], dtype)
-                )
+            # for i, (in_size, out_size) in enumerate(weight_dims):
+            #     dtype = state.dtype
+            #     weights.append(
+            #         tf.get_variable("weight" + str(i), [in_size, out_size], dtype)
+            #     )
+            #     biases.append(
+            #         tf.get_variable("bias" + str(i), [out_size], dtype)
+            #     )
+
+            dtype = state.dtype
+
+            def get_weights(i, height, width):
+                return tf.get_variable("weight" + str(i), [height, width], dtype)
+
+            def get_bias(i, size):
+                return tf.get_variable("bias" + str(i), [size], dtype)
+
+            weights = [get_weights(1, height=dims[inputs] + dims[c], width=dims[h]),
+                       get_weights(2, height=dims[h], width=total_variable_dim)]
+            biases = [get_bias(1, size=dims[h]),
+                      get_bias(2, size=total_variable_dim)]
 
             new_h = tf.sigmoid(tf.matmul(concat, weights[0]) + biases[0])
             new_h = tf.verify_tensor_all_finite(new_h, 'new_h')
@@ -131,7 +143,7 @@ class NTMCell(RNNCell):
             concat = tf.matmul(new_h, weights[1]) + biases[1]
             concat = tf.verify_tensor_all_finite(concat, 'concat')
 
-            g, k, b, e, v = tf.split_v(concat, output_dims, split_dim=1)
+            g, k, b, e, v = tf.split_v(concat, var_dims, split_dim=1)
 
             # cosine distances
             k = tf.expand_dims(
@@ -165,7 +177,6 @@ class NTMCell(RNNCell):
             new_M = M * (1 - f) + new_content  # ?, dim, size_mem
             new_M = tf.verify_tensor_all_finite(new_M, 'new_M')
             new_M = tf.reshape(new_M, [-1, self._size_memory * self._dim])
-            # M = tf.reshape(M, [-1, self._size_memory * self._dim])
 
             return new_h, NTMStateTuple(new_M, new_h, new_w)
             # return h, NTMStateTuple(M, h, w)

@@ -10,6 +10,7 @@ from __future__ import division
 from __future__ import print_function
 
 import collections
+import functools
 import math
 
 import tensorflow as tf
@@ -111,34 +112,13 @@ class Cell(tf.contrib.rnn.RNNCell):
             ]
 
             total_variable_dim = sum(var_dims)
+            dt = state.dtype
 
-            # weight_dims = [
-            #     # (in_size, out_size)
-            #     (dims[inputs] + dims[c], dims[h]),
-            #     (dims[h], total_variable_dim),
-            # ]
+            weights = [tf.get_variable('weight0', [dims[inputs] + dims[c], dims[h]], dt),
+                       tf.get_variable('weight1', [dims[h], total_variable_dim], dt)]
 
-            # for i, (in_size, out_size) in enumerate(weight_dims):
-            #     dtype = state.dtype
-            #     weights.append(
-            #         tf.get_variable("weight" + str(i), [in_size, out_size], dtype)
-            #     )
-            #     biases.append(
-            #         tf.get_variable("bias" + str(i), [out_size], dtype)
-            #     )
-
-            dtype = state.dtype
-
-            def get_weights(i, height, width):
-                return tf.get_variable("weight" + str(i), [height, width], dtype)
-
-            def get_bias(i, size):
-                return tf.get_variable("bias" + str(i), [size], dtype)
-
-            weights = [get_weights(1, height=dims[inputs] + dims[c], width=dims[h]),
-                       get_weights(2, height=dims[h], width=total_variable_dim)]
-            biases = [get_bias(1, size=dims[h]),
-                      get_bias(2, size=total_variable_dim)]
+            biases = [tf.get_variable('bias0', [dims[h]], dt),
+                      tf.get_variable('bias1', [total_variable_dim], dt)]
 
             new_h = tf.sigmoid(tf.matmul(concat, weights[0]) + biases[0])
             new_h = tf.verify_tensor_all_finite(new_h, 'new_h')
@@ -183,92 +163,3 @@ class Cell(tf.contrib.rnn.RNNCell):
 
             return new_h, NTMStateTuple(new_M, new_h, new_w)
             # return h, NTMStateTuple(M, h, w)
-
-
-def _get_concat_variable(name, shape, dtype, num_shards):
-    """Get a sharded variable concatenated into one tensor."""
-    sharded_variable = _get_sharded_variable(name, shape, dtype, num_shards)
-    if len(sharded_variable) == 1:
-        return sharded_variable[0]
-
-    concat_name = name + "/concat"
-    concat_full_name = tf.get_variable_scope().name + "/" + concat_name + ":0"
-    for value in tf.get_collection(tf.GraphKeys.CONCATENATED_VARIABLES):
-        if value.name == concat_full_name:
-            return value
-
-    concat_variable = tf.concat(0, sharded_variable, name=concat_name)
-    tf.add_to_collection(tf.GraphKeys.CONCATENATED_VARIABLES,
-                         concat_variable)
-    return concat_variable
-
-
-def _get_sharded_variable(name, shape, dtype, num_shards):
-    """Get a list of sharded variables with the given dtype."""
-    if num_shards > shape[0]:
-        raise ValueError("Too many shards: shape=%s, num_shards=%d" %
-                         (shape, num_shards))
-    unit_shard_size = int(math.floor(shape[0] / num_shards))
-    remaining_rows = shape[0] - unit_shard_size * num_shards
-
-    shards = []
-    for i in range(num_shards):
-        current_size = unit_shard_size
-        if i < remaining_rows:
-            current_size += 1
-        shards.append(tf.get_variable(name + "_%d" % i, [current_size] + shape[1:],
-                                      dtype=dtype))
-    return shards
-
-
-def _linear(args, output_size, bias, bias_start=0.0, scope=None):
-    """Linear map: sum_i(args[i] * W[i]), where W[i] is a variable.
-
-  Args:
-    args: a 2D Tensor or a list of 2D, batch x n, Tensors.
-    output_size: int, second dimension of W[i].
-    bias: boolean, whether to add a bias term or not.
-    bias_start: starting value to initialize the bias; 0 by default.
-    scope: VariableScope for the created subgraph; defaults to "Linear".
-
-  Returns:
-    A 2D Tensor with shape [batch x output_size] equal to
-    sum_i(args[i] * W[i]), where W[i]s are newly created matrices.
-
-  Raises:
-    ValueError: if some of the arguments has unspecified or wrong shape.
-  """
-    if args is None or (tf.nest.is_sequence(args) and not args):
-        raise ValueError("`args` must be specified")
-    if not tf.nest.is_sequence(args):
-        args = [args]
-
-    # Calculate the total size of arguments on dimension 1.
-    total_arg_size = 0
-    shapes = [a.get_shape().as_list() for a in args]
-    for shape in shapes:
-        if len(shape) != 2:
-            raise ValueError("Linear is expecting 2D arguments: %s" % str(shapes))
-        if not shape[1]:
-            raise ValueError("Linear expects shape[1] of arguments: %s" % str(shapes))
-        else:
-            total_arg_size += shape[1]
-
-    dtype = [a.dtype for a in args][0]
-
-    # Now the computation.
-    with tf.variable_scope(scope or "Linear"):
-        matrix = tf.get_variable(
-            "Matrix", [total_arg_size, output_size], dtype=dtype)
-        if len(args) == 1:
-            res = tf.matmul(args[0], matrix)
-        else:
-            res = tf.matmul(tf.concat(1, args), matrix)
-        if not bias:
-            return res
-        bias_term = tf.get_variable(
-            "Bias", [output_size],
-            dtype=dtype,
-            initializer=tf.constant_initializer(
-                bias_start, dtype=dtype))
-    return res + bias_term

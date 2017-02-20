@@ -1,11 +1,17 @@
-import tensorflow as tf
-import numpy as np
 import gym.spaces
-import copy
+import numpy as np
+import tensorflow as tf
 from tensorflow.python.training.adam import AdamOptimizer
+from tensorflow.python.training.ftrl import FtrlOptimizer
+from tensorflow.python.training.rmsprop import RMSPropOptimizer
 
-import ntm
-
+learning_rate = 0.01
+optimizers = {
+    1: AdamOptimizer(learning_rate),
+    2: FtrlOptimizer(learning_rate),
+    3: RMSPropOptimizer(learning_rate),
+}
+optimizer = optimizers[2]
 
 def get_base_name(var):
     return var.name.split(':')[0]
@@ -32,6 +38,7 @@ def get_params():
 
 
 weights, biases = get_params()
+params = weights + biases
 
 
 def perceptron(i, x):
@@ -40,40 +47,62 @@ def perceptron(i, x):
 
 observation_ph = tf.placeholder(dtype, obs_size, name='observation')
 hidden = perceptron(0, tf.expand_dims(observation_ph, 0))
-action_dist = perceptron(1, hidden)
+output = perceptron(1, tf.sigmoid(hidden))
+action_dist = tf.nn.softmax(output, name='action_dist')
 tf_action = tf.squeeze(tf.multinomial(action_dist, 1), name='action')
 
 prob = tf.gather(tf.squeeze(action_dist), tf_action, name='prob')
-log_prob = tf.log(prob, name='log_prob')
-tf_scores = tf.gradients(log_prob, weights + biases, name='gradient')
+tf_scores = tf.gradients(tf.log(prob), params, name='gradient')
 
-params = weights + biases
 gradient_phs = [tf.placeholder(dtype, param.get_shape(),
                                name=get_base_name(param) + '_placeholder')
                 for param in params]
-train_op = AdamOptimizer().apply_gradients(zip(gradient_phs, params))
+train_op = optimizer.apply_gradients(zip(gradient_phs, params))
 
 epochs = 200
 batches = 500
 
-for _ in range(epochs):
-    with tf.Session() as sess:
-        tf.global_variables_initializer().run()
-        gradients = [np.zeros(param.get_shape()) for param in params]
+
+def zeros_like_params():
+    return [np.zeros(param.get_shape()) for param in params]
+
+
+show_off = False
+with tf.Session() as sess:
+    tf.global_variables_initializer().run()
+
+    # update every epoch
+    for e in range(epochs):
+        gradients = zeros_like_params()
         mean_reward = 0
-        for _ in range(batches):
+
+        # average over batches
+        for b in range(batches):
             observation = env.reset()
             done = False
+            cumulative_scores = zeros_like_params()
+            cumulative_reward = 0
+            t = 0
+
+            # steps
             while not done:
-                # env.render()
+                if show_off:
+                    env.render()
                 action, new_scores = sess.run([tf_action, tf_scores],
                                               {observation_ph: observation.squeeze()})
-                observation, reward, done, info = env.step(env.action_space.sample())
+                observation, reward, done, info = env.step(action)
 
-                mean_reward += reward / batches
-                for gradient, score in zip(gradients, new_scores):
-                    gradient += reward * score / batches
+                cumulative_reward += reward
+                for old_score, new_score in zip(cumulative_scores, new_scores):
+                    old_score += new_score
+                t += 1
 
-        print("Reward: {}".format(mean_reward))
+            mean_reward += cumulative_reward / batches
+            for gradient, cumulative_score in zip(gradients, cumulative_scores):
+                gradient -= cumulative_score * cumulative_reward / batches
+
+        print("Epoch: {}. Reward: {}".format(e, mean_reward))
+        if mean_reward > 199:
+            show_off = True
         feed_dict = dict(zip(gradient_phs, gradients))
         sess.run(train_op, feed_dict)

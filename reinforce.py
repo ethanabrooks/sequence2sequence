@@ -1,9 +1,15 @@
 import tensorflow as tf
 import numpy as np
 import gym.spaces
+import copy
 from tensorflow.python.training.adam import AdamOptimizer
 
 import ntm
+
+
+def get_base_name(var):
+    return var.name.split(':')[0]
+
 
 env = gym.make('CartPole-v1')
 
@@ -15,9 +21,6 @@ act_size = env.action_space.n
 
 hidden_size = 50
 
-
-# model = ntm.Cell(hidden_size)
-# state_tuple = model.zero_state(1, dtype)
 
 def get_params():
     weights = [tf.get_variable('weight0', [obs_size, hidden_size], dtype),
@@ -35,38 +38,42 @@ def perceptron(i, x):
     return tf.matmul(x, weights[i]) + biases[i]
 
 
-observation_tf = tf.placeholder(dtype, obs_size, name='observation')
-hidden = perceptron(0, tf.expand_dims(observation_tf, 0))
+observation_ph = tf.placeholder(dtype, obs_size, name='observation')
+hidden = perceptron(0, tf.expand_dims(observation_ph, 0))
 action_dist = perceptron(1, hidden)
 tf_action = tf.squeeze(tf.multinomial(action_dist, 1), name='action')
 
 prob = tf.gather(tf.squeeze(action_dist), tf_action, name='prob')
 log_prob = tf.log(prob, name='log_prob')
-tf_gradient = tf.gradients(log_prob, weights + biases, name='gradient')
+tf_scores = tf.gradients(log_prob, weights + biases, name='gradient')
 
 params = weights + biases
-tf_gradients = [tf.placeholder(dtype, [None] + list(param.get_shape()))
+gradient_phs = [tf.placeholder(dtype, param.get_shape(),
+                               name=get_base_name(param) + '_placeholder')
                 for param in params]
-# tf_rewards = tf.placeholder(dtype, [None])
-mean_gradients = [tf.reduce_mean(gradient, 0) for gradient in tf_gradients]
-train_op = AdamOptimizer().apply_gradients(zip(mean_gradients, params))
+train_op = AdamOptimizer().apply_gradients(zip(gradient_phs, params))
 
-for _ in range(200):
+epochs = 200
+batches = 500
+
+for _ in range(epochs):
     with tf.Session() as sess:
         tf.global_variables_initializer().run()
-        observation_np = env.reset()
-        gradients, rewards = [], []
-        for t in range(100):
-            env.render()
-            obs = observation_np.squeeze()
-            action, np_gradient = sess.run([tf_action, tf_gradient], {observation_tf: obs})
-            observation_np, reward, done, info = env.step(action)
-            gradients.append(np_gradient)
-            rewards.append(reward)
+        gradients = [np.zeros(param.get_shape()) for param in params]
+        mean_reward = 0
+        for _ in range(batches):
+            observation = env.reset()
+            done = False
+            while not done:
+                # env.render()
+                action, new_scores = sess.run([tf_action, tf_scores],
+                                              {observation_ph: observation.squeeze()})
+                observation, reward, done, info = env.step(env.action_space.sample())
 
-            if done:
-                print("Timesteps: {}. Reward: {}".format(t + 1, sum(rewards)))
-                break
+                mean_reward += reward / batches
+                for gradient, score in zip(gradients, new_scores):
+                    gradient += reward * score / batches
 
-        np_gradients = [np.stack(same_var_gradients) for same_var_gradients in zip(*gradients)]
-        sess.run(train_op, dict(zip(tf_gradients, np_gradients)))
+        print("Reward: {}".format(mean_reward))
+        feed_dict = dict(zip(gradient_phs, gradients))
+        sess.run(train_op, feed_dict)

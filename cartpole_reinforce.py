@@ -6,6 +6,7 @@ from tensorflow.python.training.ftrl import FtrlOptimizer
 from tensorflow.python.training.rmsprop import RMSPropOptimizer
 
 from mlp import MLP
+from reinforce import Reinforce
 
 learning_rate = 1.
 optimizers = {
@@ -15,82 +16,10 @@ optimizers = {
 }
 optimizer = optimizers[2]
 
-
-def get_base_name(var):
-    return var.name.split(':')[0]
-
-
 env = gym.make('CartPole-v1')
-
 dtype = env.observation_space.low.dtype
 
-assert (isinstance(env.action_space, gym.spaces.Discrete))
-obs_size, = env.observation_space.shape
-act_size = env.action_space.n
+model = MLP([5], dtype)
+trainer = Reinforce(env, model, optimizer)
 
-hidden_size = 3
-
-model = MLP([obs_size, hidden_size, act_size], dtype)
-
-# get action
-observation_ph = tf.placeholder(dtype, obs_size, name='observation')
-logits = model.forward(tf.expand_dims(observation_ph, 0))
-action_dist = tf.nn.softmax(logits, name='action_dist')
-tf_action = tf.squeeze(tf.multinomial(logits, 1), name='action')
-
-# get score
-prob = tf.gather(tf.squeeze(action_dist), tf_action, name='prob')
-tf_scores = tf.gradients(tf.log(prob), model.params, name='gradient')
-
-# apply gradient
-gradient_phs = [tf.placeholder(dtype, param.get_shape(),
-                               name=get_base_name(param) + '_placeholder')
-                for param in model.params]
-train_op = optimizer.apply_gradients(zip(gradient_phs, model.params))
-
-epochs = 200
-batches = 500
-
-
-def zeros_like_params():
-    return [np.zeros(param.get_shape()) for param in model.params]
-
-show_off = False
-with tf.Session() as sess:
-    tf.global_variables_initializer().run()
-
-    # update every epoch
-    for e in range(epochs):
-        gradients = zeros_like_params()
-        mean_reward = 0
-
-        # average over batches
-        for b in range(batches):
-            observation = env.reset()
-            done = False
-            t = 0
-            cumulative_reward = 0
-            cumulative_scores = zeros_like_params()
-
-            # steps
-            while not done:
-                if show_off:
-                    env.render()
-                action, new_scores = sess.run([tf_action, tf_scores],
-                                              {observation_ph: observation.squeeze()})
-                observation, reward, done, info = env.step(action)
-
-                cumulative_reward += reward
-                for old_score, new_score in zip(cumulative_scores, new_scores):
-                    old_score += new_score
-                t += 1
-
-            mean_reward += cumulative_reward / batches
-            for gradient, cumulative_score in zip(gradients, cumulative_scores):
-                gradient -= cumulative_score * cumulative_reward / batches
-
-        print("Epoch: {}. Reward: {}".format(e, mean_reward))
-        feed_dict = dict(zip(gradient_phs, gradients))
-        sess.run(train_op, feed_dict)
-        if mean_reward >= 200:
-            show_off = True
+trainer.train()

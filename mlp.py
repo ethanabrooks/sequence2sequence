@@ -1,12 +1,14 @@
 import tensorflow as tf
 import numpy as np
 
+from model import Model
 
-class MLP:
+
+class MLP(Model):
     def __init__(self, layer_sizes, dtype=tf.float32):
+        self.dtype = dtype
         self._in_layer_created = False
         self._out_layer_created = False
-        self._dtype = dtype
         assert layer_sizes
         layer_sizes = list(layer_sizes)
         self._layer_sizes = layer_sizes
@@ -33,12 +35,12 @@ class MLP:
     def create_in_layer(self, in_size):
         self._in_layer_created = True
         out_size = self._layer_sizes[0]
-        self.weights.insert(0, tf.get_variable('weight0', [in_size, out_size], self._dtype))
-        self.biases.insert(0, tf.get_variable('bias0', [out_size], self._dtype))
+        self.weights.insert(0, tf.get_variable('weight0', [in_size, out_size], self.dtype))
+        self.biases.insert(0, tf.get_variable('bias0', [out_size], self.dtype))
 
     def create_out_layer(self, out_size):
         self._out_layer_created = True
         in_size = self._layer_sizes[-1]
         i = str(len(self._layer_sizes))
-        self.weights.append(tf.get_variable('weight' + i, [in_size, out_size], self._dtype))
-        self.biases.append(tf.get_variable('bias' + i, [out_size], self._dtype))
+        self.weights.append(tf.get_variable('weight' + i, [in_size, out_size], self.dtype))
+        self.biases.append(tf.get_variable('bias' + i, [out_size], self.dtype))

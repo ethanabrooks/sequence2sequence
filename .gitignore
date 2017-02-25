@@ -1,8 +1,8 @@
-env
-data_utils.pyc em_cell.pyc seq2seq_model.pyc
-.idea
+.idea/
 data
+data_utils.pyc
+seq2seq_model.pyc
+env
+em_cell.pyc
+nohup.out
 train
-.git
-.idea
-summaries

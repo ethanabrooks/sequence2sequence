@@ -1,0 +1,344 @@
+2017-02-15 19:28:19.714812: I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: GeForce GTX TITAN X
+major: 5 minor: 2 memoryClockRate (GHz) 1.076
+pciBusID 0000:01:00.0
+Total memory: 11.92GiB
+Free memory: 11.59GiB
+2017-02-15 19:28:19.714867: I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 
+2017-02-15 19:28:19.714877: I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y 
+2017-02-15 19:28:19.714894: I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX TITAN X, pci bus id: 0000:01:00.0)
+2017-02-15 19:29:25.084360: I tensorflow/compiler/xla/service/platform_util.cc:58] platform CUDA present with 1 visible devices
+2017-02-15 19:29:25.084423: I tensorflow/compiler/xla/service/platform_util.cc:58] platform Host present with 36 visible devices
+2017-02-15 19:29:25.153463: I tensorflow/compiler/xla/service/service.cc:180] XLA service executing computations on platform Host. Devices:
+2017-02-15 19:29:25.153521: I tensorflow/compiler/xla/service/service.cc:187]   StreamExecutor device (0): <undefined>, <undefined>
+2017-02-15 19:29:25.154434: I tensorflow/compiler/xla/service/platform_util.cc:58] platform CUDA present with 1 visible devices
+2017-02-15 19:29:25.154458: I tensorflow/compiler/xla/service/platform_util.cc:58] platform Host present with 36 visible devices
+2017-02-15 19:29:25.215000: I tensorflow/compiler/xla/service/service.cc:180] XLA service executing computations on platform CUDA. Devices:
+2017-02-15 19:29:25.215049: I tensorflow/compiler/xla/service/service.cc:187]   StreamExecutor device (0): GeForce GTX TITAN X, Compute Capability 5.2
+Preparing WMT data in data
+Creating 2 layers of 256 units.
+Created model with fresh parameters.
+Reading development and training data (limit: 0).
+  reading data line 100000
+  reading data line 200000
+  reading data line 300000
+  reading data line 400000
+  reading data line 500000
+  reading data line 600000
+  reading data line 700000
+  reading data line 800000
+  reading data line 900000
+  reading data line 1000000
+  reading data line 1100000
+  reading data line 1200000
+  reading data line 1300000
+  reading data line 1400000
+  reading data line 1500000
+  reading data line 1600000
+  reading data line 1700000
+  reading data line 1800000
+  reading data line 1900000
+  reading data line 2000000
+  reading data line 2100000
+  reading data line 2200000
+  reading data line 2300000
+  reading data line 2400000
+  reading data line 2500000
+  reading data line 2600000
+  reading data line 2700000
+  reading data line 2800000
+  reading data line 2900000
+  reading data line 3000000
+  reading data line 3100000
+  reading data line 3200000
+  reading data line 3300000
+  reading data line 3400000
+  reading data line 3500000
+  reading data line 3600000
+  reading data line 3700000
+  reading data line 3800000
+  reading data line 3900000
+  reading data line 4000000
+  reading data line 4100000
+  reading data line 4200000
+  reading data line 4300000
+  reading data line 4400000
+  reading data line 4500000
+  reading data line 4600000
+  reading data line 4700000
+  reading data line 4800000
+  reading data line 4900000
+  reading data line 5000000
+  reading data line 5100000
+  reading data line 5200000
+  reading data line 5300000
+  reading data line 5400000
+  reading data line 5500000
+  reading data line 5600000
+  reading data line 5700000
+  reading data line 5800000
+  reading data line 5900000
+  reading data line 6000000
+  reading data line 6100000
+  reading data line 6200000
+  reading data line 6300000
+  reading data line 6400000
+  reading data line 6500000
+  reading data line 6600000
+  reading data line 6700000
+  reading data line 6800000
+  reading data line 6900000
+  reading data line 7000000
+  reading data line 7100000
+  reading data line 7200000
+  reading data line 7300000
+  reading data line 7400000
+  reading data line 7500000
+  reading data line 7600000
+  reading data line 7700000
+  reading data line 7800000
+  reading data line 7900000
+  reading data line 8000000
+  reading data line 8100000
+  reading data line 8200000
+  reading data line 8300000
+  reading data line 8400000
+  reading data line 8500000
+  reading data line 8600000
+  reading data line 8700000
+  reading data line 8800000
+  reading data line 8900000
+  reading data line 9000000
+  reading data line 9100000
+  reading data line 9200000
+  reading data line 9300000
+  reading data line 9400000
+  reading data line 9500000
+  reading data line 9600000
+  reading data line 9700000
+  reading data line 9800000
+  reading data line 9900000
+  reading data line 10000000
+  reading data line 10100000
+  reading data line 10200000
+  reading data line 10300000
+  reading data line 10400000
+  reading data line 10500000
+  reading data line 10600000
+  reading data line 10700000
+  reading data line 10800000
+  reading data line 10900000
+  reading data line 11000000
+  reading data line 11100000
+  reading data line 11200000
+  reading data line 11300000
+  reading data line 11400000
+  reading data line 11500000
+  reading data line 11600000
+  reading data line 11700000
+  reading data line 11800000
+  reading data line 11900000
+  reading data line 12000000
+  reading data line 12100000
+  reading data line 12200000
+  reading data line 12300000
+  reading data line 12400000
+  reading data line 12500000
+  reading data line 12600000
+  reading data line 12700000
+  reading data line 12800000
+  reading data line 12900000
+  reading data line 13000000
+  reading data line 13100000
+  reading data line 13200000
+  reading data line 13300000
+  reading data line 13400000
+  reading data line 13500000
+  reading data line 13600000
+  reading data line 13700000
+  reading data line 13800000
+  reading data line 13900000
+  reading data line 14000000
+  reading data line 14100000
+  reading data line 14200000
+  reading data line 14300000
+  reading data line 14400000
+  reading data line 14500000
+  reading data line 14600000
+  reading data line 14700000
+  reading data line 14800000
+  reading data line 14900000
+  reading data line 15000000
+  reading data line 15100000
+  reading data line 15200000
+  reading data line 15300000
+  reading data line 15400000
+  reading data line 15500000
+  reading data line 15600000
+  reading data line 15700000
+  reading data line 15800000
+  reading data line 15900000
+  reading data line 16000000
+  reading data line 16100000
+  reading data line 16200000
+  reading data line 16300000
+  reading data line 16400000
+  reading data line 16500000
+  reading data line 16600000
+  reading data line 16700000
+  reading data line 16800000
+  reading data line 16900000
+  reading data line 17000000
+  reading data line 17100000
+  reading data line 17200000
+  reading data line 17300000
+  reading data line 17400000
+  reading data line 17500000
+  reading data line 17600000
+  reading data line 17700000
+  reading data line 17800000
+  reading data line 17900000
+  reading data line 18000000
+  reading data line 18100000
+  reading data line 18200000
+  reading data line 18300000
+  reading data line 18400000
+  reading data line 18500000
+  reading data line 18600000
+  reading data line 18700000
+  reading data line 18800000
+  reading data line 18900000
+  reading data line 19000000
+  reading data line 19100000
+  reading data line 19200000
+  reading data line 19300000
+  reading data line 19400000
+  reading data line 19500000
+  reading data line 19600000
+  reading data line 19700000
+  reading data line 19800000
+  reading data line 19900000
+  reading data line 20000000
+  reading data line 20100000
+  reading data line 20200000
+  reading data line 20300000
+  reading data line 20400000
+  reading data line 20500000
+  reading data line 20600000
+  reading data line 20700000
+  reading data line 20800000
+  reading data line 20900000
+  reading data line 21000000
+  reading data line 21100000
+  reading data line 21200000
+  reading data line 21300000
+  reading data line 21400000
+  reading data line 21500000
+  reading data line 21600000
+  reading data line 21700000
+  reading data line 21800000
+  reading data line 21900000
+  reading data line 22000000
+  reading data line 22100000
+  reading data line 22200000
+  reading data line 22300000
+  reading data line 22400000
+  reading data line 22500000
+2017-02-15 19:55:21.153930: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 2734 get requests, put_count=2300 evicted_count=1000 eviction_rate=0.434783 and unsatisfied allocation rate=0.561083
+2017-02-15 19:55:21.153998: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 100 to 110
+global step 200 learning rate 0.5000 step-time 1.50 perplexity 4308.73
+????????????????????????????SAVING????????????????????????????????????????????
+  eval: bucket 0 perplexity 490.42
+  eval: bucket 1 perplexity 419.21
+  eval: bucket 2 perplexity 354.27
+  eval: bucket 3 perplexity 345.87
+global step 400 learning rate 0.5000 step-time 0.54 perplexity 395.14
+????????????????????????????SAVING????????????????????????????????????????????
+  eval: bucket 0 perplexity 348.34
+  eval: bucket 1 perplexity 314.81
+  eval: bucket 2 perplexity 277.36
+  eval: bucket 3 perplexity 270.53
+global step 600 learning rate 0.5000 step-time 0.57 perplexity 298.56
+????????????????????????????SAVING????????????????????????????????????????????
+  eval: bucket 0 perplexity 101.42
+  eval: bucket 1 perplexity 179.94
+  eval: bucket 2 perplexity 182.52
+  eval: bucket 3 perplexity 227.66
+global step 800 learning rate 0.5000 step-time 0.56 perplexity 244.53
+????????????????????????????SAVING????????????????????????????????????????????
+  eval: bucket 0 perplexity 206.15
+  eval: bucket 1 perplexity 179.02
+  eval: bucket 2 perplexity 205.96
+  eval: bucket 3 perplexity 206.76
+global step 1000 learning rate 0.5000 step-time 0.55 perplexity 195.41
+????????????????????????????SAVING????????????????????????????????????????????
+  eval: bucket 0 perplexity 136.18
+  eval: bucket 1 perplexity 177.26
+  eval: bucket 2 perplexity 179.43
+  eval: bucket 3 perplexity 206.06
+global step 1200 learning rate 0.5000 step-time 0.57 perplexity 238.81
+????????????????????????????SAVING????????????????????????????????????????????
+  eval: bucket 0 perplexity 95.11
+  eval: bucket 1 perplexity 123.09
+  eval: bucket 2 perplexity 142.25
+  eval: bucket 3 perplexity 163.49
+global step 1400 learning rate 0.5000 step-time 0.56 perplexity 230.63
+????????????????????????????SAVING????????????????????????????????????????????
+  eval: bucket 0 perplexity 75.33
+  eval: bucket 1 perplexity 94.59
+  eval: bucket 2 perplexity 151.46
+  eval: bucket 3 perplexity 166.97
+global step 1600 learning rate 0.5000 step-time 0.53 perplexity 201.31
+????????????????????????????SAVING????????????????????????????????????????????
+  eval: bucket 0 perplexity 102.31
+  eval: bucket 1 perplexity 117.43
+  eval: bucket 2 perplexity 149.87
+  eval: bucket 3 perplexity 172.06
+global step 1800 learning rate 0.5000 step-time 0.55 perplexity 171.86
+????????????????????????????SAVING????????????????????????????????????????????
+  eval: bucket 0 perplexity 225.24
+  eval: bucket 1 perplexity 390.13
+  eval: bucket 2 perplexity 513.87
+  eval: bucket 3 perplexity 484.35
+global step 2000 learning rate 0.5000 step-time 0.54 perplexity 154.93
+????????????????????????????SAVING????????????????????????????????????????????
+  eval: bucket 0 perplexity 52.96
+  eval: bucket 1 perplexity 78.60
+  eval: bucket 2 perplexity 109.39
+  eval: bucket 3 perplexity 131.77
+global step 2200 learning rate 0.5000 step-time 0.53 perplexity 117.41
+????????????????????????????SAVING????????????????????????????????????????????
+  eval: bucket 0 perplexity 44.92
+  eval: bucket 1 perplexity 65.21
+  eval: bucket 2 perplexity 99.61
+  eval: bucket 3 perplexity 126.39
+global step 2400 learning rate 0.5000 step-time 0.53 perplexity 98.52
+????????????????????????????SAVING????????????????????????????????????????????
+  eval: bucket 0 perplexity 40.99
+  eval: bucket 1 perplexity 60.28
+  eval: bucket 2 perplexity 77.55
+  eval: bucket 3 perplexity 100.01
+global step 2600 learning rate 0.5000 step-time 0.52 perplexity 87.39
+????????????????????????????SAVING????????????????????????????????????????????
+  eval: bucket 0 perplexity 45.38
+  eval: bucket 1 perplexity 55.80
+  eval: bucket 2 perplexity 84.80
+  eval: bucket 3 perplexity 97.55
+global step 2800 learning rate 0.5000 step-time 0.53 perplexity 80.50
+????????????????????????????SAVING????????????????????????????????????????????
+  eval: bucket 0 perplexity 48.84
+  eval: bucket 1 perplexity 50.15
+  eval: bucket 2 perplexity 60.27
+  eval: bucket 3 perplexity 75.76
+global step 3000 learning rate 0.5000 step-time 0.56 perplexity 74.48
+????????????????????????????SAVING????????????????????????????????????????????
+  eval: bucket 0 perplexity 51.82
+  eval: bucket 1 perplexity 43.90
+  eval: bucket 2 perplexity 64.23
+  eval: bucket 3 perplexity 70.73
+global step 3200 learning rate 0.5000 step-time 0.55 perplexity 70.10
+????????????????????????????SAVING????????????????????????????????????????????
+  eval: bucket 0 perplexity 43.41
+  eval: bucket 1 perplexity 36.94
+  eval: bucket 2 perplexity 54.96
+  eval: bucket 3 perplexity 57.77

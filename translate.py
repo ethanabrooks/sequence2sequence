@@ -41,6 +41,7 @@ import logging
 import numpy as np
 from six.moves import xrange  # pylint: disable=redefined-builtin
 import tensorflow as tf
+import ntm
 
 import data_utils
 import seq2seq_model
@@ -162,8 +163,8 @@ def train():
         from_train, to_train, from_dev, to_dev, _, _ = data_utils.prepare_wmt_data(
             FLAGS.data_dir, FLAGS.from_vocab_size, FLAGS.to_vocab_size)
 
-    config = tf.ConfigProto(intra_op_parallelism_threads=8, inter_op_parallelism_threads=8)
-    config.gpu_options.allow_growth = True
+    config = tf.ConfigProto()
+    config.graph_options.optimizer_options.global_jit_level = tf.OptimizerOptions.ON_1
     with tf.Session(config=config) as sess:
         # Create model.
         print("Creating %d layers of %d units." % (FLAGS.num_layers, FLAGS.size))

@@ -84,11 +84,11 @@ class NTMCell(RNNCell):
             M = tf.reshape(M, (-1, self._dim, self._size_memory))  # ?, dim, size_mem
 
             c = tf.squeeze(
-                tf.batch_matmul(M, tf.expand_dims(w, axis=2)),
+                tf.matmul(M, tf.expand_dims(w, axis=2)),
                 axis=2
             )  # ?, dim
 
-            concat = tf.concat(1, [inputs, c])  # ?, dim + dim
+            concat = tf.concat(axis=1, values=[inputs, c])  # ?, dim + dim
 
             input_dims = {
                 inputs: inputs.get_shape()[1],
@@ -141,7 +141,7 @@ class NTMCell(RNNCell):
             M_hat = tf.nn.l2_normalize(M, dim=1)  # ?, dim, size_mem
             M_hat = tf.verify_tensor_all_finite(M_hat, 'M_hat')
             cosine_distance = tf.squeeze(
-                tf.batch_matmul(k, M_hat, adj_x=True), axis=1
+                tf.matmul(k, M_hat, adj_x=True), axis=1
             )  # ?, size_mem
             cosine_distance = tf.verify_tensor_all_finite(cosine_distance, 'cosine_distance')
 
@@ -160,7 +160,7 @@ class NTMCell(RNNCell):
             f = tf.expand_dims(new_w * e, axis=1)  # ?, 1, size_mem
             f = tf.verify_tensor_all_finite(f, 'f')
             v = tf.expand_dims(v, axis=2)  # ?, dim, 1
-            new_content = tf.batch_matmul(v, f)  # ?, dim, size_mem
+            new_content = tf.matmul(v, f)  # ?, dim, size_mem
             new_content = tf.verify_tensor_all_finite(new_content, 'new_content')
             new_M = M * (1 - f) + new_content  # ?, dim, size_mem
             new_M = tf.verify_tensor_all_finite(new_M, 'new_M')
@@ -183,7 +183,7 @@ def _get_concat_variable(name, shape, dtype, num_shards):
         if value.name == concat_full_name:
             return value
 
-    concat_variable = tf.concat(0, sharded_variable, name=concat_name)
+    concat_variable = tf.concat(axis=0, values=sharded_variable, name=concat_name)
     tf.add_to_collection(tf.GraphKeys.CONCATENATED_VARIABLES,
                          concat_variable)
     return concat_variable
@@ -249,7 +249,7 @@ def _linear(args, output_size, bias, bias_start=0.0, scope=None):
         if len(args) == 1:
             res = tf.matmul(args[0], matrix)
         else:
-            res = tf.matmul(tf.concat(1, args), matrix)
+            res = tf.matmul(tf.concat(axis=1, values=args), matrix)
         if not bias:
             return res
         bias_term = tf.get_variable(

@@ -27,7 +27,7 @@ import tensorflow as tf
 # import tensorflow.models.rnn.seq2seq as seq2seq
 # import tensorflow.nn.seq2seq as seq2seq
 import data_utils
-# from em_cell import NTMCell
+import ntm
 from tensorflow.contrib.legacy_seq2seq.python.ops.seq2seq import \
     model_with_buckets, embedding_attention_seq2seq
 
@@ -107,6 +107,7 @@ class Seq2SeqModel(object):
             b = tf.get_variable("proj_b", [self.target_vocab_size], dtype=dtype)
             output_projection = (w, b)
 
+            # if you are getting errors, check this order
             def sampled_loss(target, logit):
                 # We need to compute the sampled_softmax_loss using 32bit floats to
                 # avoid numerical instabilities.
@@ -131,10 +132,10 @@ class Seq2SeqModel(object):
         def single_cell():
 
 
-            return tf.contrib.rnn.GRUCell(size)
+            # return tf.contrib.rnn.GRUCell(size)
             # return tf.nn.rnn_cell.GRUCell(size)
             # return tf.nn.rnn_cell.LSTMCell(size)
-            # return NTMCell(size)
+            return ntm.Cell(size)
 
         # if use_lstm:
         #     def single_cell():

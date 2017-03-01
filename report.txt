@@ -1,0 +1,17 @@
+--------------------------------------------------------------------------------
+Processing file 'ntm.py'
+ outputting to 'ntm.py'
+--------------------------------------------------------------------------------
+
+'ntm.py' Line 134
+--------------------------------------------------------------------------------
+
+Added keyword 'axis' to reordered function 'tf.split'
+Added keyword 'num_or_size_splits' to reordered function 'tf.split'
+
+    Old:             g, k, b, e, v = tf.split(concat, output_dims, axis=1)
+                                                                           
+    New:             g, k, b, e, v = tf.split(axis=concat, num_or_size_splits=output_dims, axis=1)
+                                              ~~~~~        ~~~~~~~~~~~~~~~~~~~                     
+
+

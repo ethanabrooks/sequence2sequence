@@ -188,6 +188,7 @@ def train():
         step_time, loss = 0.0, 0.0
         current_step = 0
         previous_losses = []
+        start = time.time()
         while True:
             # Choose a bucket according to data distribution. We pick a random number
             # in [0, 1] and use the corresponding interval in train_buckets_scale.
@@ -210,8 +211,9 @@ def train():
                 # Print statistics for the previous epoch.
                 perplexity = math.exp(float(loss)) if loss < 300 else float("inf")
                 print("global step %d learning rate %.4f step-time %.2f perplexity "
-                      "%.2f" % (model.global_step.eval(), model.learning_rate.eval(),
-                                step_time, perplexity))
+                      "%.2f time since start %.2f" %
+                      (model.global_step.eval(), model.learning_rate.eval(),
+                       step_time, perplexity, time.time() - start))
                 # Decrease learning rate if no improvement was seen over last 3 times.
                 if len(previous_losses) > 2 and loss > max(previous_losses[-3:]):
                     sess.run(model.learning_rate_decay_op)

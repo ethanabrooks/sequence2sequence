@@ -10,16 +10,15 @@ from __future__ import division
 from __future__ import print_function
 
 import collections
-import functools
 import math
 
 import tensorflow as tf
 # from tensorflow.python.ops.rnn_cell import RNNCell
+from tensorflow.python.ops.rnn_cell_impl import _RNNCell as RNNCell
 
 _NTMStateTuple = collections.namedtuple("LSTMStateTuple", ("M", "h", "w"))
 
 
-# noinspection PyClassHasNoInit
 class NTMStateTuple(_NTMStateTuple):
     """Tuple used by LSTM Cells for `state_size`, `zero_state`, and output state.
 
@@ -36,7 +35,7 @@ class NTMStateTuple(_NTMStateTuple):
         return M.dtype
 
 
-class Cell(tf.contrib.rnn.RNNCell):
+class Cell(RNNCell):
     """Basic LSTM recurrent network cell.
 
   The implementation is based on: http://arxiv.org/abs/1409.2329.
@@ -93,9 +92,9 @@ class Cell(tf.contrib.rnn.RNNCell):
                 axis=2
             )  # ?, dim
 
-            concat = tf.concat([inputs, c], 1)  # ?, dim + dim
+            concat = tf.concat(axis=1, values=[inputs, c])  # ?, dim + dim
 
-            dims = {
+            input_dims = {
                 inputs: inputs.get_shape()[1],
                 M: self._dim,
                 w: self._size_memory,
@@ -125,40 +124,41 @@ class Cell(tf.contrib.rnn.RNNCell):
 
             # Parameters of gates are concatenated into one multiply for efficiency.
             concat = tf.matmul(new_h, weights[1]) + biases[1]
-            concat = tf.verify_tensor_all_finite(concat, 'concat')
-            g, k, b, e, v = tf.split(concat, var_dims, axis=1)
+            # concat = tf.verify_tensor_all_finite(concat, 'concat')
+
+            g, k, b, e, v = tf.split(concat, num_or_size_splits=output_dims, axis=1)
 
             # cosine distances
             k = tf.expand_dims(
                 tf.nn.l2_normalize(k, dim=1), axis=2
             )  # ?, dim, 1
-            k = tf.verify_tensor_all_finite(k, 'k')
+            # k = tf.verify_tensor_all_finite(k, 'k')
             M_hat = tf.nn.l2_normalize(M, dim=1)  # ?, dim, size_mem
             M_hat = tf.verify_tensor_all_finite(M_hat, 'M_hat')
             cosine_distance = tf.squeeze(
                 tf.matmul(k, M_hat, transpose_a=True), axis=1
             )  # ?, size_mem
-            cosine_distance = tf.verify_tensor_all_finite(cosine_distance, 'cosine_distance')
+            # cosine_distance = tf.verify_tensor_all_finite(cosine_distance, 'cosine_distance')
 
             # w
             g = tf.sigmoid(g)  # ?, 1
             v = tf.tanh(v)  # ?, dim
             b = tf.nn.softplus(b)  # ?, 1
-            b = tf.verify_tensor_all_finite(b, 'b')
+            # b = tf.verify_tensor_all_finite(b, 'b')
             w_hat = tf.nn.softmax(b * cosine_distance)  # ?, size_mem
-            w_hat = tf.verify_tensor_all_finite(w_hat, 'w_hat')
+            # w_hat = tf.verify_tensor_all_finite(w_hat, 'w_hat')
             new_w = (1 - g) * w + g * w_hat  # ?, size_mem
-            new_w = tf.verify_tensor_all_finite(new_w, 'new_w')
+            # new_w = tf.verify_tensor_all_finite(new_w, 'new_w')
 
             # M
             e = tf.sigmoid(e)
             f = tf.expand_dims(new_w * e, axis=1)  # ?, 1, size_mem
-            f = tf.verify_tensor_all_finite(f, 'f')
+            # f = tf.verify_tensor_all_finite(f, 'f')
             v = tf.expand_dims(v, axis=2)  # ?, dim, 1
             new_content = tf.matmul(v, f)  # ?, dim, size_mem
-            new_content = tf.verify_tensor_all_finite(new_content, 'new_content')
+            # new_content = tf.verify_tensor_all_finite(new_content, 'new_content')
             new_M = M * (1 - f) + new_content  # ?, dim, size_mem
-            new_M = tf.verify_tensor_all_finite(new_M, 'new_M')
+            # new_M = tf.verify_tensor_all_finite(new_M, 'new_M')
             new_M = tf.reshape(new_M, [-1, self._size_memory * self._dim])
 
             return new_h, NTMStateTuple(new_M, new_h, new_w)

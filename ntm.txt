@@ -1,0 +1,2964 @@
+2017-02-28 09:05:34.912243: I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: GeForce GTX TITAN X
+major: 5 minor: 2 memoryClockRate (GHz) 1.076
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 11.81GiB
+2017-02-28 09:05:34.912307: I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 
+2017-02-28 09:05:34.912319: I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y 
+2017-02-28 09:05:34.912340: I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX TITAN X, pci bus id: 0000:04:00.0)
+Preparing WMT data in data
+Creating 2 layers of 256 units.
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell_9/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell_9/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell_8/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell_8/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell_7/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell_7/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell_6/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell_6/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell_5/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell_5/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell_4/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell_4/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell_3/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell_3/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell_2/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell_2/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell_1/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell_1/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/embedding_attention_decoder/attention_decoder/multi_rnn_cell/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/rnn/multi_rnn_cell_4/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/rnn/multi_rnn_cell_4/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/rnn/multi_rnn_cell_3/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/rnn/multi_rnn_cell_3/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/rnn/multi_rnn_cell_2/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/rnn/multi_rnn_cell_2/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/rnn/multi_rnn_cell_1/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/rnn/multi_rnn_cell_1/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/rnn/multi_rnn_cell/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients/model_with_buckets/embedding_attention_seq2seq/rnn/multi_rnn_cell/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_14/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_14/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_13/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_13/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_12/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_12/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_11/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_11/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_10/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_10/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_9/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_9/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_8/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_8/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_7/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_7/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_6/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_6/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_5/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_5/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_4/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_4/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_3/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_3/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_2/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_2/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_1/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell_1/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/embedding_attention_decoder/attention_decoder/multi_rnn_cell/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell_9/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell_9/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell_8/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell_8/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell_7/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell_7/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell_6/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell_6/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell_5/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell_5/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell_4/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell_4/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell_3/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell_3/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell_2/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell_2/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell_1/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell_1/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_1/model_with_buckets/embedding_attention_seq2seq_1/rnn/multi_rnn_cell/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_24/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_24/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_23/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_23/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_22/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_22/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_21/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_21/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_20/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_20/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_19/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_19/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_18/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_18/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_17/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_17/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_16/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_16/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_15/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_15/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_14/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_14/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_13/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_13/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_12/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_12/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_11/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_11/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_10/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_10/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_9/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_9/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_8/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_8/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_7/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_7/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_6/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_6/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_5/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_5/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_4/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_4/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_3/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_3/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_2/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_2/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_1/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell_1/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/embedding_attention_decoder/attention_decoder/multi_rnn_cell/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_19/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_19/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_18/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_18/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_17/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_17/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_16/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_16/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_15/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_15/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_14/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_14/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_13/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_13/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_12/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_12/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_11/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_11/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_10/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_10/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_9/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_9/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_8/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_8/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_7/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_7/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_6/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_6/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_5/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_5/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_4/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_4/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_3/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_3/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_2/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_2/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_1/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell_1/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_2/model_with_buckets/embedding_attention_seq2seq_2/rnn/multi_rnn_cell/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_49/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_49/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_48/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_48/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_47/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_47/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_46/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_46/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_45/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_45/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_44/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_44/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_43/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_43/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_42/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_42/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_41/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_41/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_40/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_40/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_39/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_39/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_38/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_38/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_37/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_37/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_36/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_36/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_35/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_35/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_34/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_34/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_33/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_33/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_32/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_32/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_31/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_31/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_30/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_30/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_29/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_29/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_28/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_28/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_27/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_27/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_26/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_26/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_25/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_25/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_24/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_24/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_23/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_23/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_22/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_22/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_21/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_21/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_20/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_20/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_19/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_19/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_18/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_18/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_17/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_17/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_16/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_16/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_15/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_15/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_14/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_14/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_13/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_13/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_12/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_12/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_11/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_11/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_10/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_10/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_9/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_9/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_8/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_8/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_7/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_7/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_6/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_6/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_5/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_5/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_4/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_4/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_3/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_3/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_2/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_2/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_1/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell_1/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/embedding_attention_decoder/attention_decoder/multi_rnn_cell/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_39/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_39/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_38/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_38/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_37/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_37/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_36/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_36/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_35/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_35/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_34/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_34/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_33/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_33/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_32/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_32/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_31/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_31/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_30/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_30/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_29/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_29/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_28/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_28/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_27/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_27/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_26/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_26/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_25/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_25/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_24/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_24/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_23/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_23/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_22/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_22/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_21/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_21/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_20/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_20/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_19/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_19/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_18/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_18/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_17/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_17/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_16/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_16/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_15/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_15/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_14/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_14/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_13/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_13/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_12/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_12/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_11/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_11/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_10/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_10/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_9/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_9/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_8/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/mult2017-02-28 09:07:18.953242: I tensorflow/compiler/xla/service/platform_util.cc:58] platform CUDA present with 1 visible devices
+2017-02-28 09:07:18.953280: I tensorflow/compiler/xla/service/platform_util.cc:58] platform Host present with 36 visible devices
+2017-02-28 09:07:19.055816: I tensorflow/compiler/xla/service/service.cc:180] XLA service executing computations on platform Host. Devices:
+2017-02-28 09:07:19.055868: I tensorflow/compiler/xla/service/service.cc:187]   StreamExecutor device (0): <undefined>, <undefined>
+2017-02-28 09:07:19.056741: I tensorflow/compiler/xla/service/platform_util.cc:58] platform CUDA present with 1 visible devices
+2017-02-28 09:07:19.056792: I tensorflow/compiler/xla/service/platform_util.cc:58] platform Host present with 36 visible devices
+2017-02-28 09:07:19.136149: I tensorflow/compiler/xla/service/service.cc:180] XLA service executing computations on platform CUDA. Devices:
+2017-02-28 09:07:19.136198: I tensorflow/compiler/xla/service/service.cc:187]   StreamExecutor device (0): GeForce GTX TITAN X, Compute Capability 5.2
+i_rnn_cell_8/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_7/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_7/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_6/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_6/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_5/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_5/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_4/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_4/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_3/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_3/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_2/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_2/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_1/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell_1/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell/cell_1/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+[<tf.Tensor 'gradients_3/model_with_buckets/embedding_attention_seq2seq_3/rnn/multi_rnn_cell/cell_0/Cell/split_grad/concat:0' shape=(?, 522) dtype=float32>, None, None]
+Created model with fresh parameters.
+Reading development and training data (limit: 0).
+  reading data line 100000
+  reading data line 200000
+  reading data line 300000
+  reading data line 400000
+  reading data line 500000
+  reading data line 600000
+  reading data line 700000
+  reading data line 800000
+  reading data line 900000
+  reading data line 1000000
+  reading data line 1100000
+  reading data line 1200000
+  reading data line 1300000
+  reading data line 1400000
+  reading data line 1500000
+  reading data line 1600000
+  reading data line 1700000
+  reading data line 1800000
+  reading data line 1900000
+  reading data line 2000000
+  reading data line 2100000
+  reading data line 2200000
+  reading data line 2300000
+  reading data line 2400000
+  reading data line 2500000
+  reading data line 2600000
+  reading data line 2700000
+  reading data line 2800000
+  reading data line 2900000
+  reading data line 3000000
+  reading data line 3100000
+  reading data line 3200000
+  reading data line 3300000
+  reading data line 3400000
+  reading data line 3500000
+  reading data line 3600000
+  reading data line 3700000
+  reading data line 3800000
+  reading data line 3900000
+  reading data line 4000000
+  reading data line 4100000
+  reading data line 4200000
+  reading data line 4300000
+  reading data line 4400000
+  reading data line 4500000
+  reading data line 4600000
+  reading data line 4700000
+  reading data line 4800000
+  reading data line 4900000
+  reading data line 5000000
+  reading data line 5100000
+  reading data line 5200000
+  reading data line 5300000
+  reading data line 5400000
+  reading data line 5500000
+  reading data line 5600000
+  reading data line 5700000
+  reading data line 5800000
+  reading data line 5900000
+  reading data line 6000000
+  reading data line 6100000
+  reading data line 6200000
+  reading data line 6300000
+  reading data line 6400000
+  reading data line 6500000
+  reading data line 6600000
+  reading data line 6700000
+  reading data line 6800000
+  reading data line 6900000
+  reading data line 7000000
+  reading data line 7100000
+  reading data line 7200000
+  reading data line 7300000
+  reading data line 7400000
+  reading data line 7500000
+  reading data line 7600000
+  reading data line 7700000
+  reading data line 7800000
+  reading data line 7900000
+  reading data line 8000000
+  reading data line 8100000
+  reading data line 8200000
+  reading data line 8300000
+  reading data line 8400000
+  reading data line 8500000
+  reading data line 8600000
+  reading data line 8700000
+  reading data line 8800000
+  reading data line 8900000
+  reading data line 9000000
+  reading data line 9100000
+  reading data line 9200000
+  reading data line 9300000
+  reading data line 9400000
+  reading data line 9500000
+  reading data line 9600000
+  reading data line 9700000
+  reading data line 9800000
+  reading data line 9900000
+  reading data line 10000000
+  reading data line 10100000
+  reading data line 10200000
+  reading data line 10300000
+  reading data line 10400000
+  reading data line 10500000
+  reading data line 10600000
+  reading data line 10700000
+  reading data line 10800000
+  reading data line 10900000
+  reading data line 11000000
+  reading data line 11100000
+  reading data line 11200000
+  reading data line 11300000
+  reading data line 11400000
+  reading data line 11500000
+  reading data line 11600000
+  reading data line 11700000
+  reading data line 11800000
+  reading data line 11900000
+  reading data line 12000000
+  reading data line 12100000
+  reading data line 12200000
+  reading data line 12300000
+  reading data line 12400000
+  reading data line 12500000
+  reading data line 12600000
+  reading data line 12700000
+  reading data line 12800000
+  reading data line 12900000
+  reading data line 13000000
+  reading data line 13100000
+  reading data line 13200000
+  reading data line 13300000
+  reading data line 13400000
+  reading data line 13500000
+  reading data line 13600000
+  reading data line 13700000
+  reading data line 13800000
+  reading data line 13900000
+  reading data line 14000000
+  reading data line 14100000
+  reading data line 14200000
+  reading data line 14300000
+  reading data line 14400000
+  reading data line 14500000
+  reading data line 14600000
+  reading data line 14700000
+  reading data line 14800000
+  reading data line 14900000
+  reading data line 15000000
+  reading data line 15100000
+  reading data line 15200000
+  reading data line 15300000
+  reading data line 15400000
+  reading data line 15500000
+  reading data line 15600000
+  reading data line 15700000
+  reading data line 15800000
+  reading data line 15900000
+  reading data line 16000000
+  reading data line 16100000
+  reading data line 16200000
+  reading data line 16300000
+  reading data line 16400000
+  reading data line 16500000
+  reading data line 16600000
+  reading data line 16700000
+  reading data line 16800000
+  reading data line 16900000
+  reading data line 17000000
+  reading data line 17100000
+  reading data line 17200000
+  reading data line 17300000
+  reading data line 17400000
+  reading data line 17500000
+  reading data line 17600000
+  reading data line 17700000
+  reading data line 17800000
+  reading data line 17900000
+  reading data line 18000000
+  reading data line 18100000
+  reading data line 18200000
+  reading data line 18300000
+  reading data line 18400000
+  reading data line 18500000
+  reading data line 18600000
+  reading data line 18700000
+  reading data line 18800000
+  reading data line 18900000
+  reading data line 19000000
+  reading data line 19100000
+  reading data line 19200000
+  reading data line 19300000
+  reading data line 19400000
+  reading data line 19500000
+  reading data line 19600000
+  reading data line 19700000
+  reading data line 19800000
+  reading data line 19900000
+  reading data line 20000000
+  reading data line 20100000
+  reading data line 20200000
+  reading data line 20300000
+  reading data line 20400000
+  reading data line 20500000
+  reading data line 20600000
+  reading data line 20700000
+  reading data line 20800000
+  reading data line 20900000
+  reading data line 21000000
+  reading data line 21100000
+  reading data line 21200000
+  reading data line 21300000
+  reading data line 21400000
+  reading data line 21500000
+  reading data line 21600000
+  reading data line 21700000
+  reading data line 21800000
+  reading data line 21900000
+  reading data line 22000000
+  reading data line 22100000
+  reading data line 22200000
+  reading data line 22300000
+  reading data line 22400000
+  reading data line 22500000
+2017-02-28 09:28:29.371903: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 7747 get requests, put_count=2831 evicted_count=1000 eviction_rate=0.353232 and unsatisfied allocation rate=0.776559
+2017-02-28 09:28:29.371959: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 100 to 110
+2017-02-28 09:28:29.777234: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 146 get requests, put_count=5157 evicted_count=5000 eviction_rate=0.969556 and unsatisfied allocation rate=0
+2017-02-28 09:28:37.730411: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 248 get requests, put_count=9260 evicted_count=9000 eviction_rate=0.971922 and unsatisfied allocation rate=0
+2017-02-28 09:28:38.216588: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 180 get requests, put_count=7193 evicted_count=7000 eviction_rate=0.973168 and unsatisfied allocation rate=0
+2017-02-28 09:28:38.606568: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 160 get requests, put_count=5174 evicted_count=5000 eviction_rate=0.96637 and unsatisfied allocation rate=0
+2017-02-28 09:28:39.158336: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 264 get requests, put_count=9280 evicted_count=9000 eviction_rate=0.969828 and unsatisfied allocation rate=0
+2017-02-28 09:28:42.390008: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 92 get requests, put_count=4111 evicted_count=4000 eviction_rate=0.972999 and unsatisfied allocation rate=0
+2017-02-28 09:28:42.750501: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 64 get requests, put_count=2085 evicted_count=2000 eviction_rate=0.959233 and unsatisfied allocation rate=0
+2017-02-28 09:28:43.309576: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 16 get requests, put_count=1041 evicted_count=1000 eviction_rate=0.960615 and unsatisfied allocation rate=0
+2017-02-28 09:28:43.887562: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 124 get requests, put_count=5152 evicted_count=5000 eviction_rate=0.970497 and unsatisfied allocation rate=0
+2017-02-28 09:28:44.425203: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 72 get requests, put_count=3102 evicted_count=3000 eviction_rate=0.967118 and unsatisfied allocation rate=0
+2017-02-28 09:28:44.974663: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 20 get requests, put_count=1053 evicted_count=1000 eviction_rate=0.949668 and unsatisfied allocation rate=0
+2017-02-28 09:28:45.474866: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 15841 get requests, put_count=15212 evicted_count=11000 eviction_rate=0.723113 and unsatisfied allocation rate=0.736191
+2017-02-28 09:28:45.474909: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 372 to 409
+2017-02-28 09:28:45.689250: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 304 get requests, put_count=10341 evicted_count=10000 eviction_rate=0.967024 and unsatisfied allocation rate=0
+2017-02-28 09:28:46.238212: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 240 get requests, put_count=8280 evicted_count=8000 eviction_rate=0.966184 and unsatisfied allocation rate=0
+2017-02-28 09:28:46.751738: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 180 get requests, put_count=7224 evicted_count=7000 eviction_rate=0.968992 and unsatisfied allocation rate=0
+2017-02-28 09:28:47.281209: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 136 get requests, put_count=5185 evicted_count=5000 eviction_rate=0.96432 and unsatisfied allocation rate=0
+2017-02-28 09:28:47.815940: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 92 get requests, put_count=4146 evicted_count=4000 eviction_rate=0.964785 and unsatisfied allocation rate=0
+2017-02-28 09:28:48.354500: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 48 get requests, put_count=2107 evicted_count=2000 eviction_rate=0.949217 and unsatisfied allocation rate=0
+2017-02-28 09:28:48.862215: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 8 get requests, put_count=1073 evicted_count=1000 eviction_rate=0.931966 and unsatisfied allocation rate=0
+2017-02-28 09:28:49.081256: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 356 get requests, put_count=11421 evicted_count=11000 eviction_rate=0.963138 and unsatisfied allocation rate=0
+2017-02-28 09:28:49.610281: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 304 get requests, put_count=9376 evicted_count=9000 eviction_rate=0.959898 and unsatisfied allocation rate=0
+2017-02-28 09:28:50.256862: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 88 get requests, put_count=3175 evicted_count=3000 eviction_rate=0.944882 and unsatisfied allocation rate=0
+2017-02-28 09:28:50.798325: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 56 get requests, put_count=2151 evicted_count=2000 eviction_rate=0.9298 and unsatisfied allocation rate=0
+2017-02-28 09:28:51.359071: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 28 get requests, put_count=1133 evicted_count=1000 eviction_rate=0.882613 and unsatisfied allocation rate=0
+2017-02-28 09:28:51.759333: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 8125 get requests, put_count=14369 evicted_count=11000 eviction_rate=0.765537 and unsatisfied allocation rate=0.598277
+2017-02-28 09:28:51.759373: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 1158 to 1273
+2017-02-28 09:28:52.284470: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 160 get requests, put_count=5287 evicted_count=5000 eviction_rate=0.945716 and unsatisfied allocation rate=0
+2017-02-28 09:28:52.872544: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 156 get requests, put_count=5296 evicted_count=5000 eviction_rate=0.944109 and unsatisfied allocation rate=0
+2017-02-28 09:28:53.405199: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 4599 get requests, put_count=7017 evicted_count=4000 eviction_rate=0.570044 and unsatisfied allocation rate=0.377473
+2017-02-28 09:28:53.405240: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 1694 to 1863
+2017-02-28 09:28:56.123993: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 128 get requests, put_count=4332 evicted_count=4000 eviction_rate=0.923361 and unsatisfied allocation rate=0
+2017-02-28 09:28:56.682818: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 132 get requests, put_count=4357 evicted_count=4000 eviction_rate=0.918063 and unsatisfied allocation rate=0
+2017-02-28 09:28:57.282807: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 160 get requests, put_count=5407 evicted_count=5000 eviction_rate=0.924727 and unsatisfied allocation rate=0
+2017-02-28 09:28:57.899571: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 204 get requests, put_count=6476 evicted_count=6000 eviction_rate=0.926498 and unsatisfied allocation rate=0
+2017-02-28 09:28:58.523682: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 216 get requests, put_count=6515 evicted_count=6000 eviction_rate=0.920952 and unsatisfied allocation rate=0
+2017-02-28 09:28:59.312021: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 264 get requests, put_count=7626 evicted_count=7000 eviction_rate=0.917912 and unsatisfied allocation rate=0
+2017-02-28 09:29:02.523250: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 39584 get requests, put_count=39381 evicted_count=5000 eviction_rate=0.126965 and unsatisfied allocation rate=0.14617
+2017-02-28 09:29:02.523288: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 6418 to 7059
+2017-02-28 09:29:03.732930: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 15891 get requests, put_count=17325 evicted_count=5000 eviction_rate=0.2886 and unsatisfied allocation rate=0.268768
+2017-02-28 09:29:03.732985: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 7764 to 8540
+global step 200 learning rate 0.5000 step-time 0.52 perplexity 848.16 time since start 106.11
+  eval: bucket 0 perplexity 149.00
+  eval: bucket 1 perplexity 235.12
+  eval: bucket 2 perplexity 284.04
+  eval: bucket 3 perplexity 286.81
+global step 400 learning rate 0.5000 step-time 0.46 perplexity 408.87 time since start 215.28
+  eval: bucket 0 perplexity 334.19
+  eval: bucket 1 perplexity 379.50
+  eval: bucket 2 perplexity 308.75
+  eval: bucket 3 perplexity 272.73
+global step 600 learning rate 0.5000 step-time 0.45 perplexity 353.91 time since start 314.90
+  eval: bucket 0 perplexity 169.29
+  eval: bucket 1 perplexity 207.12
+  eval: bucket 2 perplexity 238.50
+  eval: bucket 3 perplexity 229.52
+global step 800 learning rate 0.5000 step-time 0.44 perplexity 315.57 time since start 413.16
+  eval: bucket 0 perplexity 1860.37
+  eval: bucket 1 perplexity 670.54
+  eval: bucket 2 perplexity 432.19
+  eval: bucket 3 perplexity 363.10
+global step 1000 learning rate 0.5000 step-time 0.47 perplexity 249.69 time since start 516.19
+  eval: bucket 0 perplexity 303.76
+  eval: bucket 1 perplexity 215.55
+  eval: bucket 2 perplexity 200.31
+  eval: bucket 3 perplexity 183.12
+global step 1200 learning rate 0.5000 step-time 0.44 perplexity 230.97 time since start 614.58
+  eval: bucket 0 perplexity 104.99
+  eval: bucket 1 perplexity 133.08
+  eval: bucket 2 perplexity 144.89
+  eval: bucket 3 perplexity 164.86
+global step 1400 learning rate 0.5000 step-time 0.46 perplexity 183.14 time since start 716.86
+  eval: bucket 0 perplexity 16830.96
+  eval: bucket 1 perplexity 8082.40
+  eval: bucket 2 perplexity 6633.52
+  eval: bucket 3 perplexity 2651.79
+global step 1600 learning rate 0.5000 step-time 0.45 perplexity 181.30 time since start 817.62
+  eval: bucket 0 perplexity 79.06
+  eval: bucket 1 perplexity 104.66
+  eval: bucket 2 perplexity 123.56
+  eval: bucket 3 perplexity 139.05
+global step 1800 learning rate 0.5000 step-time 0.43 perplexity 143.64 time since start 914.47
+  eval: bucket 0 perplexity 65.48
+  eval: bucket 1 perplexity 94.24
+  eval: bucket 2 perplexity 117.36
+  eval: bucket 3 perplexity 121.83
+global step 2000 learning rate 0.5000 step-time 0.45 perplexity 134.43 time since start 1016.19
+  eval: bucket 0 perplexity 45.22
+  eval: bucket 1 perplexity 80.38
+  eval: bucket 2 perplexity 104.26
+  eval: bucket 3 perplexity 122.61
+global step 2200 learning rate 0.5000 step-time 0.44 perplexity 125.01 time since start 1134.26
+  eval: bucket 0 perplexity 72.96
+  eval: bucket 1 perplexity 110.02
+  eval: bucket 2 perplexity 142.07
+  eval: bucket 3 perplexity 145.55
+global step 2400 learning rate 0.5000 step-time 0.44 perplexity 119.85 time since start 1231.54
+  eval: bucket 0 perplexity 57.54
+  eval: bucket 1 perplexity 85.27
+  eval: bucket 2 perplexity 90.54
+  eval: bucket 3 perplexity 111.08
+global step 2600 learning rate 0.5000 step-time 0.46 perplexity 116.22 time since start 1333.91
+  eval: bucket 0 perplexity 58.29
+  eval: bucket 1 perplexity 95.40
+  eval: bucket 2 perplexity 107.31
+  eval: bucket 3 perplexity 122.42
+global step 2800 learning rate 0.5000 step-time 0.47 perplexity 110.26 time since start 1438.99
+  eval: bucket 0 perplexity 51.25
+  eval: bucket 1 perplexity 85.02
+  eval: bucket 2 perplexity 100.13
+  eval: bucket 3 perplexity 105.17
+global step 3000 learning rate 0.5000 step-time 0.45 perplexity 105.87 time since start 1538.88
+  eval: bucket 0 perplexity 51.22
+  eval: bucket 1 perplexity 83.16
+  eval: bucket 2 perplexity 103.34
+  eval: bucket 3 perplexity 103.87
+global step 3200 learning rate 0.5000 step-time 0.45 perplexity 101.52 time since start 1640.52
+  eval: bucket 0 perplexity 58.09
+  eval: bucket 1 perplexity 93.44
+  eval: bucket 2 perplexity 107.14
+  eval: bucket 3 perplexity 104.60
+global step 3400 learning rate 0.5000 step-time 0.45 perplexity 98.12 time since start 1741.39
+  eval: bucket 0 perplexity 48.67
+  eval: bucket 1 perplexity 73.54
+  eval: bucket 2 perplexity 83.26
+  eval: bucket 3 perplexity 96.12
+global step 3600 learning rate 0.5000 step-time 0.44 perplexity 94.86 time since start 1838.53
+  eval: bucket 0 perplexity 35.06
+  eval: bucket 1 perplexity 69.53
+  eval: bucket 2 perplexity 82.13
+  eval: bucket 3 perplexity 85.15
+global step 3800 learning rate 0.5000 step-time 0.44 perplexity 93.66 time since start 1936.73
+  eval: bucket 0 perplexity 52.15
+  eval: bucket 1 perplexity 71.85
+  eval: bucket 2 perplexity 78.18
+  eval: bucket 3 perplexity 89.26
+global step 4000 learning rate 0.5000 step-time 0.46 perplexity 91.63 time since start 2039.47
+  eval: bucket 0 perplexity 48.23
+  eval: bucket 1 perplexity 69.85
+  eval: bucket 2 perplexity 81.61
+  eval: bucket 3 perplexity 86.93
+global step 4200 learning rate 0.5000 step-time 0.46 perplexity 88.36 time since start 2141.36
+  eval: bucket 0 perplexity 81.03
+  eval: bucket 1 perplexity 79.22
+  eval: bucket 2 perplexity 99.02
+  eval: bucket 3 perplexity 105.25
+global step 4400 learning rate 0.5000 step-time 0.44 perplexity 85.81 time since start 2238.83
+  eval: bucket 0 perplexity 36.97
+  eval: bucket 1 perplexity 65.70
+  eval: bucket 2 perplexity 70.63
+  eval: bucket 3 perplexity 82.30
+global step 4600 learning rate 0.5000 step-time 0.44 perplexity 84.43 time since start 2337.20
+  eval: bucket 0 perplexity 40.65
+  eval: bucket 1 perplexity 70.31
+  eval: bucket 2 perplexity 78.63
+  eval: bucket 3 perplexity 76.61
+global step 4800 learning rate 0.5000 step-time 0.45 perplexity 87.06 time since start 2456.90
+  eval: bucket 0 perplexity 49.80
+  eval: bucket 1 perplexity 64.43
+  eval: bucket 2 perplexity 72.27
+  eval: bucket 3 perplexity 76.22
+global step 5000 learning rate 0.5000 step-time 0.44 perplexity 78.97 time since start 2555.68
+  eval: bucket 0 perplexity 37.19
+  eval: bucket 1 perplexity 60.53
+  eval: bucket 2 perplexity 64.92
+  eval: bucket 3 perplexity 78.92
+global step 5200 learning rate 0.5000 step-time 0.46 perplexity 78.16 time since start 2658.16
+  eval: bucket 0 perplexity 43.88
+  eval: bucket 1 perplexity 60.45
+  eval: bucket 2 perplexity 76.79
+  eval: bucket 3 perplexity 72.37
+global step 5400 learning rate 0.5000 step-time 0.45 perplexity 75.93 time since start 2757.94
+  eval: bucket 0 perplexity 34.07
+  eval: bucket 1 perplexity 58.03
+  eval: bucket 2 perplexity 71.29
+  eval: bucket 3 perplexity 81.14
+global step 5600 learning rate 0.5000 step-time 0.45 perplexity 74.50 time since start 2858.34
+  eval: bucket 0 perplexity 30.52
+  eval: bucket 1 perplexity 64.00
+  eval: bucket 2 perplexity 65.64
+  eval: bucket 3 perplexity 73.86
+global step 5800 learning rate 0.5000 step-time 0.44 perplexity 73.62 time since start 2956.96
+  eval: bucket 0 perplexity 36.58
+  eval: bucket 1 perplexity 67.50
+  eval: bucket 2 perplexity 66.80
+  eval: bucket 3 perplexity 77.17
+global step 6000 learning rate 0.5000 step-time 0.45 perplexity 74.87 time since start 3057.88
+  eval: bucket 0 perplexity 35.46
+  eval: bucket 1 perplexity 61.50
+  eval: bucket 2 perplexity 67.17
+  eval: bucket 3 perplexity 71.39
+global step 6200 learning rate 0.5000 step-time 0.45 perplexity 70.44 time since start 3158.06
+  eval: bucket 0 perplexity 37.59
+  eval: bucket 1 perplexity 66.02
+  eval: bucket 2 perplexity 76.75
+  eval: bucket 3 perplexity 79.62
+global step 6400 learning rate 0.5000 step-time 0.46 perplexity 69.87 time since start 3261.45
+  eval: bucket 0 perplexity 37.11
+  eval: bucket 1 perplexity 49.05
+  eval: bucket 2 perplexity 63.51
+  eval: bucket 3 perplexity 70.66
+global step 6600 learning rate 0.5000 step-time 0.45 perplexity 66.79 time since start 3360.88
+  eval: bucket 0 perplexity 26.08
+  eval: bucket 1 perplexity 52.74
+  eval: bucket 2 perplexity 57.67
+  eval: bucket 3 perplexity 70.33
+global step 6800 learning rate 0.5000 step-time 0.45 perplexity 65.40 time since start 3460.68
+  eval: bucket 0 perplexity 33.07
+  eval: bucket 1 perplexity 50.80
+  eval: bucket 2 perplexity 56.42
+  eval: bucket 3 perplexity 65.79
+global step 7000 learning rate 0.5000 step-time 0.45 perplexity 64.55 time since start 3560.38
+  eval: bucket 0 perplexity 34.97
+  eval: bucket 1 perplexity 49.64
+  eval: bucket 2 perplexity 57.80
+  eval: bucket 3 perplexity 66.33
+global step 7200 learning rate 0.5000 step-time 0.45 perplexity 63.76 time since start 3681.33
+  eval: bucket 0 perplexity 32.43
+  eval: bucket 1 perplexity 56.76
+  eval: bucket 2 perplexity 52.29
+  eval: bucket 3 perplexity 72.35
+global step 7400 learning rate 0.5000 step-time 0.45 perplexity 62.71 time since start 3781.18
+  eval: bucket 0 perplexity 25.50
+  eval: bucket 1 perplexity 52.69
+  eval: bucket 2 perplexity 66.09
+  eval: bucket 3 perplexity 63.68
+global step 7600 learning rate 0.5000 step-time 0.44 perplexity 61.09 time since start 3879.08
+  eval: bucket 0 perplexity 32.62
+  eval: bucket 1 perplexity 44.96
+  eval: bucket 2 perplexity 56.50
+  eval: bucket 3 perplexity 60.82
+global step 7800 learning rate 0.5000 step-time 0.45 perplexity 60.26 time since start 3980.07
+  eval: bucket 0 perplexity 25.75
+  eval: bucket 1 perplexity 46.13
+  eval: bucket 2 perplexity 52.81
+  eval: bucket 3 perplexity 62.05
+global step 8000 learning rate 0.5000 step-time 0.44 perplexity 58.43 time since start 4078.67
+  eval: bucket 0 perplexity 22.53
+  eval: bucket 1 perplexity 50.32
+  eval: bucket 2 perplexity 52.00
+  eval: bucket 3 perplexity 66.98
+global step 8200 learning rate 0.5000 step-time 0.45 perplexity 58.06 time since start 4179.63
+  eval: bucket 0 perplexity 24.39
+  eval: bucket 1 perplexity 42.00
+  eval: bucket 2 perplexity 50.56
+  eval: bucket 3 perplexity 57.62
+global step 8400 learning rate 0.5000 step-time 0.45 perplexity 56.77 time since start 4280.44
+  eval: bucket 0 perplexity 28.92
+  eval: bucket 1 perplexity 45.42
+  eval: bucket 2 perplexity 53.24
+  eval: bucket 3 perplexity 60.88
+global step 8600 learning rate 0.5000 step-time 0.44 perplexity 55.51 time since start 4378.57
+  eval: bucket 0 perplexity 24.14
+  eval: bucket 1 perplexity 49.21
+  eval: bucket 2 perplexity 53.68
+  eval: bucket 3 perplexity 56.57
+global step 8800 learning rate 0.5000 step-time 0.43 perplexity 55.08 time since start 4475.54
+  eval: bucket 0 perplexity 22.64
+  eval: bucket 1 perplexity 41.27
+  eval: bucket 2 perplexity 49.71
+  eval: bucket 3 perplexity 58.38
+global step 9000 learning rate 0.5000 step-time 0.45 perplexity 53.67 time since start 4577.06
+  eval: bucket 0 perplexity 29.28
+  eval: bucket 1 perplexity 48.24
+  eval: bucket 2 perplexity 55.61
+  eval: bucket 3 perplexity 57.30
+global step 9200 learning rate 0.5000 step-time 0.45 perplexity 53.37 time since start 4676.69
+  eval: bucket 0 perplexity 24.20
+  eval: bucket 1 perplexity 38.18
+  eval: bucket 2 perplexity 54.63
+  eval: bucket 3 perplexity 61.15
+global step 9400 learning rate 0.5000 step-time 0.44 perplexity 52.04 time since start 4776.29
+  eval: bucket 0 perplexity 24.51
+  eval: bucket 1 perplexity 40.42
+  eval: bucket 2 perplexity 44.50
+  eval: bucket 3 perplexity 57.65
+global step 9600 learning rate 0.5000 step-time 0.43 perplexity 50.32 time since start 4893.76
+  eval: bucket 0 perplexity 26.64
+  eval: bucket 1 perplexity 38.93
+  eval: bucket 2 perplexity 52.66
+  eval: bucket 3 perplexity 59.23
+global step 9800 learning rate 0.5000 step-time 0.45 perplexity 50.41 time since start 4995.20
+  eval: bucket 0 perplexity 28.12
+  eval: bucket 1 perplexity 39.29
+  eval: bucket 2 perplexity 46.99
+  eval: bucket 3 perplexity 49.95
+global step 10000 learning rate 0.5000 step-time 0.45 perplexity 50.42 time since start 5095.46
+  eval: bucket 0 perplexity 30.74
+  eval: bucket 1 perplexity 40.61
+  eval: bucket 2 perplexity 52.16
+  eval: bucket 3 perplexity 61.97
+global step 10200 learning rate 0.5000 step-time 0.45 perplexity 49.88 time since start 5196.89
+  eval: bucket 0 perplexity 23.82
+  eval: bucket 1 perplexity 37.55
+  eval: bucket 2 perplexity 52.89
+  eval: bucket 3 perplexity 59.22
+global step 10400 learning rate 0.5000 step-time 0.44 perplexity 48.39 time since start 5295.75
+  eval: bucket 0 perplexity 21.71
+  eval: bucket 1 perplexity 36.43
+  eval: bucket 2 perplexity 45.41
+  eval: bucket 3 perplexity 57.70
+global step 10600 learning rate 0.5000 step-time 0.46 perplexity 48.23 time since start 5398.39
+  eval: bucket 0 perplexity 38.04
+  eval: bucket 1 perplexity 40.78
+  eval: bucket 2 perplexity 55.38
+  eval: bucket 3 perplexity 52.46
+global step 10800 learning rate 0.5000 step-time 0.43 perplexity 46.75 time since start 5494.60
+  eval: bucket 0 perplexity 74.51
+  eval: bucket 1 perplexity 46.57
+  eval: bucket 2 perplexity 55.13
+  eval: bucket 3 perplexity 60.09
+global step 11000 learning rate 0.5000 step-time 0.44 perplexity 46.74 time since start 5592.49
+  eval: bucket 0 perplexity 25.28
+  eval: bucket 1 perplexity 36.82
+  eval: bucket 2 perplexity 43.55
+  eval: bucket 3 perplexity 53.27
+global step 11200 learning rate 0.5000 step-time 0.43 perplexity 46.02 time since start 5689.81
+  eval: bucket 0 perplexity 25.88
+  eval: bucket 1 perplexity 34.06
+  eval: bucket 2 perplexity 44.49
+  eval: bucket 3 perplexity 51.71
+global step 11400 learning rate 0.5000 step-time 0.45 perplexity 45.89 time since start 5790.05
+  eval: bucket 0 perplexity 26.16
+  eval: bucket 1 perplexity 45.24
+  eval: bucket 2 perplexity 49.95
+  eval: bucket 3 perplexity 55.60
+global step 11600 learning rate 0.5000 step-time 0.45 perplexity 45.12 time since start 5890.69
+  eval: bucket 0 perplexity 20.06
+  eval: bucket 1 perplexity 39.20
+  eval: bucket 2 perplexity 39.73
+  eval: bucket 3 perplexity 47.10
+global step 11800 learning rate 0.5000 step-time 0.45 perplexity 44.88 time since start 5991.93
+  eval: bucket 0 perplexity 22.89
+  eval: bucket 1 perplexity 38.79
+  eval: bucket 2 perplexity 40.29
+  eval: bucket 3 perplexity 46.18
+global step 12000 learning rate 0.5000 step-time 0.45 perplexity 44.31 time since start 6112.42
+  eval: bucket 0 perplexity 23.25
+  eval: bucket 1 perplexity 32.73
+  eval: bucket 2 perplexity 38.63
+  eval: bucket 3 perplexity 46.09
+global step 12200 learning rate 0.5000 step-time 0.45 perplexity 44.44 time since start 6213.18
+  eval: bucket 0 perplexity 25.46
+  eval: bucket 1 perplexity 36.67
+  eval: bucket 2 perplexity 39.66
+  eval: bucket 3 perplexity 47.45
+global step 12400 learning rate 0.5000 step-time 0.45 perplexity 43.59 time since start 6313.39
+  eval: bucket 0 perplexity 21.28
+  eval: bucket 1 perplexity 33.87
+  eval: bucket 2 perplexity 46.01
+  eval: bucket 3 perplexity 45.81
+global step 12600 learning rate 0.5000 step-time 0.46 perplexity 43.53 time since start 6415.08
+  eval: bucket 0 perplexity 23.02
+  eval: bucket 1 perplexity 29.16
+  eval: bucket 2 perplexity 36.31
+  eval: bucket 3 perplexity 46.25
+global step 12800 learning rate 0.5000 step-time 0.43 perplexity 42.65 time since start 6511.19
+  eval: bucket 0 perplexity 21.55
+  eval: bucket 1 perplexity 31.96
+  eval: bucket 2 perplexity 39.60
+  eval: bucket 3 perplexity 46.38
+global step 13000 learning rate 0.5000 step-time 0.45 perplexity 42.87 time since start 6612.44
+  eval: bucket 0 perplexity 20.39
+  eval: bucket 1 perplexity 32.81
+  eval: bucket 2 perplexity 39.68
+  eval: bucket 3 perplexity 42.41
+global step 13200 learning rate 0.5000 step-time 0.46 perplexity 41.94 time since start 6713.50
+  eval: bucket 0 perplexity 22.78
+  eval: bucket 1 perplexity 30.74
+  eval: bucket 2 perplexity 37.13
+  eval: bucket 3 perplexity 46.93
+global step 13400 learning rate 0.5000 step-time 0.44 perplexity 40.93 time since start 6811.21
+  eval: bucket 0 perplexity 20.11
+  eval: bucket 1 perplexity 32.24
+  eval: bucket 2 perplexity 41.67
+  eval: bucket 3 perplexity 40.52
+global step 13600 learning rate 0.5000 step-time 0.43 perplexity 40.72 time since start 6907.98
+  eval: bucket 0 perplexity 26.08
+  eval: bucket 1 perplexity 41.52
+  eval: bucket 2 perplexity 36.28
+  eval: bucket 3 perplexity 44.60
+global step 13800 learning rate 0.5000 step-time 0.46 perplexity 41.16 time since start 7010.27
+  eval: bucket 0 perplexity 24.37
+  eval: bucket 1 perplexity 29.14
+  eval: bucket 2 perplexity 40.55
+  eval: bucket 3 perplexity 42.15
+global step 14000 learning rate 0.5000 step-time 0.44 perplexity 40.27 time since start 7109.93
+  eval: bucket 0 perplexity 25.65
+  eval: bucket 1 perplexity 34.72
+  eval: bucket 2 perplexity 32.74
+  eval: bucket 3 perplexity 43.11
+global step 14200 learning rate 0.5000 step-time 0.46 perplexity 40.44 time since start 7211.51
+  eval: bucket 0 perplexity 16.83
+  eval: bucket 1 perplexity 28.23
+  eval: bucket 2 perplexity 37.61
+  eval: bucket 3 perplexity 43.77
+global step 14400 learning rate 0.5000 step-time 0.45 perplexity 39.76 time since start 7332.52
+  eval: bucket 0 perplexity 23.46
+  eval: bucket 1 perplexity 28.83
+  eval: bucket 2 perplexity 37.08
+  eval: bucket 3 perplexity 40.72
+global step 14600 learning rate 0.5000 step-time 0.44 perplexity 38.25 time since start 7431.08
+  eval: bucket 0 perplexity 23.71
+  eval: bucket 1 perplexity 30.35
+  eval: bucket 2 perplexity 36.55
+  eval: bucket 3 perplexity 40.68
+global step 14800 learning rate 0.5000 step-time 0.44 perplexity 38.49 time since start 7529.95
+  eval: bucket 0 perplexity 26.74
+  eval: bucket 1 perplexity 30.68
+  eval: bucket 2 perplexity 41.80
+  eval: bucket 3 perplexity 42.45
+global step 15000 learning rate 0.5000 step-time 0.46 perplexity 39.31 time since start 7633.21
+  eval: bucket 0 perplexity 16.16
+  eval: bucket 1 perplexity 36.08
+  eval: bucket 2 perplexity 32.28
+  eval: bucket 3 perplexity 41.17
+global step 15200 learning rate 0.5000 step-time 0.44 perplexity 38.85 time since start 7732.30
+  eval: bucket 0 perplexity 20.22
+  eval: bucket 1 perplexity 26.54
+  eval: bucket 2 perplexity 35.49
+  eval: bucket 3 perplexity 42.61
+global step 15400 learning rate 0.5000 step-time 0.44 perplexity 37.49 time since start 7829.94
+  eval: bucket 0 perplexity 30.03
+  eval: bucket 1 perplexity 24.81
+  eval: bucket 2 perplexity 40.36
+  eval: bucket 3 perplexity 38.74
+global step 15600 learning rate 0.5000 step-time 0.46 perplexity 37.66 time since start 7932.60
+  eval: bucket 0 perplexity 22.43
+  eval: bucket 1 perplexity 30.66
+  eval: bucket 2 perplexity 35.62
+  eval: bucket 3 perplexity 38.35
+global step 15800 learning rate 0.5000 step-time 0.46 perplexity 37.35 time since start 8034.46
+  eval: bucket 0 perplexity 24.58
+  eval: bucket 1 perplexity 27.99
+  eval: bucket 2 perplexity 32.43
+  eval: bucket 3 perplexity 38.24
+global step 16000 learning rate 0.5000 step-time 0.44 perplexity 37.25 time since start 8131.98
+  eval: bucket 0 perplexity 23.33
+  eval: bucket 1 perplexity 25.68
+  eval: bucket 2 perplexity 30.54
+  eval: bucket 3 perplexity 39.57
+global step 16200 learning rate 0.5000 step-time 0.43 perplexity 36.08 time since start 8227.67
+  eval: bucket 0 perplexity 21.38
+  eval: bucket 1 perplexity 27.48
+  eval: bucket 2 perplexity 36.33
+  eval: bucket 3 perplexity 42.21
+global step 16400 learning rate 0.5000 step-time 0.45 perplexity 36.22 time since start 8329.77
+  eval: bucket 0 perplexity 28.02
+  eval: bucket 1 perplexity 24.83
+  eval: bucket 2 perplexity 34.93
+  eval: bucket 3 perplexity 36.81
+global step 16600 learning rate 0.5000 step-time 0.44 perplexity 35.82 time since start 8428.03
+  eval: bucket 0 perplexity 21.59
+  eval: bucket 1 perplexity 30.52
+  eval: bucket 2 perplexity 31.42
+  eval: bucket 3 perplexity 41.58
+global step 16800 learning rate 0.5000 step-time 0.47 perplexity 36.00 time since start 8531.86
+  eval: bucket 0 perplexity 23.34
+  eval: bucket 1 perplexity 26.51
+  eval: bucket 2 perplexity 31.01
+  eval: bucket 3 perplexity 38.78
+global step 17000 learning rate 0.5000 step-time 0.43 perplexity 35.48 time since start 8647.22
+  eval: bucket 0 perplexity 27.29
+  eval: bucket 1 perplexity 29.64
+  eval: bucket 2 perplexity 30.17
+  eval: bucket 3 perplexity 43.21
+global step 17200 learning rate 0.5000 step-time 0.47 perplexity 35.64 time since start 8752.38
+  eval: bucket 0 perplexity 17.48
+  eval: bucket 1 perplexity 25.32
+  eval: bucket 2 perplexity 30.60
+  eval: bucket 3 perplexity 37.68
+global step 17400 learning rate 0.5000 step-time 0.45 perplexity 34.67 time since start 8852.29
+  eval: bucket 0 perplexity 17.81
+  eval: bucket 1 perplexity 24.75
+  eval: bucket 2 perplexity 32.25
+  eval: bucket 3 perplexity 39.13
+global step 17600 learning rate 0.5000 step-time 0.44 perplexity 34.25 time since start 8951.26
+  eval: bucket 0 perplexity 39.30
+  eval: bucket 1 perplexity 28.63
+  eval: bucket 2 perplexity 30.22
+  eval: bucket 3 perplexity 39.35
+global step 17800 learning rate 0.5000 step-time 0.45 perplexity 34.39 time since start 9052.37
+  eval: bucket 0 perplexity 22.93
+  eval: bucket 1 perplexity 24.15
+  eval: bucket 2 perplexity 29.40
+  eval: bucket 3 perplexity 37.35
+global step 18000 learning rate 0.5000 step-time 0.42 perplexity 33.62 time since start 9150.28
+  eval: bucket 0 perplexity 25.19
+  eval: bucket 1 perplexity 26.86
+  eval: bucket 2 perplexity 32.48
+  eval: bucket 3 perplexity 36.84
+global step 18200 learning rate 0.5000 step-time 0.46 perplexity 33.89 time since start 9253.10
+  eval: bucket 0 perplexity 34.51
+  eval: bucket 1 perplexity 29.09
+  eval: bucket 2 perplexity 40.39
+  eval: bucket 3 perplexity 40.38
+global step 18400 learning rate 0.5000 step-time 0.45 perplexity 33.40 time since start 9352.23
+  eval: bucket 0 perplexity 21.78
+  eval: bucket 1 perplexity 28.20
+  eval: bucket 2 perplexity 31.53
+  eval: bucket 3 perplexity 36.38
+global step 18600 learning rate 0.5000 step-time 0.44 perplexity 33.09 time since start 9451.31
+  eval: bucket 0 perplexity 18.05
+  eval: bucket 1 perplexity 28.15
+  eval: bucket 2 perplexity 27.00
+  eval: bucket 3 perplexity 34.26
+global step 18800 learning rate 0.5000 step-time 0.45 perplexity 32.76 time since start 9552.53
+  eval: bucket 0 perplexity 19.72
+  eval: bucket 1 perplexity 23.68
+  eval: bucket 2 perplexity 32.83
+  eval: bucket 3 perplexity 35.11
+global step 19000 learning rate 0.5000 step-time 0.44 perplexity 32.58 time since start 9650.22
+  eval: bucket 0 perplexity 17.68
+  eval: bucket 1 perplexity 25.24
+  eval: bucket 2 perplexity 28.38
+  eval: bucket 3 perplexity 32.33
+global step 19200 learning rate 0.5000 step-time 0.44 perplexity 32.21 time since start 9749.36
+  eval: bucket 0 perplexity 18.86
+  eval: bucket 1 perplexity 26.46
+  eval: bucket 2 perplexity 28.96
+  eval: bucket 3 perplexity 32.13
+global step 19400 learning rate 0.5000 step-time 0.48 perplexity 32.56 time since start 9875.90
+  eval: bucket 0 perplexity 15.45
+  eval: bucket 1 perplexity 20.19
+  eval: bucket 2 perplexity 27.98
+  eval: bucket 3 perplexity 32.18
+global step 19600 learning rate 0.5000 step-time 0.47 perplexity 33.15 time since start 9979.68
+  eval: bucket 0 perplexity 18.42
+  eval: bucket 1 perplexity 22.34
+  eval: bucket 2 perplexity 26.99
+  eval: bucket 3 perplexity 34.52
+global step 19800 learning rate 0.4950 step-time 0.45 perplexity 31.66 time since start 10082.64
+  eval: bucket 0 perplexity 15.37
+  eval: bucket 1 perplexity 23.93
+  eval: bucket 2 perplexity 30.07
+  eval: bucket 3 perplexity 34.21
+global step 20000 learning rate 0.4950 step-time 0.45 perplexity 31.62 time since start 10183.07
+  eval: bucket 0 perplexity 16.59
+  eval: bucket 1 perplexity 23.27
+  eval: bucket 2 perplexity 29.01
+  eval: bucket 3 perplexity 33.54
+global step 20200 learning rate 0.4950 step-time 0.45 perplexity 31.54 time since start 10283.34
+  eval: bucket 0 perplexity 18.31
+  eval: bucket 1 perplexity 25.83
+  eval: bucket 2 perplexity 33.05
+  eval: bucket 3 perplexity 34.57
+global step 20400 learning rate 0.4950 step-time 0.45 perplexity 31.25 time since start 10383.70
+  eval: bucket 0 perplexity 21.96
+  eval: bucket 1 perplexity 21.15
+  eval: bucket 2 perplexity 27.93
+  eval: bucket 3 perplexity 38.70
+global step 20600 learning rate 0.4950 step-time 0.43 perplexity 30.76 time since start 10479.69
+  eval: bucket 0 perplexity 22.43
+  eval: bucket 1 perplexity 19.61
+  eval: bucket 2 perplexity 29.92
+  eval: bucket 3 perplexity 31.07
+global step 20800 learning rate 0.4950 step-time 0.45 perplexity 30.84 time since start 10580.78
+  eval: bucket 0 perplexity 25.48
+  eval: bucket 1 perplexity 25.34
+  eval: bucket 2 perplexity 34.75
+  eval: bucket 3 perplexity 29.22
+global step 21000 learning rate 0.4950 step-time 0.45 perplexity 30.79 time since start 10681.47
+  eval: bucket 0 perplexity 19.36
+  eval: bucket 1 perplexity 24.94
+  eval: bucket 2 perplexity 28.28
+  eval: bucket 3 perplexity 33.74
+global step 21200 learning rate 0.4950 step-time 0.43 perplexity 30.19 time since start 10778.02
+  eval: bucket 0 perplexity 19.55
+  eval: bucket 1 perplexity 24.78
+  eval: bucket 2 perplexity 31.67
+  eval: bucket 3 perplexity 31.63
+global step 21400 learning rate 0.4950 step-time 0.46 perplexity 30.45 time since start 10880.87
+  eval: bucket 0 perplexity 21.20
+  eval: bucket 1 perplexity 24.56
+  eval: bucket 2 perplexity 25.89
+  eval: bucket 3 perplexity 30.74
+global step 21600 learning rate 0.4950 step-time 0.45 perplexity 30.44 time since start 10982.12
+  eval: bucket 0 perplexity 17.98
+  eval: bucket 1 perplexity 23.50
+  eval: bucket 2 perplexity 26.57
+  eval: bucket 3 perplexity 30.00
+global step 21800 learning rate 0.4950 step-time 0.43 perplexity 29.71 time since start 11101.42
+  eval: bucket 0 perplexity 16.97
+  eval: bucket 1 perplexity 20.06
+  eval: bucket 2 perplexity 28.10
+  eval: bucket 3 perplexity 33.36
+global step 22000 learning rate 0.4950 step-time 0.46 perplexity 30.35 time since start 11202.78
+  eval: bucket 0 perplexity 21.76
+  eval: bucket 1 perplexity 22.29
+  eval: bucket 2 perplexity 26.59
+  eval: bucket 3 perplexity 32.26
+global step 22200 learning rate 0.4950 step-time 0.45 perplexity 29.51 time since start 11302.72
+  eval: bucket 0 perplexity 14.51
+  eval: bucket 1 perplexity 20.09
+  eval: bucket 2 perplexity 25.37
+  eval: bucket 3 perplexity 30.89
+global step 22400 learning rate 0.4950 step-time 0.45 perplexity 29.13 time since start 11404.95
+  eval: bucket 0 perplexity 17.81
+  eval: bucket 1 perplexity 24.41
+  eval: bucket 2 perplexity 25.33
+  eval: bucket 3 perplexity 31.27
+global step 22600 learning rate 0.4950 step-time 0.45 perplexity 29.65 time since start 11506.29
+  eval: bucket 0 perplexity 17.57
+  eval: bucket 1 perplexity 18.36
+  eval: bucket 2 perplexity 27.24
+  eval: bucket 3 perplexity 31.74
+global step 22800 learning rate 0.4950 step-time 0.48 perplexity 29.33 time since start 11612.52
+  eval: bucket 0 perplexity 25.58
+  eval: bucket 1 perplexity 19.05
+  eval: bucket 2 perplexity 29.47
+  eval: bucket 3 perplexity 27.87
+global step 23000 learning rate 0.4950 step-time 0.47 perplexity 28.75 time since start 11716.64
+  eval: bucket 0 perplexity 16.82
+  eval: bucket 1 perplexity 23.18
+  eval: bucket 2 perplexity 27.60
+  eval: bucket 3 perplexity 32.69
+global step 23200 learning rate 0.4950 step-time 0.43 perplexity 28.39 time since start 11814.51
+  eval: bucket 0 perplexity 16.35
+  eval: bucket 1 perplexity 25.01
+  eval: bucket 2 perplexity 25.44
+  eval: bucket 3 perplexity 28.45
+global step 23400 learning rate 0.4950 step-time 0.45 perplexity 28.47 time since start 11915.84
+  eval: bucket 0 perplexity 17.07
+  eval: bucket 1 perplexity 21.35
+  eval: bucket 2 perplexity 23.74
+  eval: bucket 3 perplexity 31.62
+global step 23600 learning rate 0.4950 step-time 0.46 perplexity 28.45 time since start 12018.78
+  eval: bucket 0 perplexity 19.18
+  eval: bucket 1 perplexity 20.40
+  eval: bucket 2 perplexity 24.98
+  eval: bucket 3 perplexity 30.07
+global step 23800 learning rate 0.4950 step-time 0.46 perplexity 28.18 time since start 12121.14
+  eval: bucket 0 perplexity 19.39
+  eval: bucket 1 perplexity 25.79
+  eval: bucket 2 perplexity 25.68
+  eval: bucket 3 perplexity 30.48
+global step 24000 learning rate 0.4950 step-time 0.45 perplexity 28.16 time since start 12221.47
+  eval: bucket 0 perplexity 23.86
+  eval: bucket 1 perplexity 22.54
+  eval: bucket 2 perplexity 28.05
+  eval: bucket 3 perplexity 33.97
+global step 24200 learning rate 0.4950 step-time 0.42 perplexity 27.59 time since start 12337.72
+  eval: bucket 0 perplexity 19.55
+  eval: bucket 1 perplexity 19.84
+  eval: bucket 2 perplexity 23.94
+  eval: bucket 3 perplexity 26.69
+global step 24400 learning rate 0.4950 step-time 0.45 perplexity 27.84 time since start 12438.59
+  eval: bucket 0 perplexity 17.73
+  eval: bucket 1 perplexity 20.15
+  eval: bucket 2 perplexity 27.26
+  eval: bucket 3 perplexity 29.74
+global step 24600 learning rate 0.4950 step-time 0.46 perplexity 27.98 time since start 12542.74
+  eval: bucket 0 perplexity 16.68
+  eval: bucket 1 perplexity 20.07
+  eval: bucket 2 perplexity 24.17
+  eval: bucket 3 perplexity 30.96
+global step 24800 learning rate 0.4950 step-time 0.44 perplexity 27.71 time since start 12643.74
+  eval: bucket 0 perplexity 21.67
+  eval: bucket 1 perplexity 18.81
+  eval: bucket 2 perplexity 25.93
+  eval: bucket 3 perplexity 29.80
+global step 25000 learning rate 0.4950 step-time 0.46 perplexity 27.69 time since start 12746.80
+  eval: bucket 0 perplexity 18.20
+  eval: bucket 1 perplexity 17.63
+  eval: bucket 2 perplexity 26.78
+  eval: bucket 3 perplexity 28.71
+global step 25200 learning rate 0.4950 step-time 0.45 perplexity 26.75 time since start 12847.99
+  eval: bucket 0 perplexity 17.11
+  eval: bucket 1 perplexity 20.01
+  eval: bucket 2 perplexity 22.27
+  eval: bucket 3 perplexity 28.22
+global step 25400 learning rate 0.4950 step-time 0.41 perplexity 26.62 time since start 12942.26
+  eval: bucket 0 perplexity 20.55
+  eval: bucket 1 perplexity 24.39
+  eval: bucket 2 perplexity 25.12
+  eval: bucket 3 perplexity 26.44
+global step 25600 learning rate 0.4950 step-time 0.44 perplexity 26.87 time since start 13040.91
+  eval: bucket 0 perplexity 17.86
+  eval: bucket 1 perplexity 20.54
+  eval: bucket 2 perplexity 25.39
+  eval: bucket 3 perplexity 27.16
+global step 25800 learning rate 0.4950 step-time 0.45 perplexity 26.58 time since start 13142.74
+  eval: bucket 0 perplexity 20.93
+  eval: bucket 1 perplexity 18.85
+  eval: bucket 2 perplexity 21.61
+  eval: bucket 3 perplexity 27.84
+global step 26000 learning rate 0.4950 step-time 0.43 perplexity 26.56 time since start 13238.69
+  eval: bucket 0 perplexity 15.95
+  eval: bucket 1 perplexity 18.57
+  eval: bucket 2 perplexity 23.06
+  eval: bucket 3 perplexity 27.94
+global step 26200 learning rate 0.4950 step-time 0.44 perplexity 26.47 time since start 13337.93
+  eval: bucket 0 perplexity 23.02
+  eval: bucket 1 perplexity 21.11
+  eval: bucket 2 perplexity 22.48
+  eval: bucket 3 perplexity 28.86
+global step 26400 learning rate 0.4950 step-time 0.44 perplexity 26.21 time since start 13437.64
+  eval: bucket 0 perplexity 19.52
+  eval: bucket 1 perplexity 18.58
+  eval: bucket 2 perplexity 24.86
+  eval: bucket 3 perplexity 27.87
+global step 26600 learning rate 0.4950 step-time 0.45 perplexity 26.12 time since start 13558.29
+  eval: bucket 0 perplexity 19.49
+  eval: bucket 1 perplexity 17.74
+  eval: bucket 2 perplexity 21.19
+  eval: bucket 3 perplexity 28.26
+global step 26800 learning rate 0.4950 step-time 0.44 perplexity 26.04 time since start 13656.96
+  eval: bucket 0 perplexity 28.06
+  eval: bucket 1 perplexity 21.61
+  eval: bucket 2 perplexity 24.35
+  eval: bucket 3 perplexity 28.01
+global step 27000 learning rate 0.4950 step-time 0.43 perplexity 25.74 time since start 13754.46
+  eval: bucket 0 perplexity 14.91
+  eval: bucket 1 perplexity 21.24
+  eval: bucket 2 perplexity 21.29
+  eval: bucket 3 perplexity 27.41
+global step 27200 learning rate 0.4950 step-time 0.45 perplexity 25.87 time since start 13855.35
+  eval: bucket 0 perplexity 19.67
+  eval: bucket 1 perplexity 19.07
+  eval: bucket 2 perplexity 24.96
+  eval: bucket 3 perplexity 28.33
+global step 27400 learning rate 0.4950 step-time 0.45 perplexity 25.87 time since start 13957.98
+  eval: bucket 0 perplexity 19.74
+  eval: bucket 1 perplexity 20.60
+  eval: bucket 2 perplexity 22.25
+  eval: bucket 3 perplexity 30.41
+global step 27600 learning rate 0.4950 step-time 0.45 perplexity 25.73 time since start 14058.24
+  eval: bucket 0 perplexity 16.75
+  eval: bucket 1 perplexity 19.72
+  eval: bucket 2 perplexity 22.31
+  eval: bucket 3 perplexity 29.95
+global step 27800 learning rate 0.4950 step-time 0.43 perplexity 24.82 time since start 14154.40
+  eval: bucket 0 perplexity 14.81
+  eval: bucket 1 perplexity 18.06
+  eval: bucket 2 perplexity 23.94
+  eval: bucket 3 perplexity 28.97
+global step 28000 learning rate 0.4950 step-time 0.45 perplexity 25.66 time since start 14255.32
+  eval: bucket 0 perplexity 15.20
+  eval: bucket 1 perplexity 16.15
+  eval: bucket 2 perplexity 20.97
+  eval: bucket 3 perplexity 27.27
+global step 28200 learning rate 0.4950 step-time 0.45 perplexity 25.28 time since start 14356.81
+  eval: bucket 0 perplexity 20.08
+  eval: bucket 1 perplexity 21.14
+  eval: bucket 2 perplexity 26.46
+  eval: bucket 3 perplexity 31.24
+global step 28400 learning rate 0.4950 step-time 0.46 perplexity 25.22 time since start 14459.15
+  eval: bucket 0 perplexity 15.73
+  eval: bucket 1 perplexity 20.66
+  eval: bucket 2 perplexity 25.99
+  eval: bucket 3 perplexity 26.52
+global step 28600 learning rate 0.4950 step-time 0.45 perplexity 24.79 time since start 14560.43
+  eval: bucket 0 perplexity 13.68
+  eval: bucket 1 perplexity 21.35
+  eval: bucket 2 perplexity 19.88
+  eval: bucket 3 perplexity 26.59
+global step 28800 learning rate 0.4950 step-time 0.43 perplexity 24.90 time since start 14658.91
+  eval: bucket 0 perplexity 14.72
+  eval: bucket 1 perplexity 18.75
+  eval: bucket 2 perplexity 21.40
+  eval: bucket 3 perplexity 26.66
+global step 29000 learning rate 0.4950 step-time 0.44 perplexity 24.50 time since start 14757.30
+  eval: bucket 0 perplexity 16.10
+  eval: bucket 1 perplexity 15.52
+  eval: bucket 2 perplexity 20.36
+  eval: bucket 3 perplexity 24.51
+global step 29200 learning rate 0.4950 step-time 0.47 perplexity 25.00 time since start 14881.81
+  eval: bucket 0 perplexity 16.82
+  eval: bucket 1 perplexity 18.13
+  eval: bucket 2 perplexity 20.25
+  eval: bucket 3 perplexity 24.71
+global step 29400 learning rate 0.4901 step-time 0.44 perplexity 24.74 time since start 14980.81
+  eval: bucket 0 perplexity 16.73
+  eval: bucket 1 perplexity 19.69
+  eval: bucket 2 perplexity 22.36
+  eval: bucket 3 perplexity 25.59
+global step 29600 learning rate 0.4901 step-time 0.48 perplexity 24.77 time since start 15086.93
+  eval: bucket 0 perplexity 19.28
+  eval: bucket 1 perplexity 18.24
+  eval: bucket 2 perplexity 21.69
+  eval: bucket 3 perplexity 24.89
+global step 29800 learning rate 0.4901 step-time 0.43 perplexity 24.03 time since start 15183.09
+  eval: bucket 0 perplexity 17.16
+  eval: bucket 1 perplexity 16.09
+  eval: bucket 2 perplexity 21.61
+  eval: bucket 3 perplexity 27.42
+global step 30000 learning rate 0.4901 step-time 0.45 perplexity 24.20 time since start 15284.54
+  eval: bucket 0 perplexity 17.54
+  eval: bucket 1 perplexity 16.87
+  eval: bucket 2 perplexity 22.94
+  eval: bucket 3 perplexity 24.43
+global step 30200 learning rate 0.4901 step-time 0.45 perplexity 24.24 time since start 15385.06
+  eval: bucket 0 perplexity 19.52
+  eval: bucket 1 perplexity 21.60
+  eval: bucket 2 perplexity 23.44
+  eval: bucket 3 perplexity 24.11
+global step 30400 learning rate 0.4901 step-time 0.45 perplexity 23.96 time since start 15485.16
+  eval: bucket 0 perplexity 17.04
+  eval: bucket 1 perplexity 17.04
+  eval: bucket 2 perplexity 24.37
+  eval: bucket 3 perplexity 25.91
+global step 30600 learning rate 0.4901 step-time 0.44 perplexity 23.54 time since start 15585.14
+  eval: bucket 0 perplexity 12.45
+  eval: bucket 1 perplexity 17.41
+  eval: bucket 2 perplexity 22.03
+  eval: bucket 3 perplexity 27.06
+global step 30800 learning rate 0.4901 step-time 0.47 perplexity 23.92 time since start 15690.11
+  eval: bucket 0 perplexity 19.82
+  eval: bucket 1 perplexity 17.25
+  eval: bucket 2 perplexity 22.47
+  eval: bucket 3 perplexity 24.44
+global step 31000 learning rate 0.4901 step-time 0.46 perplexity 23.63 time since start 15791.47
+  eval: bucket 0 perplexity 19.64
+  eval: bucket 1 perplexity 15.69
+  eval: bucket 2 perplexity 20.66
+  eval: bucket 3 perplexity 25.40
+global step 31200 learning rate 0.4901 step-time 0.46 perplexity 23.53 time since start 15894.59
+  eval: bucket 0 perplexity 21.28
+  eval: bucket 1 perplexity 17.11
+  eval: bucket 2 perplexity 22.83
+  eval: bucket 3 perplexity 26.96
+global step 31400 learning rate 0.4901 step-time 0.46 perplexity 23.48 time since start 15997.83
+  eval: bucket 0 perplexity 17.09
+  eval: bucket 1 perplexity 16.08
+  eval: bucket 2 perplexity 20.83
+  eval: bucket 3 perplexity 22.07
+global step 31600 learning rate 0.4901 step-time 0.48 perplexity 23.64 time since start 16124.53
+  eval: bucket 0 perplexity 19.34
+  eval: bucket 1 perplexity 21.55
+  eval: bucket 2 perplexity 22.00
+  eval: bucket 3 perplexity 26.76
+global step 31800 learning rate 0.4851 step-time 0.45 perplexity 24.16 time since start 16225.15
+  eval: bucket 0 perplexity 26.46
+  eval: bucket 1 perplexity 19.77
+  eval: bucket 2 perplexity 22.48
+  eval: bucket 3 perplexity 25.63
+global step 32000 learning rate 0.4803 step-time 0.45 perplexity 23.47 time since start 16326.63
+  eval: bucket 0 perplexity 15.83
+  eval: bucket 1 perplexity 19.41
+  eval: bucket 2 perplexity 20.56
+  eval: bucket 3 perplexity 23.61
+global step 32200 learning rate 0.4803 step-time 0.46 perplexity 23.01 time since start 16428.22
+  eval: bucket 0 perplexity 17.86
+  eval: bucket 1 perplexity 20.17
+  eval: bucket 2 perplexity 20.46
+  eval: bucket 3 perplexity 26.59
+global step 32400 learning rate 0.4803 step-time 0.44 perplexity 23.15 time since start 16527.57
+  eval: bucket 0 perplexity 14.71
+  eval: bucket 1 perplexity 18.47
+  eval: bucket 2 perplexity 20.27
+  eval: bucket 3 perplexity 25.14
+global step 32600 learning rate 0.4803 step-time 0.46 perplexity 22.76 time since start 16629.82
+  eval: bucket 0 perplexity 15.39
+  eval: bucket 1 perplexity 16.62
+  eval: bucket 2 perplexity 21.98
+  eval: bucket 3 perplexity 24.53
+global step 32800 learning rate 0.4803 step-time 0.45 perplexity 22.75 time since start 16730.41
+  eval: bucket 0 perplexity 15.60
+  eval: bucket 1 perplexity 17.19
+  eval: bucket 2 perplexity 17.64
+  eval: bucket 3 perplexity 22.92
+global step 33000 learning rate 0.4803 step-time 0.44 perplexity 22.68 time since start 16829.45
+  eval: bucket 0 perplexity 22.56
+  eval: bucket 1 perplexity 16.47
+  eval: bucket 2 perplexity 22.16
+  eval: bucket 3 perplexity 29.20
+global step 33200 learning rate 0.4803 step-time 0.47 perplexity 22.77 time since start 16934.47
+  eval: bucket 0 perplexity 16.78
+  eval: bucket 1 perplexity 18.74
+  eval: bucket 2 perplexity 21.41
+  eval: bucket 3 perplexity 23.47
+global step 33400 learning rate 0.4755 step-time 0.44 perplexity 22.15 time since start 17034.22
+  eval: bucket 0 perplexity 15.96
+  eval: bucket 1 perplexity 16.68
+  eval: bucket 2 perplexity 20.33
+  eval: bucket 3 perplexity 22.97
+global step 33600 learning rate 0.4755 step-time 0.46 perplexity 22.63 time since start 17136.94
+  eval: bucket 0 perplexity 21.22
+  eval: bucket 1 perplexity 17.74
+  eval: bucket 2 perplexity 23.03
+  eval: bucket 3 perplexity 21.86
+global step 33800 learning rate 0.4755 step-time 0.46 perplexity 22.25 time since start 17238.90
+  eval: bucket 0 perplexity 21.22
+  eval: bucket 1 perplexity 16.36
+  eval: bucket 2 perplexity 20.13
+  eval: bucket 3 perplexity 24.90
+global step 34000 learning rate 0.4755 step-time 0.46 perplexity 22.07 time since start 17363.14
+  eval: bucket 0 perplexity 12.77
+  eval: bucket 1 perplexity 16.82
+  eval: bucket 2 perplexity 19.71
+  eval: bucket 3 perplexity 22.58
+global step 34200 learning rate 0.4755 step-time 0.46 perplexity 22.30 time since start 17465.72
+  eval: bucket 0 perplexity 15.75
+  eval: bucket 1 perplexity 17.54
+  eval: bucket 2 perplexity 19.15
+  eval: bucket 3 perplexity 27.61
+global step 34400 learning rate 0.4755 step-time 0.45 perplexity 21.89 time since start 17568.90
+  eval: bucket 0 perplexity 18.57
+  eval: bucket 1 perplexity 19.63
+  eval: bucket 2 perplexity 19.49
+  eval: bucket 3 perplexity 25.93
+global step 34600 learning rate 0.4755 step-time 0.45 perplexity 22.00 time since start 17672.54
+  eval: bucket 0 perplexity 17.25
+  eval: bucket 1 perplexity 16.70
+  eval: bucket 2 perplexity 18.37
+  eval: bucket 3 perplexity 21.35
+global step 34800 learning rate 0.4755 step-time 0.45 perplexity 21.82 time since start 17772.99
+  eval: bucket 0 perplexity 14.25
+  eval: bucket 1 perplexity 16.05
+  eval: bucket 2 perplexity 19.95
+  eval: bucket 3 perplexity 24.63
+global step 35000 learning rate 0.4755 step-time 0.44 perplexity 21.69 time since start 17873.42
+  eval: bucket 0 perplexity 14.69
+  eval: bucket 1 perplexity 18.10
+  eval: bucket 2 perplexity 22.78
+  eval: bucket 3 perplexity 23.64
+global step 35200 learning rate 0.4755 step-time 0.43 perplexity 21.59 time since start 17970.87
+  eval: bucket 0 perplexity 16.07
+  eval: bucket 1 perplexity 15.58
+  eval: bucket 2 perplexity 18.47
+  eval: bucket 3 perplexity 22.31
+global step 35400 learning rate 0.4755 step-time 0.47 perplexity 21.70 time since start 18074.86
+  eval: bucket 0 perplexity 17.08
+  eval: bucket 1 perplexity 15.36
+  eval: bucket 2 perplexity 19.77
+  eval: bucket 3 perplexity 22.64
+global step 35600 learning rate 0.4755 step-time 0.45 perplexity 21.21 time since start 18174.92
+  eval: bucket 0 perplexity 17.32
+  eval: bucket 1 perplexity 15.90
+  eval: bucket 2 perplexity 19.74
+  eval: bucket 3 perplexity 23.78
+global step 35800 learning rate 0.4755 step-time 0.46 perplexity 21.51 time since start 18277.60
+  eval: bucket 0 perplexity 15.11
+  eval: bucket 1 perplexity 18.75
+  eval: bucket 2 perplexity 19.83
+  eval: bucket 3 perplexity 24.69
+global step 36000 learning rate 0.4755 step-time 0.42 perplexity 20.69 time since start 18373.75
+  eval: bucket 0 perplexity 14.85
+  eval: bucket 1 perplexity 17.12
+  eval: bucket 2 perplexity 21.37
+  eval: bucket 3 perplexity 23.05
+global step 36200 learning rate 0.4755 step-time 0.44 perplexity 21.02 time since start 18472.54
+  eval: bucket 0 perplexity 17.46
+  eval: bucket 1 perplexity 17.50
+  eval: bucket 2 perplexity 18.60
+  eval: bucket 3 perplexity 24.62
+global step 36400 learning rate 0.4755 step-time 0.48 perplexity 21.58 time since start 18598.56
+  eval: bucket 0 perplexity 15.60
+  eval: bucket 1 perplexity 14.58
+  eval: bucket 2 perplexity 21.94
+  eval: bucket 3 perplexity 20.91
+global step 36600 learning rate 0.4707 step-time 0.46 perplexity 21.27 time since start 18702.03
+  eval: bucket 0 perplexity 15.89
+  eval: bucket 1 perplexity 16.68
+  eval: bucket 2 perplexity 18.12
+  eval: bucket 3 perplexity 22.53
+global step 36800 learning rate 0.4707 step-time 0.45 perplexity 20.75 time since start 18802.34
+  eval: bucket 0 perplexity 14.86
+  eval: bucket 1 perplexity 17.09
+  eval: bucket 2 perplexity 21.63
+  eval: bucket 3 perplexity 24.71
+global step 37000 learning rate 0.4707 step-time 0.45 perplexity 20.83 time since start 18902.91
+  eval: bucket 0 perplexity 13.70
+  eval: bucket 1 perplexity 14.81
+  eval: bucket 2 perplexity 18.84
+  eval: bucket 3 perplexity 23.28
+global step 37200 learning rate 0.4707 step-time 0.44 perplexity 20.84 time since start 19001.17
+  eval: bucket 0 perplexity 18.23
+  eval: bucket 1 perplexity 14.77
+  eval: bucket 2 perplexity 17.90
+  eval: bucket 3 perplexity 22.50
+global step 37400 learning rate 0.4707 step-time 0.45 perplexity 20.73 time since start 19101.62
+  eval: bucket 0 perplexity 17.96
+  eval: bucket 1 perplexity 16.48
+  eval: bucket 2 perplexity 19.27
+  eval: bucket 3 perplexity 23.08
+global step 37600 learning rate 0.4707 step-time 0.45 perplexity 20.87 time since start 19202.42
+  eval: bucket 0 perplexity 15.99
+  eval: bucket 1 perplexity 14.60
+  eval: bucket 2 perplexity 20.30
+  eval: bucket 3 perplexity 21.60
+global step 37800 learning rate 0.4660 step-time 0.45 perplexity 20.51 time since start 19303.78
+  eval: bucket 0 perplexity 13.80
+  eval: bucket 1 perplexity 15.64
+  eval: bucket 2 perplexity 17.44
+  eval: bucket 3 perplexity 20.40
+global step 38000 learning rate 0.4660 step-time 0.45 perplexity 20.46 time since start 19404.90
+  eval: bucket 0 perplexity 20.24
+  eval: bucket 1 perplexity 18.13
+  eval: bucket 2 perplexity 21.55
+  eval: bucket 3 perplexity 21.55
+global step 38200 learning rate 0.4660 step-time 0.46 perplexity 20.70 time since start 19507.47
+  eval: bucket 0 perplexity 16.27
+  eval: bucket 1 perplexity 13.90
+  eval: bucket 2 perplexity 16.70
+  eval: bucket 3 perplexity 23.44
+global step 38400 learning rate 0.4660 step-time 0.46 perplexity 20.61 time since start 19611.99
+  eval: bucket 0 perplexity 14.85
+  eval: bucket 1 perplexity 18.43
+  eval: bucket 2 perplexity 20.56
+  eval: bucket 3 perplexity 23.05
+global step 38600 learning rate 0.4660 step-time 0.46 perplexity 20.49 time since start 19715.60
+  eval: bucket 0 perplexity 14.33
+  eval: bucket 1 perplexity 16.14
+  eval: bucket 2 perplexity 18.39
+  eval: bucket 3 perplexity 22.88
+global step 38800 learning rate 0.4660 step-time 0.46 perplexity 20.49 time since start 19838.68
+  eval: bucket 0 perplexity 15.32
+  eval: bucket 1 perplexity 16.02
+  eval: bucket 2 perplexity 17.81
+  eval: bucket 3 perplexity 21.05
+global step 39000 learning rate 0.4660 step-time 0.48 perplexity 20.44 time since start 19945.69
+  eval: bucket 0 perplexity 15.03
+  eval: bucket 1 perplexity 13.73
+  eval: bucket 2 perplexity 17.78
+  eval: bucket 3 perplexity 25.56
+global step 39200 learning rate 0.4660 step-time 0.46 perplexity 20.44 time since start 20048.88
+  eval: bucket 0 perplexity 12.40
+  eval: bucket 1 perplexity 15.75
+  eval: bucket 2 perplexity 16.04
+  eval: bucket 3 perplexity 23.04
+global step 39400 learning rate 0.4660 step-time 0.44 perplexity 19.81 time since start 20146.63
+  eval: bucket 0 perplexity 17.51
+  eval: bucket 1 perplexity 15.98
+  eval: bucket 2 perplexity 18.23
+  eval: bucket 3 perplexity 22.30
+global step 39600 learning rate 0.4660 step-time 0.47 perplexity 20.44 time since start 20251.38
+  eval: bucket 0 perplexity 16.46
+  eval: bucket 1 perplexity 17.06
+  eval: bucket 2 perplexity 16.82
+  eval: bucket 3 perplexity 22.32
+global step 39800 learning rate 0.4660 step-time 0.46 perplexity 20.07 time since start 20353.82
+  eval: bucket 0 perplexity 12.79
+  eval: bucket 1 perplexity 15.49
+  eval: bucket 2 perplexity 17.53
+  eval: bucket 3 perplexity 21.02
+global step 40000 learning rate 0.4660 step-time 0.45 perplexity 19.98 time since start 20454.32
+  eval: bucket 0 perplexity 14.44
+  eval: bucket 1 perplexity 17.59
+  eval: bucket 2 perplexity 19.09
+  eval: bucket 3 perplexity 22.74
+global step 40200 learning rate 0.4660 step-time 0.46 perplexity 19.82 time since start 20556.66
+  eval: bucket 0 perplexity 11.76
+  eval: bucket 1 perplexity 16.41
+  eval: bucket 2 perplexity 19.90
+  eval: bucket 3 perplexity 23.13
+global step 40400 learning rate 0.4660 step-time 0.45 perplexity 19.85 time since start 20657.65
+  eval: bucket 0 perplexity 20.56
+  eval: bucket 1 perplexity 15.39
+  eval: bucket 2 perplexity 20.99
+  eval: bucket 3 perplexity 22.63
+global step 40600 learning rate 0.4660 step-time 0.45 perplexity 19.64 time since start 20758.05
+  eval: bucket 0 perplexity 18.16
+  eval: bucket 1 perplexity 15.99
+  eval: bucket 2 perplexity 18.70
+  eval: bucket 3 perplexity 22.54
+global step 40800 learning rate 0.4660 step-time 0.46 perplexity 19.68 time since start 20860.88
+  eval: bucket 0 perplexity 13.21
+  eval: bucket 1 perplexity 13.31
+  eval: bucket 2 perplexity 20.72
+  eval: bucket 3 perplexity 20.93
+global step 41000 learning rate 0.4660 step-time 0.47 perplexity 19.75 time since start 20965.10
+  eval: bucket 0 perplexity 11.80
+  eval: bucket 1 perplexity 16.01
+  eval: bucket 2 perplexity 18.32
+  eval: bucket 3 perplexity 21.13
+global step 41200 learning rate 0.4660 step-time 0.46 perplexity 19.44 time since start 21086.71
+  eval: bucket 0 perplexity 12.86
+  eval: bucket 1 perplexity 16.80
+  eval: bucket 2 perplexity 17.78
+  eval: bucket 3 perplexity 22.07
+global step 41400 learning rate 0.4660 step-time 0.45 perplexity 19.42 time since start 21186.87
+  eval: bucket 0 perplexity 14.81
+  eval: bucket 1 perplexity 15.93
+  eval: bucket 2 perplexity 15.92
+  eval: bucket 3 perplexity 21.68
+global step 41600 learning rate 0.4660 step-time 0.43 perplexity 19.17 time since start 21284.99
+  eval: bucket 0 perplexity 17.00
+  eval: bucket 1 perplexity 15.17
+  eval: bucket 2 perplexity 16.98
+  eval: bucket 3 perplexity 21.80
+global step 41800 learning rate 0.4660 step-time 0.45 perplexity 19.25 time since start 21385.58
+  eval: bucket 0 perplexity 15.79
+  eval: bucket 1 perplexity 15.51
+  eval: bucket 2 perplexity 18.83
+  eval: bucket 3 perplexity 21.94
+global step 42000 learning rate 0.4660 step-time 0.44 perplexity 19.01 time since start 21483.81
+  eval: bucket 0 perplexity 15.84
+  eval: bucket 1 perplexity 16.34
+  eval: bucket 2 perplexity 18.38
+  eval: bucket 3 perplexity 21.41
+global step 42200 learning rate 0.4660 step-time 0.45 perplexity 19.29 time since start 21583.64
+  eval: bucket 0 perplexity 12.25
+  eval: bucket 1 perplexity 15.33
+  eval: bucket 2 perplexity 16.70
+  eval: bucket 3 perplexity 20.99
+global step 42400 learning rate 0.4614 step-time 0.45 perplexity 19.06 time since start 21686.22
+  eval: bucket 0 perplexity 12.33
+  eval: bucket 1 perplexity 14.58
+  eval: bucket 2 perplexity 18.66
+  eval: bucket 3 perplexity 21.81
+global step 42600 learning rate 0.4614 step-time 0.46 perplexity 18.99 time since start 21788.83
+  eval: bucket 0 perplexity 14.60
+  eval: bucket 1 perplexity 12.62
+  eval: bucket 2 perplexity 20.67
+  eval: bucket 3 perplexity 20.47
+global step 42800 learning rate 0.4614 step-time 0.45 perplexity 19.50 time since start 21888.67
+  eval: bucket 0 perplexity 20.72
+  eval: bucket 1 perplexity 13.10
+  eval: bucket 2 perplexity 16.63
+  eval: bucket 3 perplexity 20.49
+global step 43000 learning rate 0.4568 step-time 0.47 perplexity 19.09 time since start 21994.09
+  eval: bucket 0 perplexity 16.62
+  eval: bucket 1 perplexity 13.94
+  eval: bucket 2 perplexity 19.19
+  eval: bucket 3 perplexity 21.04
+global step 43200 learning rate 0.4568 step-time 0.45 perplexity 18.77 time since start 22095.17
+  eval: bucket 0 perplexity 20.69
+  eval: bucket 1 perplexity 15.28
+  eval: bucket 2 perplexity 21.11
+  eval: bucket 3 perplexity 21.92
+global step 43400 learning rate 0.4568 step-time 0.47 perplexity 18.95 time since start 22199.82
+  eval: bucket 0 perplexity 17.73
+  eval: bucket 1 perplexity 14.07
+  eval: bucket 2 perplexity 15.51
+  eval: bucket 3 perplexity 20.03
+global step 43600 learning rate 0.4568 step-time 0.44 perplexity 18.48 time since start 22318.46
+  eval: bucket 0 perplexity 14.56
+  eval: bucket 1 perplexity 12.46
+  eval: bucket 2 perplexity 15.91
+  eval: bucket 3 perplexity 16.33
+global step 43800 learning rate 0.4568 step-time 0.45 perplexity 18.76 time since start 22421.82
+  eval: bucket 0 perplexity 13.28
+  eval: bucket 1 perplexity 14.02
+  eval: bucket 2 perplexity 18.21
+  eval: bucket 3 perplexity 18.35
+global step 44000 learning rate 0.4568 step-time 0.43 perplexity 18.33 time since start 22517.23
+  eval: bucket 0 perplexity 15.07
+  eval: bucket 1 perplexity 14.57
+  eval: bucket 2 perplexity 16.19
+  eval: bucket 3 perplexity 20.96
+global step 44200 learning rate 0.4568 step-time 0.46 perplexity 18.49 time since start 22619.23
+  eval: bucket 0 perplexity 17.89
+  eval: bucket 1 perplexity 11.88
+  eval: bucket 2 perplexity 15.71
+  eval: bucket 3 perplexity 19.68
+global step 44400 learning rate 0.4568 step-time 0.44 perplexity 18.16 time since start 22718.29
+  eval: bucket 0 perplexity 14.98
+  eval: bucket 1 perplexity 13.66
+  eval: bucket 2 perplexity 17.32
+  eval: bucket 3 perplexity 21.13
+global step 44600 learning rate 0.4568 step-time 0.46 perplexity 18.54 time since start 22821.55
+  eval: bucket 0 perplexity 18.67
+  eval: bucket 1 perplexity 16.23
+  eval: bucket 2 perplexity 16.61
+  eval: bucket 3 perplexity 20.97
+global step 44800 learning rate 0.4522 step-time 0.45 perplexity 18.28 time since start 22922.12
+  eval: bucket 0 perplexity 16.22
+  eval: bucket 1 perplexity 15.41
+  eval: bucket 2 perplexity 17.26
+  eval: bucket 3 perplexity 20.34
+global step 45000 learning rate 0.4522 step-time 0.47 perplexity 18.50 time since start 23027.50
+  eval: bucket 0 perplexity 13.98
+  eval: bucket 1 perplexity 13.58
+  eval: bucket 2 perplexity 17.47
+  eval: bucket 3 perplexity 20.25
+global step 45200 learning rate 0.4522 step-time 0.46 perplexity 18.19 time since start 23131.10
+  eval: bucket 0 perplexity 13.76
+  eval: bucket 1 perplexity 14.67
+  eval: bucket 2 perplexity 17.93
+  eval: bucket 3 perplexity 21.04
+global step 45400 learning rate 0.4522 step-time 0.45 perplexity 18.41 time since start 23232.35
+  eval: bucket 0 perplexity 13.19
+  eval: bucket 1 perplexity 16.02
+  eval: bucket 2 perplexity 16.93
+  eval: bucket 3 perplexity 20.33
+global step 45600 learning rate 0.4522 step-time 0.45 perplexity 18.07 time since start 23332.30
+  eval: bucket 0 perplexity 20.46
+  eval: bucket 1 perplexity 14.68
+  eval: bucket 2 perplexity 18.50
+  eval: bucket 3 perplexity 19.48
+global step 45800 learning rate 0.4522 step-time 0.44 perplexity 17.97 time since start 23431.47
+  eval: bucket 0 perplexity 14.62
+  eval: bucket 1 perplexity 12.01
+  eval: bucket 2 perplexity 16.76
+  eval: bucket 3 perplexity 19.86
+global step 46000 learning rate 0.4522 step-time 0.45 perplexity 17.93 time since start 23533.93
+  eval: bucket 0 perplexity 13.91
+  eval: bucket 1 perplexity 13.92
+  eval: bucket 2 perplexity 17.93
+  eval: bucket 3 perplexity 20.42
+global step 46200 learning rate 0.4522 step-time 0.45 perplexity 17.88 time since start 23656.59
+  eval: bucket 0 perplexity 12.52
+  eval: bucket 1 perplexity 12.44
+  eval: bucket 2 perplexity 16.32
+  eval: bucket 3 perplexity 19.52
+global step 46400 learning rate 0.4522 step-time 0.46 perplexity 18.14 time since start 23759.58
+  eval: bucket 0 perplexity 15.09
+  eval: bucket 1 perplexity 14.29
+  eval: bucket 2 perplexity 15.99
+  eval: bucket 3 perplexity 17.71
+global step 46600 learning rate 0.4477 step-time 0.45 perplexity 17.81 time since start 23859.84
+  eval: bucket 0 perplexity 13.93
+  eval: bucket 1 perplexity 15.42
+  eval: bucket 2 perplexity 16.61
+  eval: bucket 3 perplexity 19.56
+global step 46800 learning rate 0.4477 step-time 0.44 perplexity 17.47 time since start 23958.30
+  eval: bucket 0 perplexity 13.08
+  eval: bucket 1 perplexity 11.25
+  eval: bucket 2 perplexity 16.87
+  eval: bucket 3 perplexity 18.93
+global step 47000 learning rate 0.4477 step-time 0.46 perplexity 17.89 time since start 24062.40
+  eval: bucket 0 perplexity 15.19
+  eval: bucket 1 perplexity 12.17
+  eval: bucket 2 perplexity 17.72
+  eval: bucket 3 perplexity 18.71
+global step 47200 learning rate 0.4477 step-time 0.46 perplexity 17.69 time since start 24164.94
+  eval: bucket 0 perplexity 14.06
+  eval: bucket 1 perplexity 14.27
+  eval: bucket 2 perplexity 15.42
+  eval: bucket 3 perplexity 20.22
+global step 47400 learning rate 0.4477 step-time 0.46 perplexity 17.67 time since start 24267.00
+  eval: bucket 0 perplexity 13.52
+  eval: bucket 1 perplexity 13.26
+  eval: bucket 2 perplexity 17.67
+  eval: bucket 3 perplexity 19.37
+global step 47600 learning rate 0.4477 step-time 0.44 perplexity 17.43 time since start 24366.28
+  eval: bucket 0 perplexity 12.15
+  eval: bucket 1 perplexity 12.73
+  eval: bucket 2 perplexity 17.10
+  eval: bucket 3 perplexity 19.69
+global step 47800 learning rate 0.4477 step-time 0.44 perplexity 17.44 time since start 24466.46
+  eval: bucket 0 perplexity 13.71
+  eval: bucket 1 perplexity 11.00
+  eval: bucket 2 perplexity 15.89
+  eval: bucket 3 perplexity 19.55
+global step 48000 learning rate 0.4477 step-time 0.44 perplexity 17.34 time since start 24565.20
+  eval: bucket 0 perplexity 16.12
+  eval: bucket 1 perplexity 13.89
+  eval: bucket 2 perplexity 18.87
+  eval: bucket 3 perplexity 19.38
+global step 48200 learning rate 0.4477 step-time 0.42 perplexity 17.17 time since start 24659.87
+  eval: bucket 0 perplexity 10.34
+  eval: bucket 1 perplexity 11.68
+  eval: bucket 2 perplexity 14.09
+  eval: bucket 3 perplexity 19.37
+global step 48400 learning rate 0.4477 step-time 0.43 perplexity 17.00 time since start 24755.78
+  eval: bucket 0 perplexity 12.60
+  eval: bucket 1 perplexity 14.15
+  eval: bucket 2 perplexity 17.14
+  eval: bucket 3 perplexity 18.92
+global step 48600 learning rate 0.4477 step-time 0.44 perplexity 17.13 time since start 24874.26
+  eval: bucket 0 perplexity 13.65
+  eval: bucket 1 perplexity 13.06
+  eval: bucket 2 perplexity 16.39
+  eval: bucket 3 perplexity 21.04
+global step 48800 learning rate 0.4477 step-time 0.44 perplexity 17.50 time since start 24973.34
+  eval: bucket 0 perplexity 12.12
+  eval: bucket 1 perplexity 15.37
+  eval: bucket 2 perplexity 15.63
+  eval: bucket 3 perplexity 18.04
+global step 49000 learning rate 0.4432 step-time 0.46 perplexity 17.49 time since start 25076.52
+  eval: bucket 0 perplexity 14.61
+  eval: bucket 1 perplexity 12.56
+  eval: bucket 2 perplexity 15.93
+  eval: bucket 3 perplexity 19.62
+global step 49200 learning rate 0.4432 step-time 0.43 perplexity 16.90 time since start 25175.06
+  eval: bucket 0 perplexity 16.32
+  eval: bucket 1 perplexity 13.96
+  eval: bucket 2 perplexity 14.96
+  eval: bucket 3 perplexity 19.35
+global step 49400 learning rate 0.4432 step-time 0.45 perplexity 17.31 time since start 25275.78
+  eval: bucket 0 perplexity 12.56
+  eval: bucket 1 perplexity 12.54
+  eval: bucket 2 perplexity 17.52
+  eval: bucket 3 perplexity 20.35
+global step 49600 learning rate 0.4432 step-time 0.43 perplexity 16.83 time since start 25372.94
+  eval: bucket 0 perplexity 13.11
+  eval: bucket 1 perplexity 13.67
+  eval: bucket 2 perplexity 16.39
+  eval: bucket 3 perplexity 18.03
+global step 49800 learning rate 0.4432 step-time 0.45 perplexity 17.00 time since start 25474.63
+  eval: bucket 0 perplexity 11.09
+  eval: bucket 1 perplexity 12.12
+  eval: bucket 2 perplexity 17.37
+  eval: bucket 3 perplexity 18.54
+global step 50000 learning rate 0.4432 step-time 0.47 perplexity 17.20 time since start 25578.30
+  eval: bucket 0 perplexity 11.87
+  eval: bucket 1 perplexity 12.25
+  eval: bucket 2 perplexity 13.77
+  eval: bucket 3 perplexity 18.38
+global step 50200 learning rate 0.4432 step-time 0.46 perplexity 16.95 time since start 25680.18
+  eval: bucket 0 perplexity 14.91
+  eval: bucket 1 perplexity 13.51
+  eval: bucket 2 perplexity 16.70
+  eval: bucket 3 perplexity 19.11
+global step 50400 learning rate 0.4432 step-time 0.46 perplexity 16.83 time since start 25782.90
+  eval: bucket 0 perplexity 16.53
+  eval: bucket 1 perplexity 14.34
+  eval: bucket 2 perplexity 14.62
+  eval: bucket 3 perplexity 17.85
+global step 50600 learning rate 0.4432 step-time 0.44 perplexity 16.71 time since start 25882.96
+  eval: bucket 0 perplexity 13.10
+  eval: bucket 1 perplexity 14.83
+  eval: bucket 2 perplexity 18.22
+  eval: bucket 3 perplexity 19.45
+global step 50800 learning rate 0.4432 step-time 0.45 perplexity 16.90 time since start 25983.53
+  eval: bucket 0 perplexity 14.17
+  eval: bucket 1 perplexity 14.41
+  eval: bucket 2 perplexity 15.57
+  eval: bucket 3 perplexity 17.08
+global step 51000 learning rate 0.4432 step-time 0.44 perplexity 16.67 time since start 26102.63
+  eval: bucket 0 perplexity 13.62
+  eval: bucket 1 perplexity 12.22
+  eval: bucket 2 perplexity 14.67
+  eval: bucket 3 perplexity 17.84
+global step 51200 learning rate 0.4432 step-time 0.45 perplexity 16.67 time since start 26203.39
+  eval: bucket 0 perplexity 14.70
+  eval: bucket 1 perplexity 13.22
+  eval: bucket 2 perplexity 15.19
+  eval: bucket 3 perplexity 17.63
+global step 51400 learning rate 0.4432 step-time 0.45 perplexity 16.76 time since start 26303.29
+  eval: bucket 0 perplexity 12.41
+  eval: bucket 1 perplexity 16.36
+  eval: bucket 2 perplexity 17.14
+  eval: bucket 3 perplexity 17.17
+global step 51600 learning rate 0.4432 step-time 0.44 perplexity 16.69 time since start 26401.49
+  eval: bucket 0 perplexity 13.63
+  eval: bucket 1 perplexity 13.51
+  eval: bucket 2 perplexity 14.05
+  eval: bucket 3 perplexity 18.30
+global step 51800 learning rate 0.4432 step-time 0.44 perplexity 16.47 time since start 26499.31
+  eval: bucket 0 perplexity 12.80
+  eval: bucket 1 perplexity 12.16
+  eval: bucket 2 perplexity 14.96
+  eval: bucket 3 perplexity 16.84
+global step 52000 learning rate 0.4432 step-time 0.45 perplexity 16.59 time since start 26600.57
+  eval: bucket 0 perplexity 16.17
+  eval: bucket 1 perplexity 11.61
+  eval: bucket 2 perplexity 16.64
+  eval: bucket 3 perplexity 17.98
+global step 52200 learning rate 0.4432 step-time 0.46 perplexity 16.33 time since start 26702.63
+  eval: bucket 0 perplexity 17.90
+  eval: bucket 1 perplexity 11.56
+  eval: bucket 2 perplexity 16.57
+  eval: bucket 3 perplexity 17.28
+global step 52400 learning rate 0.4432 step-time 0.44 perplexity 16.49 time since start 26803.89
+  eval: bucket 0 perplexity 10.70
+  eval: bucket 1 perplexity 13.40
+  eval: bucket 2 perplexity 17.07
+  eval: bucket 3 perplexity 20.23
+global step 52600 learning rate 0.4432 step-time 0.45 perplexity 16.40 time since start 26903.51
+  eval: bucket 0 perplexity 12.71
+  eval: bucket 1 perplexity 12.72
+  eval: bucket 2 perplexity 15.92
+  eval: bucket 3 perplexity 20.51
+global step 52800 learning rate 0.4432 step-time 0.45 perplexity 16.19 time since start 27004.14
+  eval: bucket 0 perplexity 10.94
+  eval: bucket 1 perplexity 13.03
+  eval: bucket 2 perplexity 15.66
+  eval: bucket 3 perplexity 18.07
+global step 53000 learning rate 0.4432 step-time 0.43 perplexity 16.05 time since start 27102.49
+  eval: bucket 0 perplexity 11.35
+  eval: bucket 1 perplexity 12.56
+  eval: bucket 2 perplexity 14.34
+  eval: bucket 3 perplexity 17.07
+global step 53200 learning rate 0.4432 step-time 0.43 perplexity 16.21 time since start 27197.80
+  eval: bucket 0 perplexity 11.44
+  eval: bucket 1 perplexity 12.98
+  eval: bucket 2 perplexity 13.23
+  eval: bucket 3 perplexity 19.55
+global step 53400 learning rate 0.4432 step-time 0.43 perplexity 16.25 time since start 27315.78
+  eval: bucket 0 perplexity 13.92
+  eval: bucket 1 perplexity 14.11
+  eval: bucket 2 perplexity 17.99
+  eval: bucket 3 perplexity 18.24
+global step 53600 learning rate 0.4388 step-time 0.42 perplexity 15.80 time since start 27409.63
+  eval: bucket 0 perplexity 12.65
+  eval: bucket 1 perplexity 12.60
+  eval: bucket 2 perplexity 16.17
+  eval: bucket 3 perplexity 16.90
+global step 53800 learning rate 0.4388 step-time 0.43 perplexity 16.14 time since start 27508.11
+  eval: bucket 0 perplexity 15.97
+  eval: bucket 1 perplexity 11.16
+  eval: bucket 2 perplexity 15.38
+  eval: bucket 3 perplexity 20.49
+global step 54000 learning rate 0.4388 step-time 0.45 perplexity 16.16 time since start 27607.73
+  eval: bucket 0 perplexity 10.58
+  eval: bucket 1 perplexity 9.88
+  eval: bucket 2 perplexity 15.99
+  eval: bucket 3 perplexity 18.36
+global step 54200 learning rate 0.4388 step-time 0.45 perplexity 15.97 time since start 27708.68
+  eval: bucket 0 perplexity 13.56
+  eval: bucket 1 perplexity 10.44
+  eval: bucket 2 perplexity 12.69
+  eval: bucket 3 perplexity 17.17
+global step 54400 learning rate 0.4388 step-time 0.46 perplexity 16.03 time since start 27811.68
+  eval: bucket 0 perplexity 14.09
+  eval: bucket 1 perplexity 11.98
+  eval: bucket 2 perplexity 16.22
+  eval: bucket 3 perplexity 17.61
+global step 54600 learning rate 0.4388 step-time 0.44 perplexity 15.80 time since start 27910.70
+  eval: bucket 0 perplexity 15.50
+  eval: bucket 1 perplexity 12.18
+  eval: bucket 2 perplexity 13.93
+  eval: bucket 3 perplexity 18.43
+global step 54800 learning rate 0.4388 step-time 0.44 perplexity 16.02 time since start 28009.56
+  eval: bucket 0 perplexity 12.16
+  eval: bucket 1 perplexity 12.13
+  eval: bucket 2 perplexity 13.66
+  eval: bucket 3 perplexity 17.25
+global step 55000 learning rate 0.4388 step-time 0.46 perplexity 15.92 time since start 28111.69
+  eval: bucket 0 perplexity 12.15
+  eval: bucket 1 perplexity 12.35
+  eval: bucket 2 perplexity 12.82
+  eval: bucket 3 perplexity 17.67
+global step 55200 learning rate 0.4388 step-time 0.46 perplexity 15.87 time since start 28213.99
+  eval: bucket 0 perplexity 12.85
+  eval: bucket 1 perplexity 9.76
+  eval: bucket 2 perplexity 14.62
+  eval: bucket 3 perplexity 17.38
+global step 55400 learning rate 0.4388 step-time 0.46 perplexity 15.90 time since start 28315.37
+  eval: bucket 0 perplexity 16.18
+  eval: bucket 1 perplexity 11.24
+  eval: bucket 2 perplexity 14.99
+  eval: bucket 3 perplexity 16.96
+global step 55600 learning rate 0.4388 step-time 0.44 perplexity 15.67 time since start 28414.10
+  eval: bucket 0 perplexity 12.58
+  eval: bucket 1 perplexity 11.73
+  eval: bucket 2 perplexity 15.07
+  eval: bucket 3 perplexity 17.56
+global step 55800 learning rate 0.4388 step-time 0.44 perplexity 15.67 time since start 28514.55
+  eval: bucket 0 perplexity 15.24
+  eval: bucket 1 perplexity 13.37
+  eval: bucket 2 perplexity 12.68
+  eval: bucket 3 perplexity 18.77
+global step 56000 learning rate 0.4388 step-time 0.45 perplexity 15.58 time since start 28634.63
+  eval: bucket 0 perplexity 12.06
+  eval: bucket 1 perplexity 11.43
+  eval: bucket 2 perplexity 15.77
+  eval: bucket 3 perplexity 17.40
+global step 56200 learning rate 0.4388 step-time 0.45 perplexity 15.50 time since start 28735.37
+  eval: bucket 0 perplexity 14.16
+  eval: bucket 1 perplexity 10.19
+  eval: bucket 2 perplexity 14.12
+  eval: bucket 3 perplexity 16.56
+global step 56400 learning rate 0.4388 step-time 0.43 perplexity 15.44 time since start 28831.81
+  eval: bucket 0 perplexity 12.52
+  eval: bucket 1 perplexity 11.25
+  eval: bucket 2 perplexity 15.63
+  eval: bucket 3 perplexity 18.59
+global step 56600 learning rate 0.4388 step-time 0.45 perplexity 15.69 time since start 28932.30
+  eval: bucket 0 perplexity 10.95
+  eval: bucket 1 perplexity 12.59
+  eval: bucket 2 perplexity 15.34
+  eval: bucket 3 perplexity 18.19
+global step 56800 learning rate 0.4344 step-time 0.43 perplexity 15.29 time since start 29029.18
+  eval: bucket 0 perplexity 11.38
+  eval: bucket 1 perplexity 11.69
+  eval: bucket 2 perplexity 12.98
+  eval: bucket 3 perplexity 18.94
+global step 57000 learning rate 0.4344 step-time 0.44 perplexity 15.56 time since start 29127.89
+  eval: bucket 0 perplexity 13.32
+  eval: bucket 1 perplexity 12.51
+  eval: bucket 2 perplexity 16.09
+  eval: bucket 3 perplexity 17.47
+global step 57200 learning rate 0.4344 step-time 0.45 perplexity 15.40 time since start 29228.22
+  eval: bucket 0 perplexity 13.57
+  eval: bucket 1 perplexity 12.97
+  eval: bucket 2 perplexity 14.80
+  eval: bucket 3 perplexity 17.11
+global step 57400 learning rate 0.4344 step-time 0.45 perplexity 15.38 time since start 29329.00
+  eval: bucket 0 perplexity 12.92
+  eval: bucket 1 perplexity 11.45
+  eval: bucket 2 perplexity 14.14
+  eval: bucket 3 perplexity 17.06
+global step 57600 learning rate 0.4344 step-time 0.44 perplexity 15.30 time since start 29427.98
+  eval: bucket 0 perplexity 15.01
+  eval: bucket 1 perplexity 12.95
+  eval: bucket 2 perplexity 15.49
+  eval: bucket 3 perplexity 17.81
+global step 57800 learning rate 0.4344 step-time 0.45 perplexity 15.24 time since start 29528.79
+  eval: bucket 0 perplexity 10.10
+  eval: bucket 1 perplexity 11.70
+  eval: bucket 2 perplexity 15.31
+  eval: bucket 3 perplexity 16.41
+global step 58000 learning rate 0.4344 step-time 0.44 perplexity 15.18 time since start 29627.05
+  eval: bucket 0 perplexity 12.52
+  eval: bucket 1 perplexity 11.61
+  eval: bucket 2 perplexity 14.76
+  eval: bucket 3 perplexity 16.97
+global step 58200 learning rate 0.4344 step-time 0.45 perplexity 15.09 time since start 29727.11
+  eval: bucket 0 perplexity 12.01
+  eval: bucket 1 perplexity 12.23
+  eval: bucket 2 perplexity 14.80
+  eval: bucket 3 perplexity 17.57
+global step 58400 learning rate 0.4344 step-time 0.43 perplexity 14.98 time since start 29842.14
+  eval: bucket 0 perplexity 12.86
+  eval: bucket 1 perplexity 11.08
+  eval: bucket 2 perplexity 14.15
+  eval: bucket 3 perplexity 17.69
+global step 58600 learning rate 0.4344 step-time 0.45 perplexity 15.06 time since start 29941.57
+  eval: bucket 0 perplexity 8.83
+  eval: bucket 1 perplexity 11.43
+  eval: bucket 2 perplexity 15.11
+  eval: bucket 3 perplexity 15.33
+global step 58800 learning rate 0.4344 step-time 0.46 perplexity 14.99 time since start 30045.14
+  eval: bucket 0 perplexity 12.34
+  eval: bucket 1 perplexity 10.68
+  eval: bucket 2 perplexity 12.88
+  eval: bucket 3 perplexity 17.78
+global step 59000 learning rate 0.4344 step-time 0.45 perplexity 15.09 time since start 30145.31
+  eval: bucket 0 perplexity 13.37
+  eval: bucket 1 perplexity 12.29
+  eval: bucket 2 perplexity 14.74
+  eval: bucket 3 perplexity 17.93
+global step 59200 learning rate 0.4300 step-time 0.45 perplexity 14.95 time since start 30245.27
+  eval: bucket 0 perplexity 11.99
+  eval: bucket 1 perplexity 10.50
+  eval: bucket 2 perplexity 13.97
+  eval: bucket 3 perplexity 17.05
+global step 59400 learning rate 0.4300 step-time 0.43 perplexity 14.69 time since start 30342.32
+  eval: bucket 0 perplexity 11.11
+  eval: bucket 1 perplexity 10.64
+  eval: bucket 2 perplexity 15.36
+  eval: bucket 3 perplexity 16.87
+global step 59600 learning rate 0.4300 step-time 0.45 perplexity 15.00 time since start 30444.20
+  eval: bucket 0 perplexity 13.37
+  eval: bucket 1 perplexity 12.26
+  eval: bucket 2 perplexity 15.94
+  eval: bucket 3 perplexity 16.99
+global step 59800 learning rate 0.4300 step-time 0.45 perplexity 14.87 time since start 30543.56
+  eval: bucket 0 perplexity 11.82
+  eval: bucket 1 perplexity 10.95
+  eval: bucket 2 perplexity 14.36
+  eval: bucket 3 perplexity 15.76
+global step 60000 learning rate 0.4300 step-time 0.50 perplexity 14.83 time since start 30653.74
+  eval: bucket 0 perplexity 13.83
+  eval: bucket 1 perplexity 9.83
+  eval: bucket 2 perplexity 12.69
+  eval: bucket 3 perplexity 16.82
+global step 60200 learning rate 0.4300 step-time 0.50 perplexity 14.77 time since start 30767.07
+  eval: bucket 0 perplexity 12.41
+  eval: bucket 1 perplexity 11.44
+  eval: bucket 2 perplexity 12.95
+  eval: bucket 3 perplexity 15.97
+global step 60400 learning rate 0.4300 step-time 0.52 perplexity 14.82 time since start 30884.37
+  eval: bucket 0 perplexity 10.52
+  eval: bucket 1 perplexity 9.68
+  eval: bucket 2 perplexity 12.85
+  eval: bucket 3 perplexity 15.21
+global step 60600 learning rate 0.4300 step-time 0.50 perplexity 14.72 time since start 30995.39
+  eval: bucket 0 perplexity 12.57
+  eval: bucket 1 perplexity 13.14
+  eval: bucket 2 perplexity 15.68
+  eval: bucket 3 perplexity 15.93
+global step 60800 learning rate 0.4300 step-time 0.52 perplexity 14.96 time since start 31136.21
+  eval: bucket 0 perplexity 11.60
+  eval: bucket 1 perplexity 11.16
+  eval: bucket 2 perplexity 15.37
+  eval: bucket 3 perplexity 16.50
+global step 61000 learning rate 0.4257 step-time 0.49 perplexity 14.57 time since start 31247.45
+  eval: bucket 0 perplexity 8.44
+  eval: bucket 1 perplexity 12.65
+  eval: bucket 2 perplexity 13.45
+  eval: bucket 3 perplexity 16.47
+global step 61200 learning rate 0.4257 step-time 0.51 perplexity 14.57 time since start 31361.24
+  eval: bucket 0 perplexity 9.10
+  eval: bucket 1 perplexity 11.37
+  eval: bucket 2 perplexity 16.48
+  eval: bucket 3 perplexity 17.19
+global step 61400 learning rate 0.4257 step-time 0.48 perplexity 14.50 time since start 31470.01
+  eval: bucket 0 perplexity 11.65
+  eval: bucket 1 perplexity 12.63
+  eval: bucket 2 perplexity 11.34
+  eval: bucket 3 perplexity 16.77
+global step 61600 learning rate 0.4257 step-time 0.50 perplexity 14.50 time since start 31582.18
+  eval: bucket 0 perplexity 12.69
+  eval: bucket 1 perplexity 9.98
+  eval: bucket 2 perplexity 14.55
+  eval: bucket 3 perplexity 16.31
+global step 61800 learning rate 0.4257 step-time 0.53 perplexity 14.63 time since start 31700.24
+  eval: bucket 0 perplexity 11.35
+  eval: bucket 1 perplexity 11.53
+  eval: bucket 2 perplexity 12.95
+  eval: bucket 3 perplexity 16.41
+global step 62000 learning rate 0.4215 step-time 0.48 perplexity 14.36 time since start 31808.35
+  eval: bucket 0 perplexity 12.83
+  eval: bucket 1 perplexity 9.59
+  eval: bucket 2 perplexity 13.39
+  eval: bucket 3 perplexity 15.01
+global step 62200 learning rate 0.4215 step-time 0.48 perplexity 14.23 time since start 31916.39
+  eval: bucket 0 perplexity 11.64
+  eval: bucket 1 perplexity 9.88
+  eval: bucket 2 perplexity 14.41
+  eval: bucket 3 perplexity 16.53
+global step 62400 learning rate 0.4215 step-time 0.51 perplexity 14.61 time since start 32030.49
+  eval: bucket 0 perplexity 11.41
+  eval: bucket 1 perplexity 11.12
+  eval: bucket 2 perplexity 15.27
+  eval: bucket 3 perplexity 16.46
+global step 62600 learning rate 0.4215 step-time 0.49 perplexity 14.47 time since start 32139.76
+  eval: bucket 0 perplexity 10.82
+  eval: bucket 1 perplexity 11.69
+  eval: bucket 2 perplexity 12.25
+  eval: bucket 3 perplexity 17.39
+global step 62800 learning rate 0.4215 step-time 0.46 perplexity 14.15 time since start 32242.72
+  eval: bucket 0 perplexity 9.29
+  eval: bucket 1 perplexity 10.70
+  eval: bucket 2 perplexity 11.98
+  eval: bucket 3 perplexity 15.56
+global step 63000 learning rate 0.4215 step-time 0.49 perplexity 14.23 time since start 32351.96
+  eval: bucket 0 perplexity 10.01
+  eval: bucket 1 perplexity 9.65
+  eval: bucket 2 perplexity 13.67
+  eval: bucket 3 perplexity 17.19
+global step 63200 learning rate 0.4215 step-time 0.47 perplexity 13.90 time since start 32476.45
+  eval: bucket 0 perplexity 10.71
+  eval: bucket 1 perplexity 10.62
+  eval: bucket 2 perplexity 13.58
+  eval: bucket 3 perplexity 15.67
+global step 63400 learning rate 0.4215 step-time 0.47 perplexity 14.11 time since start 32583.08
+  eval: bucket 0 perplexity 10.78
+  eval: bucket 1 perplexity 12.34
+  eval: bucket 2 perplexity 13.52
+  eval: bucket 3 perplexity 16.62
+global step 63600 learning rate 0.4215 step-time 0.50 perplexity 14.31 time since start 32695.02
+  eval: bucket 0 perplexity 11.78
+  eval: bucket 1 perplexity 9.99
+  eval: bucket 2 perplexity 13.07
+  eval: bucket 3 perplexity 15.95
+global step 63800 learning rate 0.4173 step-time 0.49 perplexity 14.15 time since start 32804.39
+  eval: bucket 0 perplexity 9.79
+  eval: bucket 1 perplexity 10.89
+  eval: bucket 2 perplexity 14.20
+  eval: bucket 3 perplexity 13.97
+global step 64000 learning rate 0.4173 step-time 0.48 perplexity 14.07 time since start 32913.76
+  eval: bucket 0 perplexity 12.33
+  eval: bucket 1 perplexity 10.11
+  eval: bucket 2 perplexity 15.52
+  eval: bucket 3 perplexity 16.31
+global step 64200 learning rate 0.4173 step-time 0.47 perplexity 14.05 time since start 33018.15
+  eval: bucket 0 perplexity 13.48
+  eval: bucket 1 perplexity 12.32
+  eval: bucket 2 perplexity 14.64
+  eval: bucket 3 perplexity 17.15
+global step 64400 learning rate 0.4173 step-time 0.47 perplexity 13.93 time since start 33122.42
+  eval: bucket 0 perplexity 10.58
+  eval: bucket 1 perplexity 10.01
+  eval: bucket 2 perplexity 14.70
+  eval: bucket 3 perplexity 15.85
+global step 64600 learning rate 0.4173 step-time 0.46 perplexity 13.75 time since start 33227.36
+  eval: bucket 0 perplexity 12.22
+  eval: bucket 1 perplexity 11.48
+  eval: bucket 2 perplexity 13.27
+  eval: bucket 3 perplexity 16.60
+global step 64800 learning rate 0.4173 step-time 0.47 perplexity 14.04 time since start 33330.63
+  eval: bucket 0 perplexity 15.84
+  eval: bucket 1 perplexity 10.15
+  eval: bucket 2 perplexity 12.54
+  eval: bucket 3 perplexity 14.67
+global step 65000 learning rate 0.4173 step-time 0.48 perplexity 13.93 time since start 33437.28
+  eval: bucket 0 perplexity 9.52
+  eval: bucket 1 perplexity 11.18
+  eval: bucket 2 perplexity 12.43
+  eval: bucket 3 perplexity 15.22
+global step 65200 learning rate 0.4173 step-time 0.50 perplexity 14.00 time since start 33547.63
+  eval: bucket 0 perplexity 9.87
+  eval: bucket 1 perplexity 8.36
+  eval: bucket 2 perplexity 13.11
+  eval: bucket 3 perplexity 15.53
+global step 65400 learning rate 0.4173 step-time 0.44 perplexity 13.41 time since start 33647.69
+  eval: bucket 0 perplexity 9.99
+  eval: bucket 1 perplexity 11.50
+  eval: bucket 2 perplexity 12.89
+  eval: bucket 3 perplexity 17.22
+global step 65600 learning rate 0.4173 step-time 0.47 perplexity 13.67 time since start 33753.04
+  eval: bucket 0 perplexity 10.97
+  eval: bucket 1 perplexity 10.83
+  eval: bucket 2 perplexity 15.11
+  eval: bucket 3 perplexity 16.32
+global step 65800 learning rate 0.4173 step-time 0.46 perplexity 13.88 time since start 33879.52
+  eval: bucket 0 perplexity 11.44
+  eval: bucket 1 perplexity 10.87
+  eval: bucket 2 perplexity 12.32
+  eval: bucket 3 perplexity 16.21
+global step 66000 learning rate 0.4173 step-time 0.46 perplexity 13.84 time since start 33984.05
+  eval: bucket 0 perplexity 11.70
+  eval: bucket 1 perplexity 10.92
+  eval: bucket 2 perplexity 12.31
+  eval: bucket 3 perplexity 14.48
+global step 66200 learning rate 0.4173 step-time 0.45 perplexity 13.52 time since start 34085.25
+  eval: bucket 0 perplexity 17.22
+  eval: bucket 1 perplexity 10.35
+  eval: bucket 2 perplexity 14.07
+  eval: bucket 3 perplexity 16.20
+global step 66400 learning rate 0.4173 step-time 0.47 perplexity 13.90 time since start 34190.59
+  eval: bucket 0 perplexity 11.28
+  eval: bucket 1 perplexity 10.80
+  eval: bucket 2 perplexity 12.62
+  eval: bucket 3 perplexity 15.27
+global step 66600 learning rate 0.4131 step-time 0.48 perplexity 13.78 time since start 34297.95
+  eval: bucket 0 perplexity 10.73
+  eval: bucket 1 perplexity 12.11
+  eval: bucket 2 perplexity 15.47
+  eval: bucket 3 perplexity 15.40
+global step 66800 learning rate 0.4131 step-time 0.48 perplexity 13.72 time since start 34404.34
+  eval: bucket 0 perplexity 10.59
+  eval: bucket 1 perplexity 9.21
+  eval: bucket 2 perplexity 13.17
+  eval: bucket 3 perplexity 16.22
+global step 67000 learning rate 0.4131 step-time 0.47 perplexity 13.45 time since start 34509.60
+  eval: bucket 0 perplexity 10.20
+  eval: bucket 1 perplexity 11.79
+  eval: bucket 2 perplexity 12.61
+  eval: bucket 3 perplexity 15.05
+global step 67200 learning rate 0.4131 step-time 0.48 perplexity 13.41 time since start 34616.31
+  eval: bucket 0 perplexity 8.74
+  eval: bucket 1 perplexity 10.06
+  eval: bucket 2 perplexity 13.20
+  eval: bucket 3 perplexity 15.36
+global step 67400 learning rate 0.4131 step-time 0.47 perplexity 13.33 time since start 34722.09
+  eval: bucket 0 perplexity 10.77
+  eval: bucket 1 perplexity 12.90
+  eval: bucket 2 perplexity 14.69
+  eval: bucket 3 perplexity 15.60
+global step 67600 learning rate 0.4131 step-time 0.45 perplexity 13.16 time since start 34824.86
+  eval: bucket 0 perplexity 10.39
+  eval: bucket 1 perplexity 9.82
+  eval: bucket 2 perplexity 12.67
+  eval: bucket 3 perplexity 14.66
+global step 67800 learning rate 0.4131 step-time 0.47 perplexity 13.42 time since start 34928.50
+  eval: bucket 0 perplexity 11.72
+  eval: bucket 1 perplexity 10.42
+  eval: bucket 2 perplexity 13.30
+  eval: bucket 3 perplexity 15.13
+global step 68000 learning rate 0.4090 step-time 0.48 perplexity 13.43 time since start 35035.69
+  eval: bucket 0 perplexity 12.04
+  eval: bucket 1 perplexity 10.71
+  eval: bucket 2 perplexity 11.41
+  eval: bucket 3 perplexity 17.21
+global step 68200 learning rate 0.4049 step-time 0.46 perplexity 13.07 time since start 35159.71
+  eval: bucket 0 perplexity 10.17
+  eval: bucket 1 perplexity 9.15
+  eval: bucket 2 perplexity 12.28
+  eval: bucket 3 perplexity 15.94
+global step 68400 learning rate 0.4049 step-time 0.48 perplexity 13.41 time since start 35266.44
+  eval: bucket 0 perplexity 12.48
+  eval: bucket 1 perplexity 10.17
+  eval: bucket 2 perplexity 13.65
+  eval: bucket 3 perplexity 13.26
+global step 68600 learning rate 0.4049 step-time 0.47 perplexity 13.20 time since start 35370.85
+  eval: bucket 0 perplexity 10.43
+  eval: bucket 1 perplexity 10.92
+  eval: bucket 2 perplexity 14.04
+  eval: bucket 3 perplexity 14.77
+global step 68800 learning rate 0.4049 step-time 0.44 perplexity 12.95 time since start 35470.23
+  eval: bucket 0 perplexity 10.00
+  eval: bucket 1 perplexity 9.96
+  eval: bucket 2 perplexity 12.19
+  eval: bucket 3 perplexity 15.17
+global step 69000 learning rate 0.4049 step-time 0.50 perplexity 13.34 time since start 35581.48
+  eval: bucket 0 perplexity 10.91
+  eval: bucket 1 perplexity 9.93
+  eval: bucket 2 perplexity 13.01
+  eval: bucket 3 perplexity 14.73
+global step 69200 learning rate 0.4049 step-time 0.48 perplexity 13.20 time since start 35688.17
+  eval: bucket 0 perplexity 9.32
+  eval: bucket 1 perplexity 10.45
+  eval: bucket 2 perplexity 12.09
+  eval: bucket 3 perplexity 14.42
+global step 69400 learning rate 0.4049 step-time 0.46 perplexity 12.93 time since start 35791.52
+  eval: bucket 0 perplexity 12.10
+  eval: bucket 1 perplexity 11.93
+  eval: bucket 2 perplexity 11.83
+  eval: bucket 3 perplexity 13.56
+global step 69600 learning rate 0.4049 step-time 0.47 perplexity 12.96 time since start 35895.81
+  eval: bucket 0 perplexity 13.11
+  eval: bucket 1 perplexity 10.92
+  eval: bucket 2 perplexity 12.13
+  eval: bucket 3 perplexity 13.14
+global step 69800 learning rate 0.4049 step-time 0.45 perplexity 12.94 time since start 35996.70
+  eval: bucket 0 perplexity 11.47
+  eval: bucket 1 perplexity 9.53
+  eval: bucket 2 perplexity 12.12
+  eval: bucket 3 perplexity 14.48
+global step 70000 learning rate 0.4049 step-time 0.46 perplexity 12.73 time since start 36099.01
+  eval: bucket 0 perplexity 11.18
+  eval: bucket 1 perplexity 9.27
+  eval: bucket 2 perplexity 12.53
+  eval: bucket 3 perplexity 15.67
+global step 70200 learning rate 0.4049 step-time 0.47 perplexity 13.03 time since start 36204.01
+  eval: bucket 0 perplexity 9.39
+  eval: bucket 1 perplexity 8.80
+  eval: bucket 2 perplexity 11.40
+  eval: bucket 3 perplexity 14.00
+global step 70400 learning rate 0.4008 step-time 0.45 perplexity 12.87 time since start 36307.13
+  eval: bucket 0 perplexity 9.76
+  eval: bucket 1 perplexity 11.04
+  eval: bucket 2 perplexity 13.47
+  eval: bucket 3 perplexity 14.90
+global step 70600 learning rate 0.4008 step-time 0.45 perplexity 12.80 time since start 36429.63
+  eval: bucket 0 perplexity 12.41
+  eval: bucket 1 perplexity 9.65
+  eval: bucket 2 perplexity 11.11
+  eval: bucket 3 perplexity 13.73
+global step 70800 learning rate 0.4008 step-time 0.49 perplexity 13.17 time since start 36538.10
+  eval: bucket 0 perplexity 9.73
+  eval: bucket 1 perplexity 8.95
+  eval: bucket 2 perplexity 12.37
+  eval: bucket 3 perplexity 14.30
+global step 71000 learning rate 0.3968 step-time 0.47 perplexity 12.85 time since start 36643.06
+  eval: bucket 0 perplexity 11.50
+  eval: bucket 1 perplexity 9.65
+  eval: bucket 2 perplexity 12.93
+  eval: bucket 3 perplexity 15.08
+global step 71200 learning rate 0.3968 step-time 0.47 perplexity 12.80 time since start 36746.90
+  eval: bucket 0 perplexity 9.11
+  eval: bucket 1 perplexity 11.20
+  eval: bucket 2 perplexity 10.67
+  eval: bucket 3 perplexity 13.92
+global step 71400 learning rate 0.3968 step-time 0.47 perplexity 12.86 time since start 36852.23
+  eval: bucket 0 perplexity 10.46
+  eval: bucket 1 perplexity 10.47
+  eval: bucket 2 perplexity 13.01
+  eval: bucket 3 perplexity 15.25
+global step 71600 learning rate 0.3968 step-time 0.46 perplexity 12.69 time since start 36955.61
+  eval: bucket 0 perplexity 10.01
+  eval: bucket 1 perplexity 10.16
+  eval: bucket 2 perplexity 12.07
+  eval: bucket 3 perplexity 14.53
+global step 71800 learning rate 0.3968 step-time 0.47 perplexity 12.61 time since start 37061.63
+  eval: bucket 0 perplexity 9.51
+  eval: bucket 1 perplexity 7.34
+  eval: bucket 2 perplexity 10.65
+  eval: bucket 3 perplexity 14.83
+global step 72000 learning rate 0.3968 step-time 0.47 perplexity 12.61 time since start 37164.98
+  eval: bucket 0 perplexity 8.65
+  eval: bucket 1 perplexity 9.15
+  eval: bucket 2 perplexity 12.18
+  eval: bucket 3 perplexity 13.71
+global step 72200 learning rate 0.3968 step-time 0.45 perplexity 12.47 time since start 37266.48
+  eval: bucket 0 perplexity 11.75
+  eval: bucket 1 perplexity 8.04
+  eval: bucket 2 perplexity 10.63
+  eval: bucket 3 perplexity 13.73
+global step 72400 learning rate 0.3968 step-time 0.48 perplexity 12.66 time since start 37373.73
+  eval: bucket 0 perplexity 11.67
+  eval: bucket 1 perplexity 10.74
+  eval: bucket 2 perplexity 12.81
+  eval: bucket 3 perplexity 14.65
+global step 72600 learning rate 0.3928 step-time 0.46 perplexity 12.52 time since start 37475.92
+  eval: bucket 0 perplexity 8.58
+  eval: bucket 1 perplexity 11.26
+  eval: bucket 2 perplexity 12.59
+  eval: bucket 3 perplexity 14.50
+global step 72800 learning rate 0.3928 step-time 0.46 perplexity 12.46 time since start 37578.62
+  eval: bucket 0 perplexity 10.17
+  eval: bucket 1 perplexity 9.89
+  eval: bucket 2 perplexity 12.69
+  eval: bucket 3 perplexity 13.72
+global step 73000 learning rate 0.3928 step-time 0.48 perplexity 12.65 time since start 37706.02
+  eval: bucket 0 perplexity 11.44
+  eval: bucket 1 perplexity 8.52
+  eval: bucket 2 perplexity 12.71
+  eval: bucket 3 perplexity 14.27
+global step 73200 learning rate 0.3928 step-time 0.44 perplexity 12.14 time since start 37806.93
+  eval: bucket 0 perplexity 13.52
+  eval: bucket 1 perplexity 9.22
+  eval: bucket 2 perplexity 12.41
+  eval: bucket 3 perplexity 15.22
+global step 73400 learning rate 0.3928 step-time 0.47 perplexity 13.02 time since start 37910.79
+  eval: bucket 0 perplexity 8.69
+  eval: bucket 1 perplexity 9.49
+  eval: bucket 2 perplexity 9.94
+  eval: bucket 3 perplexity 14.45
+global step 73600 learning rate 0.3889 step-time 0.44 perplexity 12.24 time since start 38009.99
+  eval: bucket 0 perplexity 10.98
+  eval: bucket 1 perplexity 10.40
+  eval: bucket 2 perplexity 13.94
+  eval: bucket 3 perplexity 14.91
+global step 73800 learning rate 0.3889 step-time 0.45 perplexity 12.34 time since start 38110.71
+  eval: bucket 0 perplexity 8.55
+  eval: bucket 1 perplexity 9.97
+  eval: bucket 2 perplexity 12.91
+  eval: bucket 3 perplexity 13.09
+global step 74000 learning rate 0.3889 step-time 0.44 perplexity 12.21 time since start 38210.23
+  eval: bucket 0 perplexity 11.27
+  eval: bucket 1 perplexity 9.99
+  eval: bucket 2 perplexity 10.85
+  eval: bucket 3 perplexity 15.67
+global step 74200 learning rate 0.3889 step-time 0.49 perplexity 12.43 time since start 38319.71
+  eval: bucket 0 perplexity 12.69
+  eval: bucket 1 perplexity 9.83
+  eval: bucket 2 perplexity 11.47
+  eval: bucket 3 perplexity 13.72
+global step 74400 learning rate 0.3850 step-time 0.45 perplexity 12.19 time since start 38419.97
+  eval: bucket 0 perplexity 11.01
+  eval: bucket 1 perplexity 11.04
+  eval: bucket 2 perplexity 11.76
+  eval: bucket 3 perplexity 12.52
+global step 74600 learning rate 0.3850 step-time 0.45 perplexity 12.25 time since start 38521.52
+  eval: bucket 0 perplexity 12.48
+  eval: bucket 1 perplexity 8.88
+  eval: bucket 2 perplexity 12.55
+  eval: bucket 3 perplexity 13.20
+global step 74800 learning rate 0.3850 step-time 0.46 perplexity 12.28 time since start 38626.60
+  eval: bucket 0 perplexity 9.62
+  eval: bucket 1 perplexity 9.56
+  eval: bucket 2 perplexity 11.25
+  eval: bucket 3 perplexity 13.66
+global step 75000 learning rate 0.3850 step-time 0.45 perplexity 12.09 time since start 38727.08
+  eval: bucket 0 perplexity 9.95
+  eval: bucket 1 perplexity 11.87
+  eval: bucket 2 perplexity 11.77
+  eval: bucket 3 perplexity 14.61
+global step 75200 learning rate 0.3850 step-time 0.44 perplexity 12.11 time since start 38828.17
+  eval: bucket 0 perplexity 10.42
+  eval: bucket 1 perplexity 9.15
+  eval: bucket 2 perplexity 12.45
+  eval: bucket 3 perplexity 13.36
+global step 75400 learning rate 0.3850 step-time 0.46 perplexity 12.62 time since start 38951.90
+  eval: bucket 0 perplexity 9.96
+  eval: bucket 1 perplexity 9.68
+  eval: bucket 2 perplexity 11.27
+  eval: bucket 3 perplexity 14.50
+global step 75600 learning rate 0.3812 step-time 0.45 perplexity 11.85 time since start 39053.53
+  eval: bucket 0 perplexity 9.68
+  eval: bucket 1 perplexity 10.09
+  eval: bucket 2 perplexity 11.76
+  eval: bucket 3 perplexity 13.12
+global step 75800 learning rate 0.3812 step-time 0.47 perplexity 12.13 time since start 39157.01
+  eval: bucket 0 perplexity 11.14
+  eval: bucket 1 perplexity 10.01
+  eval: bucket 2 perplexity 9.55
+  eval: bucket 3 perplexity 14.68
+global step 76000 learning rate 0.3812 step-time 0.43 perplexity 11.90 time since start 39255.02
+  eval: bucket 0 perplexity 10.83
+  eval: bucket 1 perplexity 9.88
+  eval: bucket 2 perplexity 10.86
+  eval: bucket 3 perplexity 15.28
+global step 76200 learning rate 0.3812 step-time 0.45 perplexity 11.82 time since start 39354.78
+  eval: bucket 0 perplexity 11.53
+  eval: bucket 1 perplexity 9.79
+  eval: bucket 2 perplexity 12.07
+  eval: bucket 3 perplexity 11.93
+global step 76400 learning rate 0.3812 step-time 0.46 perplexity 12.04 time since start 39456.23
+  eval: bucket 0 perplexity 11.78
+  eval: bucket 1 perplexity 9.41
+  eval: bucket 2 perplexity 11.22
+  eval: bucket 3 perplexity 14.96
+global step 76600 learning rate 0.3812 step-time 0.44 perplexity 11.77 time since start 39554.59
+  eval: bucket 0 perplexity 13.36
+  eval: bucket 1 perplexity 8.27
+  eval: bucket 2 perplexity 11.61
+  eval: bucket 3 perplexity 12.96
+global step 76800 learning rate 0.3812 step-time 0.44 perplexity 11.87 time since start 39653.64
+  eval: bucket 0 perplexity 9.92
+  eval: bucket 1 perplexity 9.69
+  eval: bucket 2 perplexity 10.68
+  eval: bucket 3 perplexity 13.36
+global step 77000 learning rate 0.3812 step-time 0.46 perplexity 12.03 time since start 39756.20
+  eval: bucket 0 perplexity 11.00
+  eval: bucket 1 perplexity 10.29
+  eval: bucket 2 perplexity 10.69
+  eval: bucket 3 perplexity 15.31
+global step 77200 learning rate 0.3812 step-time 0.47 perplexity 12.00 time since start 39860.67
+  eval: bucket 0 perplexity 8.73
+  eval: bucket 1 perplexity 10.09
+  eval: bucket 2 perplexity 11.14
+  eval: bucket 3 perplexity 11.90
+global step 77400 learning rate 0.3812 step-time 0.44 perplexity 11.75 time since start 39957.87
+  eval: bucket 0 perplexity 8.27
+  eval: bucket 1 perplexity 7.60
+  eval: bucket 2 perplexity 10.50
+  eval: bucket 3 perplexity 16.30
+global step 77600 learning rate 0.3812 step-time 0.47 perplexity 11.90 time since start 40062.38
+  eval: bucket 0 perplexity 9.48
+  eval: bucket 1 perplexity 10.99
+  eval: bucket 2 perplexity 10.87
+  eval: bucket 3 perplexity 12.40
+global step 77800 learning rate 0.3812 step-time 0.46 perplexity 11.87 time since start 40185.27
+  eval: bucket 0 perplexity 12.87
+  eval: bucket 1 perplexity 8.07
+  eval: bucket 2 perplexity 11.49
+  eval: bucket 3 perplexity 13.32
+global step 78000 learning rate 0.3812 step-time 0.47 perplexity 11.95 time since start 40290.01
+  eval: bucket 0 perplexity 12.90
+  eval: bucket 1 perplexity 9.35
+  eval: bucket 2 perplexity 11.66
+  eval: bucket 3 perplexity 14.62
+global step 78200 learning rate 0.3774 step-time 0.45 perplexity 11.87 time since start 40390.39
+  eval: bucket 0 perplexity 11.46
+  eval: bucket 1 perplexity 8.72
+  eval: bucket 2 perplexity 12.29
+  eval: bucket 3 perplexity 14.09
+global step 78400 learning rate 0.3774 step-time 0.46 perplexity 11.85 time since start 40493.04
+  eval: bucket 0 perplexity 10.52
+  eval: bucket 1 perplexity 8.63
+  eval: bucket 2 perplexity 10.28
+  eval: bucket 3 perplexity 13.22
+global step 78600 learning rate 0.3774 step-time 0.46 perplexity 11.85 time since start 40594.68
+  eval: bucket 0 perplexity 11.73
+  eval: bucket 1 perplexity 8.56
+  eval: bucket 2 perplexity 12.31
+  eval: bucket 3 perplexity 13.27
+global step 78800 learning rate 0.3774 step-time 0.47 perplexity 11.88 time since start 40699.95
+  eval: bucket 0 perplexity 11.07
+  eval: bucket 1 perplexity 9.44
+  eval: bucket 2 perplexity 11.17
+  eval: bucket 3 perplexity 12.42
+global step 79000 learning rate 0.3736 step-time 0.45 perplexity 11.58 time since start 40800.61
+  eval: bucket 0 perplexity 8.82
+  eval: bucket 1 perplexity 9.42
+  eval: bucket 2 perplexity 12.18
+  eval: bucket 3 perplexity 13.45
+global step 79200 learning rate 0.3736 step-time 0.45 perplexity 11.77 time since start 40902.02
+  eval: bucket 0 perplexity 8.82
+  eval: bucket 1 perplexity 8.38
+  eval: bucket 2 perplexity 12.52
+  eval: bucket 3 perplexity 12.26
+global step 79400 learning rate 0.3736 step-time 0.45 perplexity 11.52 time since start 41002.61
+  eval: bucket 0 perplexity 8.03
+  eval: bucket 1 perplexity 8.48
+  eval: bucket 2 perplexity 10.78
+  eval: bucket 3 perplexity 15.25
+global step 79600 learning rate 0.3736 step-time 0.44 perplexity 11.66 time since start 41103.48
+  eval: bucket 0 perplexity 10.11
+  eval: bucket 1 perplexity 9.88
+  eval: bucket 2 perplexity 13.20
+  eval: bucket 3 perplexity 13.64
+global step 79800 learning rate 0.3736 step-time 0.48 perplexity 11.78 time since start 41209.69
+  eval: bucket 0 perplexity 9.27
+  eval: bucket 1 perplexity 10.69
+  eval: bucket 2 perplexity 13.21
+  eval: bucket 3 perplexity 14.68
+global step 80000 learning rate 0.3699 step-time 0.47 perplexity 11.68 time since start 41313.71
+  eval: bucket 0 perplexity 10.45
+  eval: bucket 1 perplexity 7.60
+  eval: bucket 2 perplexity 9.94
+  eval: bucket 3 perplexity 13.89
+global step 80200 learning rate 0.3699 step-time 0.46 perplexity 11.43 time since start 41415.71
+  eval: bucket 0 perplexity 9.09
+  eval: bucket 1 perplexity 10.62
+  eval: bucket 2 perplexity 11.34
+  eval: bucket 3 perplexity 13.01
+global step 80400 learning rate 0.3699 step-time 0.48 perplexity 11.56 time since start 41542.12
+  eval: bucket 0 perplexity 9.30
+  eval: bucket 1 perplexity 9.07
+  eval: bucket 2 perplexity 11.58
+  eval: bucket 3 perplexity 14.70
+global step 80600 learning rate 0.3699 step-time 0.46 perplexity 11.75 time since start 41645.26
+  eval: bucket 0 perplexity 9.02
+  eval: bucket 1 perplexity 9.97
+  eval: bucket 2 perplexity 11.60
+  eval: bucket 3 perplexity 11.93
+global step 80800 learning rate 0.3662 step-time 0.45 perplexity 11.30 time since start 41744.90
+  eval: bucket 0 perplexity 7.61
+  eval: bucket 1 perplexity 10.30
+  eval: bucket 2 perplexity 11.53
+  eval: bucket 3 perplexity 11.07
+global step 81000 learning rate 0.3662 step-time 0.44 perplexity 11.42 time since start 41843.43
+  eval: bucket 0 perplexity 8.20
+  eval: bucket 1 perplexity 9.34
+  eval: bucket 2 perplexity 13.24
+  eval: bucket 3 perplexity 13.59
+global step 81200 learning rate 0.3662 step-time 0.46 perplexity 11.49 time since start 41946.13
+  eval: bucket 0 perplexity 9.22
+  eval: bucket 1 perplexity 9.88
+  eval: bucket 2 perplexity 10.88
+  eval: bucket 3 perplexity 12.71
+global step 81400 learning rate 0.3662 step-time 0.43 perplexity 11.23 time since start 42042.62
+  eval: bucket 0 perplexity 8.19
+  eval: bucket 1 perplexity 9.11
+  eval: bucket 2 perplexity 10.22
+  eval: bucket 3 perplexity 11.85
+global step 81600 learning rate 0.3662 step-time 0.46 perplexity 11.50 time since start 42145.28
+  eval: bucket 0 perplexity 10.58
+  eval: bucket 1 perplexity 8.45
+  eval: bucket 2 perplexity 10.07
+  eval: bucket 3 perplexity 14.04
+global step 81800 learning rate 0.3625 step-time 0.46 perplexity 11.38 time since start 42248.02
+  eval: bucket 0 perplexity 9.55
+  eval: bucket 1 perplexity 8.17
+  eval: bucket 2 perplexity 11.68
+  eval: bucket 3 perplexity 14.40
+global step 82000 learning rate 0.3625 step-time 0.44 perplexity 11.28 time since start 42346.70
+  eval: bucket 0 perplexity 13.22
+  eval: bucket 1 perplexity 10.42
+  eval: bucket 2 perplexity 12.37
+  eval: bucket 3 perplexity 13.70
+global step 82200 learning rate 0.3625 step-time 0.46 perplexity 11.39 time since start 42449.70
+  eval: bucket 0 perplexity 10.27
+  eval: bucket 1 perplexity 10.70
+  eval: bucket 2 perplexity 11.78
+  eval: bucket 3 perplexity 12.77
+global step 82400 learning rate 0.3625 step-time 0.46 perplexity 11.44 time since start 42552.19
+  eval: bucket 0 perplexity 11.38
+  eval: bucket 1 perplexity 7.95
+  eval: bucket 2 perplexity 12.34
+  eval: bucket 3 perplexity 13.29
+global step 82600 learning rate 0.3589 step-time 0.46 perplexity 11.32 time since start 42655.43
+  eval: bucket 0 perplexity 10.59
+  eval: bucket 1 perplexity 9.73
+  eval: bucket 2 perplexity 11.05
+  eval: bucket 3 perplexity 12.55
+global step 82800 learning rate 0.3589 step-time 0.45 perplexity 11.17 time since start 42775.63
+  eval: bucket 0 perplexity 11.00
+  eval: bucket 1 perplexity 9.33
+  eval: bucket 2 perplexity 11.59
+  eval: bucket 3 perplexity 12.57
+global step 83000 learning rate 0.3589 step-time 0.46 perplexity 11.35 time since start 42878.63
+  eval: bucket 0 perplexity 11.04
+  eval: bucket 1 perplexity 10.37
+  eval: bucket 2 perplexity 11.52
+  eval: bucket 3 perplexity 13.50
+global step 83200 learning rate 0.3589 step-time 0.46 perplexity 11.16 time since start 42981.67
+  eval: bucket 0 perplexity 10.68
+  eval: bucket 1 perplexity 10.43
+  eval: bucket 2 perplexity 9.91
+  eval: bucket 3 perplexity 13.46
+global step 83400 learning rate 0.3589 step-time 0.45 perplexity 11.35 time since start 43083.60
+  eval: bucket 0 perplexity 9.11
+  eval: bucket 1 perplexity 9.29
+  eval: bucket 2 perplexity 11.32
+  eval: bucket 3 perplexity 14.24
+global step 83600 learning rate 0.3589 step-time 0.46 perplexity 11.25 time since start 43185.47
+  eval: bucket 0 perplexity 7.36
+  eval: bucket 1 perplexity 7.85
+  eval: bucket 2 perplexity 11.67
+  eval: bucket 3 perplexity 12.82
+global step 83800 learning rate 0.3589 step-time 0.46 perplexity 11.26 time since start 43289.38
+  eval: bucket 0 perplexity 7.24
+  eval: bucket 1 perplexity 9.07
+  eval: bucket 2 perplexity 10.86
+  eval: bucket 3 perplexity 12.96
+global step 84000 learning rate 0.3589 step-time 0.45 perplexity 11.12 time since start 43390.61
+  eval: bucket 0 perplexity 8.13
+  eval: bucket 1 perplexity 11.63
+  eval: bucket 2 perplexity 11.38
+  eval: bucket 3 perplexity 13.07
+global step 84200 learning rate 0.3589 step-time 0.47 perplexity 11.28 time since start 43496.14
+  eval: bucket 0 perplexity 10.69
+  eval: bucket 1 perplexity 9.64
+  eval: bucket 2 perplexity 11.56
+  eval: bucket 3 perplexity 13.12
+global step 84400 learning rate 0.3553 step-time 0.45 perplexity 11.15 time since start 43595.26
+  eval: bucket 0 perplexity 9.65
+  eval: bucket 1 perplexity 9.40
+  eval: bucket 2 perplexity 10.86
+  eval: bucket 3 perplexity 12.49
+global step 84600 learning rate 0.3553 step-time 0.45 perplexity 11.16 time since start 43695.52
+  eval: bucket 0 perplexity 8.12
+  eval: bucket 1 perplexity 9.88
+  eval: bucket 2 perplexity 11.71
+  eval: bucket 3 perplexity 14.43
+global step 84800 learning rate 0.3553 step-time 0.46 perplexity 10.85 time since start 43797.34
+  eval: bucket 0 perplexity 7.79
+  eval: bucket 1 perplexity 8.64
+  eval: bucket 2 perplexity 11.28
+  eval: bucket 3 perplexity 11.76
+global step 85000 learning rate 0.3553 step-time 0.46 perplexity 11.20 time since start 43900.72
+  eval: bucket 0 perplexity 9.39
+  eval: bucket 1 perplexity 8.75
+  eval: bucket 2 perplexity 9.54
+  eval: bucket 3 perplexity 14.81
+global step 85200 learning rate 0.3517 step-time 0.46 perplexity 11.05 time since start 44022.82
+  eval: bucket 0 perplexity 10.08
+  eval: bucket 1 perplexity 9.43
+  eval: bucket 2 perplexity 10.36
+  eval: bucket 3 perplexity 13.28
+global step 85400 learning rate 0.3517 step-time 0.45 perplexity 10.83 time since start 44122.67
+  eval: bucket 0 perplexity 8.50
+  eval: bucket 1 perplexity 7.21
+  eval: bucket 2 perplexity 11.07
+  eval: bucket 3 perplexity 12.39
+global step 85600 learning rate 0.3517 step-time 0.45 perplexity 11.00 time since start 44222.07
+  eval: bucket 0 perplexity 8.64
+  eval: bucket 1 perplexity 8.89
+  eval: bucket 2 perplexity 10.23
+  eval: bucket 3 perplexity 14.33
+global step 85800 learning rate 0.3517 step-time 0.46 perplexity 11.10 time since start 44325.22
+  eval: bucket 0 perplexity 10.28
+  eval: bucket 1 perplexity 9.19
+  eval: bucket 2 perplexity 10.13
+  eval: bucket 3 perplexity 13.26
+global step 86000 learning rate 0.3482 step-time 0.46 perplexity 11.04 time since start 44426.94
+  eval: bucket 0 perplexity 12.52
+  eval: bucket 1 perplexity 9.06
+  eval: bucket 2 perplexity 11.89
+  eval: bucket 3 perplexity 12.70
+global step 86200 learning rate 0.3482 step-time 0.43 perplexity 10.59 time since start 44523.90
+  eval: bucket 0 perplexity 7.60
+  eval: bucket 1 perplexity 8.11
+  eval: bucket 2 perplexity 10.39
+  eval: bucket 3 perplexity 13.55
+global step 86400 learning rate 0.3482 step-time 0.46 perplexity 10.84 time since start 44627.01
+  eval: bucket 0 perplexity 9.40
+  eval: bucket 1 perplexity 8.54
+  eval: bucket 2 perplexity 9.00
+  eval: bucket 3 perplexity 13.30
+global step 86600 learning rate 0.3482 step-time 0.46 perplexity 11.06 time since start 44730.10
+  eval: bucket 0 perplexity 8.51
+  eval: bucket 1 perplexity 7.16
+  eval: bucket 2 perplexity 11.05
+  eval: bucket 3 perplexity 10.97
+global step 86800 learning rate 0.3447 step-time 0.44 perplexity 10.85 time since start 44829.25
+  eval: bucket 0 perplexity 9.38
+  eval: bucket 1 perplexity 8.28
+  eval: bucket 2 perplexity 10.90
+  eval: bucket 3 perplexity 13.41
+global step 87000 learning rate 0.3447 step-time 0.44 perplexity 10.78 time since start 44928.62
+  eval: bucket 0 perplexity 10.08
+  eval: bucket 1 perplexity 8.96
+  eval: bucket 2 perplexity 12.43
+  eval: bucket 3 perplexity 13.83
+global step 87200 learning rate 0.3447 step-time 0.45 perplexity 10.83 time since start 45028.17
+  eval: bucket 0 perplexity 9.74
+  eval: bucket 1 perplexity 8.71
+  eval: bucket 2 perplexity 11.56
+  eval: bucket 3 perplexity 12.55
+global step 87400 learning rate 0.3447 step-time 0.47 perplexity 10.83 time since start 45132.61
+  eval: bucket 0 perplexity 7.06
+  eval: bucket 1 perplexity 7.76
+  eval: bucket 2 perplexity 9.68
+  eval: bucket 3 perplexity 13.30
+global step 87600 learning rate 0.3447 step-time 0.44 perplexity 10.72 time since start 45251.18
+  eval: bucket 0 perplexity 7.99
+  eval: bucket 1 perplexity 10.59
+  eval: bucket 2 perplexity 9.70
+  eval: bucket 3 perplexity 12.85
+global step 87800 learning rate 0.3447 step-time 0.47 perplexity 10.89 time since start 45354.34
+  eval: bucket 0 perplexity 7.64
+  eval: bucket 1 perplexity 8.60
+  eval: bucket 2 perplexity 11.41
+  eval: bucket 3 perplexity 14.12
+global step 88000 learning rate 0.3413 step-time 0.46 perplexity 10.76 time since start 45455.86
+  eval: bucket 0 perplexity 13.12
+  eval: bucket 1 perplexity 8.47
+  eval: bucket 2 perplexity 11.40
+  eval: bucket 3 perplexity 11.65
+global step 88200 learning rate 0.3413 step-time 0.45 perplexity 10.78 time since start 45556.04
+  eval: bucket 0 perplexity 10.42
+  eval: bucket 1 perplexity 7.91
+  eval: bucket 2 perplexity 11.02
+  eval: bucket 3 perplexity 13.69
+global step 88400 learning rate 0.3413 step-time 0.46 perplexity 10.60 time since start 45657.04
+  eval: bucket 0 perplexity 6.64
+  eval: bucket 1 perplexity 9.68
+  eval: bucket 2 perplexity 10.48
+  eval: bucket 3 perplexity 12.56
+global step 88600 learning rate 0.3413 step-time 0.45 perplexity 10.82 time since start 45756.60
+  eval: bucket 0 perplexity 8.55
+  eval: bucket 1 perplexity 8.26
+  eval: bucket 2 perplexity 11.11
+  eval: bucket 3 perplexity 12.50
+global step 88800 learning rate 0.3379 step-time 0.45 perplexity 10.63 time since start 45857.65
+  eval: bucket 0 perplexity 9.84
+  eval: bucket 1 perplexity 9.38
+  eval: bucket 2 perplexity 11.88
+  eval: bucket 3 perplexity 13.34
+global step 89000 learning rate 0.3379 step-time 0.44 perplexity 10.60 time since start 45956.08
+  eval: bucket 0 perplexity 8.76
+  eval: bucket 1 perplexity 8.03
+  eval: bucket 2 perplexity 10.44
+  eval: bucket 3 perplexity 13.52
+global step 89200 learning rate 0.3379 step-time 0.44 perplexity 10.75 time since start 46054.92
+  eval: bucket 0 perplexity 7.26
+  eval: bucket 1 perplexity 7.84
+  eval: bucket 2 perplexity 10.69
+  eval: bucket 3 perplexity 11.41
+global step 89400 learning rate 0.3379 step-time 0.45 perplexity 10.56 time since start 46155.17
+  eval: bucket 0 perplexity 9.58
+  eval: bucket 1 perplexity 10.28
+  eval: bucket 2 perplexity 11.29
+  eval: bucket 3 perplexity 11.39
+global step 89600 learning rate 0.3379 step-time 0.46 perplexity 10.61 time since start 46258.29
+  eval: bucket 0 perplexity 9.02
+  eval: bucket 1 perplexity 8.58
+  eval: bucket 2 perplexity 10.24
+  eval: bucket 3 perplexity 11.19
+global step 89800 learning rate 0.3379 step-time 0.44 perplexity 10.70 time since start 46356.72
+  eval: bucket 0 perplexity 11.84
+  eval: bucket 1 perplexity 8.23
+  eval: bucket 2 perplexity 10.84
+  eval: bucket 3 perplexity 14.56
+global step 90000 learning rate 0.3379 step-time 0.46 perplexity 10.57 time since start 46480.02
+  eval: bucket 0 perplexity 8.72
+  eval: bucket 1 perplexity 9.68
+  eval: bucket 2 perplexity 9.54
+  eval: bucket 3 perplexity 13.23
+global step 90200 learning rate 0.3379 step-time 0.46 perplexity 10.56 time since start 46583.73
+  eval: bucket 0 perplexity 10.47
+  eval: bucket 1 perplexity 9.15
+  eval: bucket 2 perplexity 11.02
+  eval: bucket 3 perplexity 12.07
+global step 90400 learning rate 0.3379 step-time 0.45 perplexity 10.41 time since start 46685.29
+  eval: bucket 0 perplexity 7.70
+  eval: bucket 1 perplexity 8.83
+  eval: bucket 2 perplexity 11.55
+  eval: bucket 3 perplexity 11.80
+global step 90600 learning rate 0.3379 step-time 0.45 perplexity 10.42 time since start 46785.52
+  eval: bucket 0 perplexity 7.87
+  eval: bucket 1 perplexity 7.37
+  eval: bucket 2 perplexity 10.19
+  eval: bucket 3 perplexity 12.23
+global step 90800 learning rate 0.3379 step-time 0.42 perplexity 10.52 time since start 46880.50
+  eval: bucket 0 perplexity 9.74
+  eval: bucket 1 perplexity 7.71
+  eval: bucket 2 perplexity 9.85
+  eval: bucket 3 perplexity 12.29
+global step 91000 learning rate 0.3379 step-time 0.47 perplexity 10.56 time since start 46984.51
+  eval: bucket 0 perplexity 8.01
+  eval: bucket 1 perplexity 8.83
+  eval: bucket 2 perplexity 10.12
+  eval: bucket 3 perplexity 12.53
+global step 91200 learning rate 0.3345 step-time 0.46 perplexity 10.60 time since start 47086.84
+  eval: bucket 0 perplexity 8.96
+  eval: bucket 1 perplexity 8.15
+  eval: bucket 2 perplexity 12.41
+  eval: bucket 3 perplexity 12.24
+global step 91400 learning rate 0.3311 step-time 0.43 perplexity 10.33 time since start 47181.47
+  eval: bucket 0 perplexity 9.69
+  eval: bucket 1 perplexity 9.53
+  eval: bucket 2 perplexity 8.99
+  eval: bucket 3 perplexity 11.27
+global step 91600 learning rate 0.3311 step-time 0.45 perplexity 10.54 time since start 47282.07
+  eval: bucket 0 perplexity 7.25
+  eval: bucket 1 perplexity 7.50
+  eval: bucket 2 perplexity 10.46
+  eval: bucket 3 perplexity 12.52
+global step 91800 learning rate 0.3311 step-time 0.45 perplexity 10.41 time since start 47382.84
+  eval: bucket 0 perplexity 10.78
+  eval: bucket 1 perplexity 8.79
+  eval: bucket 2 perplexity 9.67
+  eval: bucket 3 perplexity 13.25
+global step 92000 learning rate 0.3311 step-time 0.43 perplexity 10.36 time since start 47480.99
+  eval: bucket 0 perplexity 9.10
+  eval: bucket 1 perplexity 8.10
+  eval: bucket 2 perplexity 10.61
+  eval: bucket 3 perplexity 11.96
+global step 92200 learning rate 0.3311 step-time 0.46 perplexity 10.46 time since start 47584.20
+  eval: bucket 0 perplexity 9.05
+  eval: bucket 1 perplexity 7.62
+  eval: bucket 2 perplexity 10.02
+  eval: bucket 3 perplexity 13.54
+global step 92400 learning rate 0.3311 step-time 0.46 perplexity 10.25 time since start 47706.06
+  eval: bucket 0 perplexity 9.06
+  eval: bucket 1 perplexity 8.80
+  eval: bucket 2 perplexity 9.58
+  eval: bucket 3 perplexity 12.61
+global step 92600 learning rate 0.3311 step-time 0.47 perplexity 10.47 time since start 47810.74
+  eval: bucket 0 perplexity 10.34
+  eval: bucket 1 perplexity 6.82
+  eval: bucket 2 perplexity 9.61
+  eval: bucket 3 perplexity 11.19
+global step 92800 learning rate 0.3278 step-time 0.44 perplexity 10.24 time since start 47909.37
+  eval: bucket 0 perplexity 9.31
+  eval: bucket 1 perplexity 6.57
+  eval: bucket 2 perplexity 10.28
+  eval: bucket 3 perplexity 10.93
+global step 93000 learning rate 0.3278 step-time 0.45 perplexity 10.16 time since start 48009.42
+  eval: bucket 0 perplexity 7.74
+  eval: bucket 1 perplexity 9.74
+  eval: bucket 2 perplexity 10.94
+  eval: bucket 3 perplexity 11.88
